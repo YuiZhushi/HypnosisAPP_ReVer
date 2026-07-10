@@ -50,8 +50,7 @@ function common_path(lhs: string, rhs: string) {
 
 function glob_script_files() {
   const results: string[] = [];
-
-  fs.globSync(`{示例,src}/**/index.{ts,tsx,js,jsx}`)
+  fs.globSync(`src/**/index.{ts,tsx,js,jsx}`)
     .filter(
       file => process.env.CI !== 'true' || !fs.readFileSync(path.join(import.meta.dirname, file)).includes('@no-ci'),
     )
@@ -60,10 +59,11 @@ function glob_script_files() {
       for (const [index, result] of results.entries()) {
         const result_dirname = path.dirname(result);
         const common = common_path(result_dirname, file_dirname);
-        if (common === result_dirname) {
+        // 例外處理：script_out_iframe 需要被獨立打包，不要被 src/index.tsx 覆蓋
+        if (common === result_dirname && !file.includes('script_out_iframe')) {
           return;
         }
-        if (common === file_dirname) {
+        if (common === file_dirname && !result.includes('script_out_iframe')) {
           results.splice(index, 1, file);
           return;
         }

@@ -1,0 +1,495 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "environment": {
+      "type": "object",
+      "properties": {
+        "virtualTime": {
+          "type": "string"
+        },
+        "year": {
+          "type": "string"
+        },
+        "month": {
+          "type": "string"
+        },
+        "week": {
+          "type": "string"
+        },
+        "day": {
+          "type": "string"
+        },
+        "hour": {
+          "type": "string"
+        },
+        "minute": {
+          "type": "string"
+        },
+        "second": {
+          "type": "string"
+        },
+        "season": {
+          "type": "string"
+        },
+        "holidayId": {
+          "type": "string"
+        },
+        "weather": {
+          "type": "string"
+        },
+        "achievementProgress": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "claimed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "claimed"
+            ]
+          }
+        },
+        "questProgress": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "accepted"
+                  },
+                  {
+                    "type": "string",
+                    "const": "completed"
+                  },
+                  {
+                    "type": "string",
+                    "const": "claimed"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          }
+        }
+      },
+      "required": [
+        "virtualTime",
+        "year",
+        "month",
+        "week",
+        "day",
+        "hour",
+        "minute",
+        "second",
+        "season",
+        "holidayId",
+        "weather",
+        "achievementProgress",
+        "questProgress"
+      ]
+    },
+    "player": {
+      "type": "object",
+      "properties": {
+        "userName": {
+          "type": "string"
+        },
+        "money": {
+          "type": "number"
+        },
+        "mcEnergy": {
+          "type": "number"
+        },
+        "mcEnergyMax": {
+          "type": "number"
+        },
+        "mcPoints": {
+          "type": "number"
+        },
+        "totalConsumedMc": {
+          "type": "number"
+        },
+        "vipTier": {
+          "type": "number"
+        },
+        "vipEndVirtualMinutes": {
+          "type": "number"
+        },
+        "vipAutoRenew": {
+          "type": "boolean"
+        },
+        "suspicion": {
+          "type": "number"
+        },
+        "currentLocationId": {
+          "type": "string"
+        },
+        "discoveredLocations": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "discoveredAt": {
+                "type": "string"
+              },
+              "isOwnedProperty": {
+                "type": "boolean"
+              },
+              "customNotes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "isOwnedProperty"
+            ]
+          }
+        },
+        "ownedHypnosis": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "unlockedAt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "enabled"
+            ]
+          }
+        },
+        "ownedBodyModifications": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "unlockedAt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "enabled"
+            ]
+          }
+        },
+        "bodyParts": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        },
+        "inventory": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema0"
+          }
+        },
+        "equipment": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema1"
+          }
+        },
+        "activeBodyModifications": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema2"
+          }
+        },
+        "activeHypnosisEffects": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema3"
+          }
+        }
+      },
+      "required": [
+        "userName",
+        "money",
+        "mcEnergy",
+        "mcEnergyMax",
+        "mcPoints",
+        "totalConsumedMc",
+        "vipTier",
+        "vipEndVirtualMinutes",
+        "vipAutoRenew",
+        "suspicion",
+        "currentLocationId",
+        "discoveredLocations",
+        "ownedHypnosis",
+        "ownedBodyModifications",
+        "bodyParts",
+        "inventory",
+        "equipment",
+        "activeBodyModifications",
+        "activeHypnosisEffects"
+      ]
+    },
+    "npcs": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "identities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alertness": {
+            "type": "number"
+          },
+          "affection": {
+            "type": "number"
+          },
+          "obedience": {
+            "type": "number"
+          },
+          "lust": {
+            "type": "number"
+          },
+          "arousal": {
+            "type": "number"
+          },
+          "bodyParts": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          },
+          "inventory": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/__schema0"
+            }
+          },
+          "equipment": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/__schema1"
+            }
+          },
+          "activeBodyModifications": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/__schema2"
+            }
+          },
+          "activeHypnosisEffects": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/__schema3"
+            }
+          },
+          "locationState": {
+            "type": "object",
+            "properties": {
+              "locationId": {
+                "type": "string"
+              },
+              "locationStatus": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "locationId",
+              "locationStatus"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "identities",
+          "alertness",
+          "affection",
+          "obedience",
+          "lust",
+          "arousal",
+          "bodyParts",
+          "inventory",
+          "equipment",
+          "activeBodyModifications",
+          "activeHypnosisEffects"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "isEnable": {
+          "type": "boolean"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "isEnable",
+        "quantity"
+      ]
+    },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "isEnable": {
+          "type": "boolean"
+        },
+        "occupyslot": {
+          "type": "string"
+        },
+        "isCountAsOccupy": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "isEnable",
+        "occupyslot",
+        "isCountAsOccupy"
+      ]
+    },
+    "__schema2": {
+      "type": "object",
+      "properties": {
+        "installedVirtualTime": {
+          "type": "string"
+        },
+        "TempEndTime": {
+          "type": "number"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "installedVirtualTime",
+        "isActive"
+      ]
+    },
+    "__schema3": {
+      "type": "object",
+      "properties": {
+        "installedVirtualTime": {
+          "type": "string"
+        },
+        "hypnosisType": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "const": "permanent"
+            },
+            {
+              "type": "string",
+              "const": "oneTime"
+            }
+          ]
+        },
+        "isEnable": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "installedVirtualTime",
+        "hypnosisType",
+        "isEnable"
+      ]
+    }
+  }
+}
