@@ -349,6 +349,51 @@ export const defaultIdentities: IdentityDef[] = [
     description: '住在女生宿舍的學生，擁有進入女宿建築與房間的基本權限',
   },
   {
+    id: 'department_store_employee',
+    name: '百貨公司員工',
+    description: '可進入百貨各樓層的員工通道與休息室。',
+  },
+  {
+    id: 'department_store_manager',
+    name: '百貨公司主管',
+    description: '擁有百貨後勤區、保全中控室與各店倉庫的管理權限。',
+  },
+  {
+    id: 'security_guard',
+    name: '百貨保全',
+    description: '負責百貨大樓巡邏與保全中控作業。',
+  },
+  {
+    id: 'department_store_vip',
+    name: '百貨 VIP',
+    description: '可使用百貨 VIP 休息室。',
+  },
+  {
+    id: 'bookstore_employee',
+    name: '書店員工',
+    description: '可進入六樓書店倉庫。',
+  },
+  {
+    id: 'electronics_store_employee',
+    name: '家電商場員工',
+    description: '可進入五樓家電倉庫。',
+  },
+  {
+    id: 'clothing_store_employee',
+    name: '服飾商場員工',
+    description: '可進入四樓衣物倉庫。',
+  },
+  {
+    id: 'pharmacy_employee',
+    name: '藥妝商場員工',
+    description: '可進入三樓藥物與一般倉庫。',
+  },
+  {
+    id: 'supermarket_employee',
+    name: '生鮮超市員工',
+    description: '可進入二樓冷凍、冷藏與一般倉庫。',
+  },
+  {
     id: 'dorm_male_resident',
     name: '男宿住戶',
     description: '住在男生宿舍的學生，擁有進入男宿建築與房間的基本權限',

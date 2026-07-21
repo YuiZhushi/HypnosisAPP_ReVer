@@ -12977,6 +12977,16 @@ export const defaultItems: ItemDef[] = [
     isSellable: true,
   },
   {
+    id: 'item_k7f2m9v3x',
+    name: '頂樓電梯機房鑰匙',
+    description: '可開啟百貨大樓頂樓電梯機房的鑰匙。',
+    type: 'material',
+    rarity: 'common',
+    isCustom: false,
+    isStackable: true,
+    isSellable: true,
+  },
+  {
     id: 'item_key_dorm_male_3106',
     name: '男宿3106室鑰匙',
     description: '男宿3106室的專屬鑰匙',

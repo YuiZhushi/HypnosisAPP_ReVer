@@ -71,6 +71,14 @@ export const defaultAreas: Area[] = [
     displayStatus: 'visible',
     connections: {},
   },
+  {
+    id: 'area_department_store',
+    name: '齋明市中心區－百貨大樓',
+    description: '樓層分明的綜合百貨大樓，從美食、精品到後勤設施一應俱全。',
+    zoneId: 'zone_downtown',
+    displayStatus: 'visible',
+    connections: {},
+  },
 
   // ==========================================
   // 2. 學園文教區區域定義
@@ -1537,7 +1545,4221 @@ export const defaultLocations: LocationNode[] = [
       ],
     },
   },
+  // ==========================================
+  // Area 1.2: 齋明市中心區 - 百貨大樓
+  // ==========================================
+  // ==========================================
+  // Area 1.2.1: 百貨大樓 - 頂樓
+  // ==========================================
+  {
+    id: 'loc_ds_rf_elevator',
+    name: 'RF 電梯間',
+    description: '百貨大樓的RF 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '前往頂樓露天平台。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_rf_roof_platform',
+    name: '頂樓露天平台',
+    description: '百貨大樓的頂樓露天平台。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '回到RF電梯間。',
+      },
+      loc_ds_7f_stairwell: {
+        status: 'open',
+        description: '走進通往7F的樓梯間。',
+      },
+      loc_ds_rf_sky_garden: {
+        status: 'open',
+        description: '走進露天空中花園。',
+      },
+      loc_ds_rf_observation_deck: {
+        status: 'open',
+        description: '前往觀景台。',
+      },
+      loc_ds_rf_outdoor_cafe: {
+        status: 'open',
+        description: '走向戶外咖啡座。',
+      },
+      loc_ds_rf_machine_room: {
+        status: 'locked',
+        description: '前往頂樓電梯機房。',
+        unlock: {
+          matchMode: 'and',
+          unlockConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: {
+                collection: 'inventory',
+                entityId: 'item_k7f2m9v3x',
+                property: 'count',
+              },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'player',
+              fixedStat: 'currentLocationId',
+              operator: '==',
+              value: 'loc_ds_rf_roof_platform',
+            },
+          ],
+        },
+      },
+      loc_ds_rf_water_tower_hideout: {
+        status: 'open',
+        description: '走向水塔隱蔽處。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'temporary',
+        description: '搭乘貨梯前往頂樓。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_ds_rf_sky_garden',
+    name: '露天空中花園',
+    description: '百貨大樓的露天空中花園。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '回到頂樓露天平台。',
+      },
+      loc_ds_rf_observation_deck: {
+        status: 'open',
+        description: '前往觀景台。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_rf_observation_deck',
+    name: '觀景台',
+    description: '百貨大樓的觀景台。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '回到頂樓露天平台。',
+      },
+      loc_ds_rf_sky_garden: {
+        status: 'open',
+        description: '走進露天空中花園。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_rf_outdoor_cafe',
+    name: '戶外咖啡座',
+    description: '百貨大樓的戶外咖啡座。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '回到頂樓露天平台。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_rf_machine_room',
+    name: '頂樓電梯機房',
+    description: '百貨大樓的頂樓電梯機房。',
+    areaId: 'area_department_store',
+    displayStatus: 'locked',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '回到頂樓露天平台。',
+      },
+    },
+    unlock: {
+      unlockMatchMode: 'and',
+      unlockConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: {
+            collection: 'inventory',
+            entityId: 'item_k7f2m9v3x',
+            property: 'count',
+          },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          fixedStat: 'currentLocationId',
+          operator: '==',
+          value: 'loc_ds_rf_roof_platform',
+        },
+      ],
+    },
+  },
+  {
+    id: 'loc_ds_rf_water_tower_hideout',
+    name: '水塔隱蔽處',
+    description: '百貨大樓的水塔隱蔽處。',
+    areaId: 'area_department_store',
+    displayStatus: 'hidden',
+    connections: {
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '回到頂樓露天平台。',
+      },
+    },
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          fixedStat: 'currentLocationId',
+          operator: '==',
+          value: 'loc_ds_rf_roof_platform',
+        },
+        {
+          targetType: 'player',
+          fixedStat: 'currentLocationId',
+          operator: '==',
+          value: 'loc_ds_rf_sky_garden',
+        },
+      ],
+    },
+  },
 
+  // ==========================================
+  // Area 1.2.2: 百貨大樓 - 7F 設備樓層
+  // ==========================================
+  {
+    id: 'loc_ds_7f_elevator',
+    name: '7F 電梯間',
+    description: '百貨大樓的7F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_stairwell: {
+        status: 'open',
+        description: '走進通往頂樓的樓梯間。',
+      },
+      loc_ds_6f_stairwell: {
+        status: 'open',
+        description: '走進通往6F的樓梯間。',
+      },
+      loc_ds_7f_restroom_female: {
+        status: 'temporary',
+        description: '進入 7F 女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'female',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_7f_elevator',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_7f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 10,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 55,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_7f_elevator',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_7f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 85,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 60,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_7f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_7f_security_control: {
+        status: 'temporary',
+        description: '進入保全中控室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['security_guard', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_7f_stairwell',
+    name: '7F 至頂樓樓梯間',
+    description: '百貨大樓的7F 至頂樓樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到7F電梯間。',
+      },
+      loc_ds_rf_roof_platform: {
+        status: 'open',
+        description: '沿著樓梯往上，前往頂樓露天平台。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_7f_restroom_female',
+    name: '7F 女廁',
+    description: '百貨大樓的7F 女廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_7f_staff_corridor',
+    name: '員工專用通道（7F）',
+    description: '百貨大樓的員工專用通道（7F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '回到前台電梯間。',
+      },
+      loc_ds_7f_utilities_control: {
+        status: 'open',
+        description: '進入空調與水電控制室。',
+      },
+      loc_ds_7f_disused_storage: {
+        status: 'open',
+        description: '走進廢棄雜物間。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_7f_utilities_control',
+    name: '空調與水電控制室',
+    description: '百貨大樓的空調與水電控制室。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_7f_disused_storage',
+    name: '廢棄雜物間',
+    description: '百貨大樓的廢棄雜物間。',
+    areaId: 'area_department_store',
+    displayStatus: 'hidden',
+    connections: {
+      loc_ds_7f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+    },
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          fixedStat: 'currentLocationId',
+          operator: '==',
+          value: 'loc_ds_7f_staff_corridor',
+        },
+      ],
+    },
+  },
+  {
+    id: 'loc_ds_7f_security_control',
+    name: '保全中控室',
+    description: '百貨大樓的保全中控室。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.3: 百貨大樓 - 6F 連鎖書局
+  // ==========================================
+  {
+    id: 'loc_ds_6f_elevator',
+    name: '6F 電梯間',
+    description: '百貨大樓的6F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '進入連鎖書局主走道。',
+      },
+      loc_ds_6f_stairwell: {
+        status: 'open',
+        description: '走進通往7F的樓梯間。',
+      },
+      loc_ds_5f_stairwell: {
+        status: 'open',
+        description: '走進通往5F的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_stairwell',
+    name: '6F 至 7F 樓梯間',
+    description: '百貨大樓的6F 至 7F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到6F電梯間。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往7F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_restroom_male',
+    name: '6F 男廁',
+    description: '百貨大樓的6F 男廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_main_corridor',
+    name: '6F連鎖書局主走道',
+    description: '百貨大樓的6F連鎖書局主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_6f_restroom_male: {
+        status: 'temporary',
+        description: '進入6F男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'male',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_6f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_6f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 20,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 35,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_6f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_6f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 65,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 40,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_6f_staff_room: {
+        status: 'temporary',
+        description: '進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_6f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_6f_public_1: {
+        status: 'open',
+        description: '前往暢銷書區。',
+      },
+      loc_ds_6f_public_2: {
+        status: 'open',
+        description: '前往文具區。',
+      },
+      loc_ds_6f_public_3: {
+        status: 'open',
+        description: '前往雜誌區。',
+      },
+      loc_ds_6f_public_4: {
+        status: 'open',
+        description: '前往漫畫區。',
+      },
+      loc_ds_6f_public_5: {
+        status: 'open',
+        description: '前往輕小說區。',
+      },
+      loc_ds_6f_public_6: {
+        status: 'open',
+        description: '前往閱讀角落。',
+      },
+      loc_ds_6f_public_7: {
+        status: 'open',
+        description: '前往遊樂設施區。',
+      },
+      loc_ds_6f_public_8: {
+        status: 'open',
+        description: '前往結帳櫃檯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_1',
+    name: '暢銷書區',
+    description: '百貨大樓的暢銷書區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_2',
+    name: '文具區',
+    description: '百貨大樓的文具區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_3',
+    name: '雜誌區',
+    description: '百貨大樓的雜誌區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_4',
+    name: '漫畫區',
+    description: '百貨大樓的漫畫區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_5',
+    name: '輕小說區',
+    description: '百貨大樓的輕小說區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_6',
+    name: '閱讀角落',
+    description: '百貨大樓的閱讀角落。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_7',
+    name: '遊樂設施區',
+    description: '百貨大樓的遊樂設施區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_public_8',
+    name: '結帳櫃檯',
+    description: '百貨大樓的結帳櫃檯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_staff_room',
+    name: '員工休息室（6F）',
+    description: '百貨大樓的員工休息室（6F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到書局主走道。',
+      },
+      loc_ds_6f_staff_corridor: {
+        status: 'open',
+        description: '進入員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_staff_corridor',
+    name: '員工專用通道（6F）',
+    description: '百貨大樓的員工專用通道（6F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_main_corridor: {
+        status: 'open',
+        description: '回到前台書局。',
+      },
+      loc_ds_6f_staff_room: {
+        status: 'open',
+        description: '進入員工休息室。',
+      },
+      loc_ds_6f_warehouse_1: {
+        status: 'temporary',
+        description: '走進書店倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bookstore_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_6f_warehouse_1',
+    name: '書店倉庫',
+    description: '百貨大樓的書店倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_6f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.4: 百貨大樓 - 5F 家電商場
+  // ==========================================
+  {
+    id: 'loc_ds_5f_elevator',
+    name: '5F 電梯間',
+    description: '百貨大樓的5F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '進入家電商場主走道。',
+      },
+      loc_ds_5f_stairwell: {
+        status: 'open',
+        description: '走進通往6F的樓梯間。',
+      },
+      loc_ds_4f_stairwell: {
+        status: 'open',
+        description: '走進通往4F的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_stairwell',
+    name: '5F 至 6F 樓梯間',
+    description: '百貨大樓的5F 至 6F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到5F電梯間。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往6F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_restroom_female',
+    name: '5F 女廁',
+    description: '百貨大樓的5F 女廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_main_corridor',
+    name: '5F家電商場主走道',
+    description: '百貨大樓的5F家電商場主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_5f_restroom_female: {
+        status: 'temporary',
+        description: '進入5F女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'female',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_5f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_5f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 10,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 55,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_5f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_5f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 85,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 60,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_5f_staff_room: {
+        status: 'temporary',
+        description: '進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_5f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_5f_public_1: {
+        status: 'open',
+        description: '前往影音展示區。',
+      },
+      loc_ds_5f_public_2: {
+        status: 'open',
+        description: '前往廚房家電區。',
+      },
+      loc_ds_5f_public_3: {
+        status: 'open',
+        description: '前往生活家電區。',
+      },
+      loc_ds_5f_public_4: {
+        status: 'open',
+        description: '前往3C數位手機區。',
+      },
+      loc_ds_5f_public_5: {
+        status: 'open',
+        description: '前往手機官方店。',
+      },
+      loc_ds_5f_public_6: {
+        status: 'open',
+        description: '前往電腦維修店。',
+      },
+      loc_ds_5f_public_7: {
+        status: 'open',
+        description: '前往結帳櫃檯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_1',
+    name: '影音展示區',
+    description: '百貨大樓的影音展示區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_2',
+    name: '廚房家電區',
+    description: '百貨大樓的廚房家電區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_3',
+    name: '生活家電區',
+    description: '百貨大樓的生活家電區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_4',
+    name: '3C 數位手機區',
+    description: '百貨大樓的3C 數位手機區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_5',
+    name: '手機官方店',
+    description: '百貨大樓的手機官方店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_6',
+    name: '電腦維修店',
+    description: '百貨大樓的電腦維修店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_public_7',
+    name: '結帳櫃檯',
+    description: '百貨大樓的結帳櫃檯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_staff_room',
+    name: '員工休息室（5F）',
+    description: '百貨大樓的員工休息室（5F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到家電商場主走道。',
+      },
+      loc_ds_5f_staff_corridor: {
+        status: 'open',
+        description: '進入員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_staff_corridor',
+    name: '員工專用通道（5F）',
+    description: '百貨大樓的員工專用通道（5F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_main_corridor: {
+        status: 'open',
+        description: '回到前台商場。',
+      },
+      loc_ds_5f_staff_room: {
+        status: 'open',
+        description: '進入員工休息室。',
+      },
+      loc_ds_5f_warehouse_1: {
+        status: 'temporary',
+        description: '走進家電倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['electronics_store_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_5f_warehouse_1',
+    name: '家電倉庫',
+    description: '百貨大樓的家電倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_5f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.5: 百貨大樓 - 4F 服飾商場
+  // ==========================================
+  {
+    id: 'loc_ds_4f_elevator',
+    name: '4F 電梯間',
+    description: '百貨大樓的4F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '進入服飾商場主走道。',
+      },
+      loc_ds_4f_stairwell: {
+        status: 'open',
+        description: '走進通往5F的樓梯間。',
+      },
+      loc_ds_3f_stairwell: {
+        status: 'open',
+        description: '走進通往3F的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_stairwell',
+    name: '4F 至 5F 樓梯間',
+    description: '百貨大樓的4F 至 5F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到4F電梯間。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往5F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_restroom_male',
+    name: '4F 男廁',
+    description: '百貨大樓的4F 男廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_main_corridor',
+    name: '4F服飾商場主走道',
+    description: '百貨大樓的4F服飾商場主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_4f_restroom_male: {
+        status: 'temporary',
+        description: '進入4F男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'male',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_4f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_4f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 20,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 35,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_4f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_4f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 65,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 40,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_4f_staff_room: {
+        status: 'temporary',
+        description: '進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_4f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_4f_public_1: {
+        status: 'open',
+        description: '前往女裝區。',
+      },
+      loc_ds_4f_public_2: {
+        status: 'open',
+        description: '前往男裝區。',
+      },
+      loc_ds_4f_public_3: {
+        status: 'open',
+        description: '前往女性內衣區。',
+      },
+      loc_ds_4f_public_4: {
+        status: 'open',
+        description: '前往男性內衣區。',
+      },
+      loc_ds_4f_public_5: {
+        status: 'open',
+        description: '前往上季促銷區。',
+      },
+      loc_ds_4f_public_6: {
+        status: 'open',
+        description: '走進試衣間。',
+      },
+      loc_ds_4f_public_7: {
+        status: 'open',
+        description: '前往結帳櫃檯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_1',
+    name: '女裝區',
+    description: '百貨大樓的女裝區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_2',
+    name: '男裝區',
+    description: '百貨大樓的男裝區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_3',
+    name: '女性內衣區',
+    description: '百貨大樓的女性內衣區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_4',
+    name: '男性內衣區',
+    description: '百貨大樓的男性內衣區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_5',
+    name: '上季促銷區',
+    description: '百貨大樓的上季促銷區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_6',
+    name: '試衣間',
+    description: '百貨大樓的試衣間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_public_7',
+    name: '結帳櫃檯',
+    description: '百貨大樓的結帳櫃檯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_staff_room',
+    name: '員工休息室（4F）',
+    description: '百貨大樓的員工休息室（4F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到服飾商場主走道。',
+      },
+      loc_ds_4f_staff_corridor: {
+        status: 'open',
+        description: '進入員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_staff_corridor',
+    name: '員工專用通道（4F）',
+    description: '百貨大樓的員工專用通道（4F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_main_corridor: {
+        status: 'open',
+        description: '回到前台商場。',
+      },
+      loc_ds_4f_staff_room: {
+        status: 'open',
+        description: '進入員工休息室。',
+      },
+      loc_ds_4f_warehouse_1: {
+        status: 'temporary',
+        description: '走進衣物倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['clothing_store_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_4f_warehouse_1',
+    name: '衣物倉庫',
+    description: '百貨大樓的衣物倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_4f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.6: 百貨大樓 - 3F 藥妝商場
+  // ==========================================
+  {
+    id: 'loc_ds_3f_elevator',
+    name: '3F 電梯間',
+    description: '百貨大樓的3F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '進入藥妝商場主走道。',
+      },
+      loc_ds_3f_stairwell: {
+        status: 'open',
+        description: '走進通往4F的樓梯間。',
+      },
+      loc_ds_2f_stairwell: {
+        status: 'open',
+        description: '走進通往2F的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_stairwell',
+    name: '3F 至 4F 樓梯間',
+    description: '百貨大樓的3F 至 4F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到3F電梯間。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往4F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_restroom_female',
+    name: '3F 女廁',
+    description: '百貨大樓的3F 女廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_main_corridor',
+    name: '3F藥妝商場主走道',
+    description: '百貨大樓的3F藥妝商場主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_3f_restroom_female: {
+        status: 'temporary',
+        description: '進入3F女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'female',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_3f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_3f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 10,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 55,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_3f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_3f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 85,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 60,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_staff_room: {
+        status: 'temporary',
+        description: '進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_public_1: {
+        status: 'open',
+        description: '前往開架彩妝區。',
+      },
+      loc_ds_3f_public_2: {
+        status: 'open',
+        description: '前往保養品區。',
+      },
+      loc_ds_3f_public_3: {
+        status: 'open',
+        description: '前往醫藥保健區。',
+      },
+      loc_ds_3f_public_4: {
+        status: 'open',
+        description: '前往日用品區。',
+      },
+      loc_ds_3f_public_5: {
+        status: 'open',
+        description: '前往結帳櫃檯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_public_1',
+    name: '開架彩妝區',
+    description: '百貨大樓的開架彩妝區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_public_2',
+    name: '保養品區',
+    description: '百貨大樓的保養品區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_public_3',
+    name: '醫藥保健區',
+    description: '百貨大樓的醫藥保健區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_public_4',
+    name: '日用品區',
+    description: '百貨大樓的日用品區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_public_5',
+    name: '結帳櫃檯',
+    description: '百貨大樓的結帳櫃檯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_staff_room',
+    name: '員工休息室（3F）',
+    description: '百貨大樓的員工休息室（3F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到藥妝商場主走道。',
+      },
+      loc_ds_3f_staff_corridor: {
+        status: 'open',
+        description: '進入員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_staff_corridor',
+    name: '員工專用通道（3F）',
+    description: '百貨大樓的員工專用通道（3F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_main_corridor: {
+        status: 'open',
+        description: '回到前台商場。',
+      },
+      loc_ds_3f_staff_room: {
+        status: 'open',
+        description: '進入員工休息室。',
+      },
+      loc_ds_3f_warehouse_1: {
+        status: 'temporary',
+        description: '走進藥物倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['pharmacy_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_warehouse_2: {
+        status: 'temporary',
+        description: '走進一般倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['pharmacy_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_warehouse_1',
+    name: '藥物倉庫',
+    description: '百貨大樓的藥物倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_3f_warehouse_2',
+    name: '一般倉庫（3F）',
+    description: '百貨大樓的一般倉庫（3F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_3f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.7: 百貨大樓 - 2F 生鮮超市
+  // ==========================================
+  {
+    id: 'loc_ds_2f_elevator',
+    name: '2F 電梯間',
+    description: '百貨大樓的2F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '進入生鮮超市主走道。',
+      },
+      loc_ds_2f_stairwell: {
+        status: 'open',
+        description: '走進通往3F的樓梯間。',
+      },
+      loc_ds_1f_stairwell_2f: {
+        status: 'open',
+        description: '走進通往1F的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_stairwell',
+    name: '2F 至 3F 樓梯間',
+    description: '百貨大樓的2F 至 3F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到2F電梯間。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往3F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_restroom_male',
+    name: '2F 男廁',
+    description: '百貨大樓的2F 男廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_main_corridor',
+    name: '2F生鮮超市主走道',
+    description: '百貨大樓的2F生鮮超市主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_2f_restroom_male: {
+        status: 'temporary',
+        description: '進入2F男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'male',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_2f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_2f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 20,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 35,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_2f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_2f_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 65,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 40,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_staff_room: {
+        status: 'temporary',
+        description: '進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_public_1: {
+        status: 'open',
+        description: '前往生鮮蔬果區。',
+      },
+      loc_ds_2f_public_2: {
+        status: 'open',
+        description: '前往肉品區。',
+      },
+      loc_ds_2f_public_3: {
+        status: 'open',
+        description: '前往海鮮區。',
+      },
+      loc_ds_2f_public_4: {
+        status: 'open',
+        description: '前往熟食區。',
+      },
+      loc_ds_2f_public_5: {
+        status: 'open',
+        description: '前往甜品區。',
+      },
+      loc_ds_2f_public_6: {
+        status: 'open',
+        description: '前往零食飲料區。',
+      },
+      loc_ds_2f_public_7: {
+        status: 'open',
+        description: '前往生活用品區。',
+      },
+      loc_ds_2f_public_8: {
+        status: 'open',
+        description: '前往結帳櫃檯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_1',
+    name: '生鮮蔬果區',
+    description: '百貨大樓的生鮮蔬果區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_2',
+    name: '肉品區',
+    description: '百貨大樓的肉品區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_3',
+    name: '海鮮區',
+    description: '百貨大樓的海鮮區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_4',
+    name: '熟食區',
+    description: '百貨大樓的熟食區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_5',
+    name: '甜品區',
+    description: '百貨大樓的甜品區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_6',
+    name: '零食飲料區',
+    description: '百貨大樓的零食飲料區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_7',
+    name: '生活用品區',
+    description: '百貨大樓的生活用品區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_public_8',
+    name: '結帳櫃檯',
+    description: '百貨大樓的結帳櫃檯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_staff_room',
+    name: '員工休息室（2F）',
+    description: '百貨大樓的員工休息室（2F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到生鮮超市主走道。',
+      },
+      loc_ds_2f_staff_corridor: {
+        status: 'open',
+        description: '進入員工專用通道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_staff_corridor',
+    name: '員工專用通道（2F）',
+    description: '百貨大樓的員工專用通道（2F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_main_corridor: {
+        status: 'open',
+        description: '回到前台超市。',
+      },
+      loc_ds_2f_staff_room: {
+        status: 'open',
+        description: '進入員工休息室。',
+      },
+      loc_ds_2f_warehouse_1: {
+        status: 'temporary',
+        description: '走進冷凍倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_warehouse_2: {
+        status: 'temporary',
+        description: '走進冷藏倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_warehouse_3: {
+        status: 'temporary',
+        description: '走進一般倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_warehouse_1',
+    name: '冷凍倉庫',
+    description: '百貨大樓的冷凍倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_warehouse_2',
+    name: '冷藏倉庫',
+    description: '百貨大樓的冷藏倉庫。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_2f_warehouse_3',
+    name: '一般倉庫（2F）',
+    description: '百貨大樓的一般倉庫（2F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_2f_staff_corridor: {
+        status: 'open',
+        description: '回到員工專用通道。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.8: 百貨大樓 - 1F 精品商場
+  // ==========================================
+  {
+    id: 'loc_ds_1f_elevator',
+    name: '1F 電梯間',
+    description: '百貨大樓的1F 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '進入精品商場主走道。',
+      },
+      loc_ds_1f_stairwell_2f: {
+        status: 'open',
+        description: '走進通往2F的樓梯間。',
+      },
+      loc_ds_1f_stairwell_b1: {
+        status: 'open',
+        description: '走進通往B1的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_stairwell_2f',
+    name: '1F 至 2F 樓梯間',
+    description: '百貨大樓的1F 至 2F 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，回到1F電梯間。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，前往2F電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_stairwell_b1',
+    name: '1F 至 B1 樓梯間',
+    description: '百貨大樓的1F 至 B1 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，回到1F電梯間。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，前往B1電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_restroom_female',
+    name: '1F 女廁',
+    description: '百貨大樓的1F 女廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_main_corridor',
+    name: '1F 精品商場主走道',
+    description: '百貨大樓的1F 精品商場主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_1f_restroom_female: {
+        status: 'temporary',
+        description: '進入 1F 女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'female',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_1f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_1f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 10,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 55,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_1f_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_1f_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 85,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 60,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_1f_vip_lounge: {
+        status: 'temporary',
+        description: '進入貴賓休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_vip', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_1f_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_1f_public_1: {
+        status: 'open',
+        description: '前往精品包包專櫃。',
+      },
+      loc_ds_1f_public_2: {
+        status: 'open',
+        description: '前往珠寶鐘錶專櫃。',
+      },
+      loc_ds_1f_public_3: {
+        status: 'open',
+        description: '前往化妝品專櫃。',
+      },
+      loc_ds_1f_public_4: {
+        status: 'open',
+        description: '前往香水專櫃。',
+      },
+      loc_ds_1f_public_5: {
+        status: 'open',
+        description: '前往名牌服飾專門店。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_public_1',
+    name: '精品包包專櫃',
+    description: '百貨大樓的精品包包專櫃。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_public_2',
+    name: '珠寶鐘錶專櫃',
+    description: '百貨大樓的珠寶鐘錶專櫃。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_public_3',
+    name: '化妝品專櫃',
+    description: '百貨大樓的化妝品專櫃。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_public_4',
+    name: '香水專櫃',
+    description: '百貨大樓的香水專櫃。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_public_5',
+    name: '名牌服飾專門店',
+    description: '百貨大樓的名牌服飾專門店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_vip_lounge',
+    name: '貴賓休息室',
+    description: '百貨大樓的貴賓休息室。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到精品商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_1f_staff_corridor',
+    name: '員工專用通道（1F）',
+    description: '百貨大樓的員工專用通道（1F）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_1f_main_corridor: {
+        status: 'open',
+        description: '回到前台商場。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.9: 百貨大樓 - B1 美食商場
+  // ==========================================
+  {
+    id: 'loc_ds_b1_elevator',
+    name: 'B1 電梯間',
+    description: '百貨大樓的B1 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '進入美食商場主走道。',
+      },
+      loc_ds_1f_stairwell_b1: {
+        status: 'open',
+        description: '走進通往1F的樓梯間。',
+      },
+      loc_ds_b1_stairwell_b2: {
+        status: 'open',
+        description: '走進通往B2的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_stairwell_b2',
+    name: 'B1 至 B2 樓梯間',
+    description: '百貨大樓的B1 至 B2 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，回到B1電梯間。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，前往B2電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_restroom_female',
+    name: 'B1 女廁',
+    description: '百貨大樓的B1 女廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_main_corridor',
+    name: 'B1 美食商場主走道',
+    description: '百貨大樓的B1 美食商場主走道。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_b1_restroom_female: {
+        status: 'temporary',
+        description: '進入 B1 女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'female',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b1_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b1_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 10,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 55,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b1_main_corridor',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b1_restroom_female',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 85,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 60,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ds_b1_staff_corridor: {
+        status: 'temporary',
+        description: '進入員工專用通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_b1_public_1: {
+        status: 'open',
+        description: '前往共用座位區。',
+      },
+      loc_ds_b1_public_2: {
+        status: 'open',
+        description: '前往迴轉壽司店。',
+      },
+      loc_ds_b1_public_3: {
+        status: 'open',
+        description: '前往高級鐵板燒。',
+      },
+      loc_ds_b1_public_4: {
+        status: 'open',
+        description: '前往義大利麵與披薩店。',
+      },
+      loc_ds_b1_public_5: {
+        status: 'open',
+        description: '前往甜點可麗餅攤位。',
+      },
+      loc_ds_b1_public_6: {
+        status: 'open',
+        description: '前往連鎖手搖飲店。',
+      },
+      loc_ds_b1_public_7: {
+        status: 'open',
+        description: '前往火鍋店。',
+      },
+      loc_ds_b1_public_8: {
+        status: 'open',
+        description: '前往高檔牛排店。',
+      },
+      loc_ds_b1_public_9: {
+        status: 'open',
+        description: '前往連鎖餐廳。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_1',
+    name: '共用座位區',
+    description: '百貨大樓的共用座位區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_2',
+    name: '迴轉壽司店',
+    description: '百貨大樓的迴轉壽司店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_3',
+    name: '高級鐵板燒',
+    description: '百貨大樓的高級鐵板燒。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_4',
+    name: '義大利麵與披薩店',
+    description: '百貨大樓的義大利麵與披薩店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_5',
+    name: '甜點可麗餅攤位',
+    description: '百貨大樓的甜點可麗餅攤位。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_6',
+    name: '連鎖手搖飲店',
+    description: '百貨大樓的連鎖手搖飲店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_7',
+    name: '火鍋店',
+    description: '百貨大樓的火鍋店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_8',
+    name: '高檔牛排店',
+    description: '百貨大樓的高檔牛排店。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_public_9',
+    name: '連鎖餐廳',
+    description: '百貨大樓的連鎖餐廳。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到美食商場主走道。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b1_staff_corridor',
+    name: '員工專用通道（B1）',
+    description: '百貨大樓的員工專用通道（B1）。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b1_main_corridor: {
+        status: 'open',
+        description: '回到前台商場。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.10: 百貨大樓 - B2 顧客停車場
+  // ==========================================
+  {
+    id: 'loc_ds_b2_elevator',
+    name: 'B2 電梯間',
+    description: '百貨大樓的B2 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b2_parking: {
+        status: 'open',
+        description: '走進顧客停車場。',
+      },
+      loc_ds_b1_stairwell_b2: {
+        status: 'open',
+        description: '走進通往B1的樓梯間。',
+      },
+      loc_ds_b2_stairwell_b3: {
+        status: 'open',
+        description: '走進通往B3的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b2_stairwell_b3',
+    name: 'B2 至 B3 樓梯間',
+    description: '百貨大樓的B2 至 B3 樓梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '沿著樓梯往上，回到B2電梯間。',
+      },
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '沿著樓梯往下，前往B3電梯間。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b2_restroom_male',
+    name: 'B2 男廁',
+    description: '百貨大樓的B2 男廁。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b2_parking: {
+        status: 'open',
+        description: '回到顧客停車場。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b2_parking',
+    name: 'B2 顧客停車場',
+    description: '百貨大樓的B2 顧客停車場。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_b2_restroom_male: {
+        status: 'temporary',
+        description: '進入 B2 男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'gender',
+              operator: '==',
+              value: 'male',
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'male',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b2_parking',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b2_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'alertness',
+                      operator: '<',
+                      value: 20,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 35,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'gender',
+                  operator: '==',
+                  value: 'female',
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b2_parking',
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'locationId',
+                      operator: '==',
+                      value: 'loc_ds_b2_restroom_male',
+                    },
+                  ],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'lust',
+                      operator: '>=',
+                      value: 65,
+                    },
+                    {
+                      targetType: 'npc',
+                      fixedStat: 'Licentiousness',
+                      operator: '>=',
+                      value: 40,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  // ==========================================
+  // Area 1.2.11: 百貨大樓 - B3 物流與貨梯
+  // ==========================================
+  {
+    id: 'loc_ds_b3_elevator',
+    name: 'B3 電梯間',
+    description: '百貨大樓的B3 電梯間。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b3_loading_dock: {
+        status: 'open',
+        description: '走進物流卸貨區。',
+      },
+      loc_ds_b2_stairwell_b3: {
+        status: 'open',
+        description: '走進通往B2的樓梯間。',
+      },
+      loc_ds_rf_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_7f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_6f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_5f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_4f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_3f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_2f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_1f_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b1_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+      loc_ds_b2_elevator: {
+        status: 'open',
+        description: '搭乘客用電梯前往其他樓層。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_b3_loading_dock',
+    name: 'B3 停車場物流卸貨區',
+    description: '百貨大樓的B3 停車場物流卸貨區。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b3_elevator: {
+        status: 'open',
+        description: '回到電梯間。',
+      },
+      loc_ds_cargo_elevator: {
+        status: 'open',
+        description: '搭乘貨物電梯。',
+      },
+    },
+  },
+  {
+    id: 'loc_ds_cargo_elevator',
+    name: '貨梯',
+    description: '百貨大樓的貨梯。',
+    areaId: 'area_department_store',
+    displayStatus: 'visible',
+    connections: {
+      loc_ds_b3_loading_dock: {
+        status: 'temporary',
+        description: '搭乘貨梯前往 B3 物流卸貨區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_rf_roof_platform: {
+        status: 'temporary',
+        description: '搭乘貨梯前往頂樓。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_7f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往 7F。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_6f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_6f_warehouse_1: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bookstore_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_5f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_5f_warehouse_1: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['electronics_store_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_4f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_4f_warehouse_1: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['clothing_store_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_warehouse_1: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['pharmacy_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_3f_warehouse_2: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['pharmacy_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_warehouse_1: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_warehouse_2: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_2f_warehouse_3: {
+        status: 'temporary',
+        description: '搭乘貨梯前往店家倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['supermarket_employee', 'department_store_manager'],
+            },
+          ],
+        },
+      },
+      loc_ds_1f_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往 1F 員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+      loc_ds_b1_staff_corridor: {
+        status: 'temporary',
+        description: '搭乘貨梯前往 B1 員工通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['department_store_employee', 'department_store_manager', 'security_guard'],
+            },
+          ],
+        },
+      },
+    },
+  },
   // ==========================================
   // Area 2.1: 齋明學院 - 校舍本館
   // ==========================================
