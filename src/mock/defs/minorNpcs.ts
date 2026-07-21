@@ -7,7 +7,10 @@ export const mockMinorNpcs: MinorNpcState[] = [
     identities: ['student'],
     gender: 'male',
     description: '普通的路人男學生',
-    locationId: 'loc_school_gate'
+    locationState: {
+      locationId: 'loc_school_gate',
+      locationStatus: 'loitering',
+    },
   },
   {
     id: 'npc_student_b',
@@ -15,7 +18,10 @@ export const mockMinorNpcs: MinorNpcState[] = [
     identities: ['student'],
     gender: 'female',
     description: '普通的路人女學生',
-    locationId: 'loc_school_classroom'
+    locationState: {
+      locationId: 'loc_school_classroom',
+      locationStatus: 'in_class',
+    },
   },
   {
     id: 'npc_shop_clerk',
@@ -23,6 +29,9 @@ export const mockMinorNpcs: MinorNpcState[] = [
     identities: ['clerk'],
     gender: 'female',
     description: '總是看起來很累的店員',
-    locationId: 'loc_convenience_store'
-  }
+    locationState: {
+      locationId: 'loc_convenience_store',
+      locationStatus: 'working',
+    },
+  },
 ];

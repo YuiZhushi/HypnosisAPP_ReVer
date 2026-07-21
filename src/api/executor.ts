@@ -10,6 +10,29 @@ function applyMath(currentValue: any, op: AttrOperation): any {
         case '=': 
         case 'set': 
             return val;
+        case 'push': {
+            const arr = Array.isArray(currentValue) ? [...currentValue] : [];
+            const items = Array.isArray(val) ? val : [val];
+            for (const item of items) {
+                if (!arr.includes(item)) arr.push(item);
+            }
+            return arr;
+        }
+        case 'remove': {
+            if (!Array.isArray(currentValue)) return currentValue;
+            const items = Array.isArray(val) ? val : [val];
+            return currentValue.filter((item: any) => !items.includes(item));
+        }
+        case 'toggle': {
+            const arr = Array.isArray(currentValue) ? [...currentValue] : [];
+            const items = Array.isArray(val) ? val : [val];
+            for (const item of items) {
+                const idx = arr.indexOf(item);
+                if (idx !== -1) arr.splice(idx, 1);
+                else arr.push(item);
+            }
+            return arr;
+        }
         default: return currentValue;
     }
 }

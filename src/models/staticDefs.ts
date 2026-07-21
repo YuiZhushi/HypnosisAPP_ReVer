@@ -1,7 +1,17 @@
-import { AttrOperation, AttrCondition, PeriodicEffect } from './core';
+import { AttrCondition, AttrOperation, PeriodicEffect } from './core';
 
 export type ItemType = 'consumable' | 'equipment' | 'material' | 'passive';
 export type ItemRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+export type TagDef = string;
+
+// ==========================================
+// 身分定義 (IdentityDef)
+// ==========================================
+export interface IdentityDef {
+  id: string;
+  name: string;
+  description: string;
+}
 
 // ==========================================
 // 催眠術定義
@@ -11,14 +21,19 @@ export interface HypnosisDef {
   name: string;
   isCustom: boolean;
 
-  unlockcost: AttrOperation[];
-  unlockconditions: AttrCondition[];
+  unlock: {
+    unlockConditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
+  };
 
-  usageConditions?: AttrCondition[];
-  usagecost: AttrOperation[];
+  usage: {
+    usageConditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
+  };
 
-  usageeffect?: AttrOperation[];
   description: string;
+
+  PlotTag?: TagDef[]; // 輔助 AI 描述用的標籤 (參照 TagDef id)
 
   PeriodicEffect?: PeriodicEffect;
 }
@@ -37,13 +52,13 @@ export interface ItemDef {
   maxStack?: number;
 
   purchase?: {
-    cost: AttrOperation[];
     conditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
   };
 
   craft?: {
-    cost: AttrOperation[];
     conditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
   };
 
   consumable?: {
@@ -57,6 +72,7 @@ export interface ItemDef {
   };
 
   equippable?: {
+    maxActivationsTimes?: number;
     specifyslot?: string;
     effect?: {
       description: string;
@@ -65,7 +81,11 @@ export interface ItemDef {
   };
 
   ExtraEffects?: AttrOperation[];
+  maxExtraEffectsctivationsTimes?: number;
+
   PeriodicEffect?: PeriodicEffect;
+
+  PlotTag?: TagDef[]; // 輔助 AI 描述用的標籤 (參照 TagDef id)
 
   isSellable: boolean;
   sellEffects?: AttrOperation[];
@@ -76,6 +96,7 @@ export interface ItemDef {
 // ==========================================
 export interface BodyPartsDef {
   id: string;
+  parentId?: string;
   name: string;
   isCustom: boolean;
   hasSensitivity?: boolean;
@@ -105,50 +126,89 @@ export interface BodyModificationDef {
   isTemporary: boolean;
 
   unlockConditions?: AttrCondition[];
+  installConditions?: AttrCondition[];
   installCost: AttrOperation[];
   effect: AttrOperation[];
 
   ExtraEffects?: AttrOperation[];
   PeriodicEffect?: PeriodicEffect;
+
+  PlotTag?: TagDef[]; // 輔助 AI 描述用的標籤 (參照 TagDef id)
 }
 
 // ==========================================
 // 地點/區域/路徑定義
 // ==========================================
+export interface EdgePathState {
+  status: 'open' | 'temporary' | 'locked';
+  description: string;
+
+  travelCost?: AttrOperation[];
+
+  unlock?: {
+    unlockConditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
+  };
+
+  temporary?: {
+    temporaryConditions?: AttrCondition[];
+    matchMode?: 'and' | 'or';
+  };
+}
+
 export interface Zone {
   id: string;
   name: string;
   description: string;
+  displayStatus: 'visible' | 'undiscovered' | 'owned' | 'locked' | 'hidden';
 }
 
-export interface EdgePathState {
-  status: 'open' | 'temporary' | 'locked';
-  description: string;
-  travelCost?: AttrOperation[];
-
-  unlockConditions?: AttrCondition[];
-  unlockCost?: AttrOperation[];
-
-  temporaryConditions?: AttrCondition[];
-  temporaryCost?: AttrOperation[];
-}
-
-export interface LocationNode {
+export interface Area {
   id: string;
   name: string;
   description: string;
   zoneId: string;
   displayStatus: 'visible' | 'undiscovered' | 'owned' | 'locked' | 'hidden';
 
+  parentId?: string; // 隸屬的父級區域 ID (層級設計)
   connections: Record<string, EdgePathState>;
 
-  unlockConditions?: AttrCondition[];
-  unlockCost?: AttrOperation[];
+  unlock?: {
+    unlockConditions?: AttrCondition[];
+    unlockMatchMode?: 'and' | 'or';
+  };
 
-  purchaseCost?: AttrOperation[];
-  purchaseConditions?: AttrCondition[];
+  discovery?: {
+    discoveryConditions?: AttrCondition[];
+    discoveryMatchMode?: 'and' | 'or';
+  };
+}
 
-  discoveryConditions?: AttrCondition[];
+export interface LocationNode {
+  id: string;
+  name: string;
+  description: string;
+  areaId: string;
+  displayStatus: 'visible' | 'undiscovered' | 'owned' | 'locked' | 'hidden';
+
+  parentId?: string; // 隸屬的父級地點 ID (層級設計)
+  connections: Record<string, EdgePathState>;
+
+  unlock?: {
+    unlockConditions?: AttrCondition[];
+    unlockMatchMode?: 'and' | 'or';
+  };
+
+  purchase?: {
+    purchaseCost?: AttrOperation[];
+    purchaseConditions?: AttrCondition[];
+    purchaseMatchMode?: 'and' | 'or';
+  };
+
+  discovery?: {
+    discoveryConditions?: AttrCondition[];
+    discoveryMatchMode?: 'and' | 'or';
+  };
 }
 
 // ==========================================
@@ -234,7 +294,7 @@ export interface ChatRecord {
 // 主要NPC世界書資料
 // ==========================================
 // 注意：yaml 與 EJSnode 型別來自 legacyInterfaces
-import { yaml, EJSnode } from './legacyInterfaces';
+import { EJSnode, yaml } from './legacyInterfaces';
 
 export interface CharacterBackgroundData {
   basic: yaml;

@@ -7,3 +7,4 @@ export * from './bodyParts';
 export * from './calendar';
 export * from './minorNpcs';
 export * from './posts';
+export * from './Identity';  
