@@ -71,6 +71,9 @@ export const defaultAreas: Area[] = [
     displayStatus: 'visible',
     connections: {},
   },
+  // ==========================================
+  // 1.2: 齋明市中心區 - 齋明市中央車站
+  // ==========================================
   {
     id: 'area_department_store',
     name: '齋明市中心區－百貨大樓',
@@ -165,6 +168,7 @@ export const defaultLocations: LocationNode[] = [
       loc_ug_stair_1: { status: 'open', description: '走下一號連外地下樓梯。' },
       loc_ug_stair_2: { status: 'open', description: '走下二號連外地下樓梯。' },
       loc_ug_stair_3: { status: 'open', description: '走下三號連外地下樓梯。' },
+      loc_ds_1f_main_corridor: { status: 'open', description: '走進精品商場。' },
     },
   },
   {
@@ -191,7 +195,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_station_outdoor: { status: 'open', description: '走出高鐵大樓回到室外。' },
+      loc_station_outdoor: { status: 'open', description: '走出高鐵大樓來到室外。' },
       loc_station_taxi: { status: 'open', description: '從側門前往計程車排班區。' },
       loc_hsr_1f_ticket: { status: 'open', description: '走向一樓的售票櫃台。' },
       loc_hsr_1f_service: { status: 'open', description: '前往中央的站內服務台。' },
@@ -321,7 +325,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -331,7 +335,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -341,7 +345,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -351,7 +355,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -361,7 +365,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -371,7 +375,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '回到高鐵一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '來到高鐵一樓大廳。' },
     },
   },
   {
@@ -381,7 +385,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '搭乘電扶梯回到一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '搭乘電扶梯來到一樓大廳。' },
       loc_hsr_2f_cafe: { status: 'open', description: '走進星級咖啡廳。' },
       loc_hsr_2f_sushi: { status: 'open', description: '走進高級日料餐廳。' },
       loc_hsr_2f_bento: { status: 'open', description: '前往鐵路便當總店。' },
@@ -413,7 +417,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開咖啡廳回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開咖啡廳來到二樓通道。' },
     },
   },
   {
@@ -423,7 +427,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開餐廳回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開餐廳來到二樓通道。' },
     },
   },
   {
@@ -433,7 +437,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開便當店回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開便當店來到二樓通道。' },
     },
   },
   {
@@ -443,7 +447,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開伴手禮店回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開伴手禮店來到二樓通道。' },
     },
   },
   {
@@ -453,7 +457,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開免稅店回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開免稅店來到二樓通道。' },
     },
   },
   {
@@ -463,7 +467,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開超商回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開超商來到二樓通道。' },
     },
   },
   {
@@ -473,7 +477,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'locked',
     connections: {
-      loc_hsr_2f_corridor: { status: 'open', description: '離開倉庫回到二樓通道。' },
+      loc_hsr_2f_corridor: { status: 'open', description: '離開倉庫來到二樓通道。' },
     },
 
     unlock: {
@@ -496,7 +500,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_1f_lobby: { status: 'open', description: '搭乘電扶梯回到一樓大廳。' },
+      loc_hsr_1f_lobby: { status: 'open', description: '搭乘電扶梯來到一樓大廳。' },
       loc_hsr_b1_locker: { status: 'open', description: '走到角落的站內置物區。' },
       loc_hsr_platform_1: { status: 'open', description: '通過驗票閘門前往一號月台。' },
       loc_hsr_platform_2: { status: 'open', description: '通過驗票閘門前往二號月台。' },
@@ -666,7 +670,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -676,7 +680,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -686,7 +690,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -696,7 +700,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -706,7 +710,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -716,7 +720,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -726,7 +730,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'visible',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '回到高鐵B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '來到高鐵B1通道。' },
     },
   },
   {
@@ -736,7 +740,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'locked',
     connections: {
-      loc_hsr_b1_corridor: { status: 'open', description: '離開辦公室回到B1通道。' },
+      loc_hsr_b1_corridor: { status: 'open', description: '離開辦公室來到B1通道。' },
       loc_hsr_secret_room: {
         status: 'open',
         description: '觸動書櫃機關，進入暗門內。',
@@ -763,7 +767,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_hsr_building',
     displayStatus: 'hidden',
     connections: {
-      loc_hsr_manager_office: { status: 'open', description: '走出暗門回到辦公室。' },
+      loc_hsr_manager_office: { status: 'open', description: '走出暗門來到辦公室。' },
     },
 
     discovery: {
@@ -784,7 +788,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_station_outdoor: { status: 'open', description: '走出地鐵站回到室外。' },
+      loc_station_outdoor: { status: 'open', description: '走出地鐵站來到室外。' },
       loc_station_taxi: { status: 'open', description: '走往計程車排班區。' },
       loc_subway_1f_ticket: { status: 'open', description: '前往地鐵自動售票區。' },
       loc_subway_1f_service: { status: 'open', description: '走向地鐵服務台。' },
@@ -863,7 +867,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -873,7 +877,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -883,7 +887,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -893,7 +897,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -903,7 +907,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -913,7 +917,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '回到地鐵一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '來到地鐵一樓大廳。' },
     },
   },
   {
@@ -923,7 +927,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_bridge: { status: 'open', description: '搭乘電扶梯回到二樓站內天橋。' },
+      loc_subway_2f_bridge: { status: 'open', description: '搭乘電扶梯來到二樓站內天橋。' },
     },
   },
   {
@@ -933,7 +937,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_bridge: { status: 'open', description: '搭乘電扶梯回到二樓站內天橋。' },
+      loc_subway_2f_bridge: { status: 'open', description: '搭乘電扶梯來到二樓站內天橋。' },
     },
   },
   {
@@ -943,7 +947,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '搭電扶梯回到一樓大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '搭電扶梯來到一樓大廳。' },
       loc_subway_2f_bridge: { status: 'open', description: '走上站內聯絡天橋。' },
       loc_subway_2f_male_toilet: {
         status: 'temporary',
@@ -1060,7 +1064,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
       loc_subway_1f_platform_1: { status: 'open', description: '搭乘電扶梯前往一樓1號月台。' },
       loc_subway_1f_platform_2: { status: 'open', description: '搭乘電扶梯前往一樓2號月台。' },
     },
@@ -1072,7 +1076,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
     },
   },
   {
@@ -1082,7 +1086,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
     },
   },
   {
@@ -1092,7 +1096,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
     },
   },
   {
@@ -1102,7 +1106,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
     },
   },
   {
@@ -1112,7 +1116,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'locked',
     connections: {
-      loc_subway_2f_corridor: { status: 'open', description: '回到地鐵二樓通道。' },
+      loc_subway_2f_corridor: { status: 'open', description: '來到地鐵二樓通道。' },
     },
 
     unlock: {
@@ -1135,7 +1139,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_subway_station',
     displayStatus: 'visible',
     connections: {
-      loc_subway_1f_lobby: { status: 'open', description: '走上樓梯回到地鐵大廳。' },
+      loc_subway_1f_lobby: { status: 'open', description: '走上樓梯來到地鐵大廳。' },
       loc_subway_b1_parking: { status: 'open', description: '繼續往前進入地下停車場。' },
       loc_ug_corridor: { status: 'open', description: '繼續往前進入地下商店街。' },
     },
@@ -1189,7 +1193,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_bus_station',
     displayStatus: 'visible',
     connections: {
-      loc_bus_1f_ticket: { status: 'open', description: '回到客運售票區。' },
+      loc_bus_1f_ticket: { status: 'open', description: '來到客運售票區。' },
       loc_bus_1f_male_toilet: {
         status: 'temporary',
         description: '走進男廁所。',
@@ -1268,7 +1272,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_bus_station',
     displayStatus: 'visible',
     connections: {
-      loc_bus_1f_waiting: { status: 'open', description: '回到候車區。' },
+      loc_bus_1f_waiting: { status: 'open', description: '來到候車區。' },
     },
   },
   {
@@ -1278,7 +1282,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_bus_station',
     displayStatus: 'visible',
     connections: {
-      loc_bus_1f_waiting: { status: 'open', description: '回到候車區。' },
+      loc_bus_1f_waiting: { status: 'open', description: '來到候車區。' },
     },
   },
   {
@@ -1288,7 +1292,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_bus_station',
     displayStatus: 'visible',
     connections: {
-      loc_bus_1f_waiting: { status: 'open', description: '回到候車區。' },
+      loc_bus_1f_waiting: { status: 'open', description: '來到候車區。' },
     },
   },
   {
@@ -1298,7 +1302,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_bus_station',
     displayStatus: 'locked',
     connections: {
-      loc_bus_1f_ticket: { status: 'open', description: '下樓回到售票處。' },
+      loc_bus_1f_ticket: { status: 'open', description: '下樓來到售票處。' },
     },
 
     unlock: {
@@ -1402,7 +1406,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1412,7 +1416,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1422,7 +1426,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1432,7 +1436,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1442,7 +1446,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1452,7 +1456,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1462,7 +1466,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1472,7 +1476,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1482,7 +1486,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1492,7 +1496,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1502,7 +1506,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'visible',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
   },
   {
@@ -1512,7 +1516,7 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_underground_mall',
     displayStatus: 'locked',
     connections: {
-      loc_ug_corridor: { status: 'open', description: '回到商店街走道。' },
+      loc_ug_corridor: { status: 'open', description: '來到商店街走道。' },
     },
 
     unlock: {
@@ -1613,7 +1617,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_elevator: {
         status: 'open',
-        description: '回到RF電梯間。',
+        description: '來到RF電梯間。',
       },
       loc_ds_7f_stairwell: {
         status: 'open',
@@ -1686,7 +1690,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_roof_platform: {
         status: 'open',
-        description: '回到頂樓露天平台。',
+        description: '來到頂樓露天平台。',
       },
       loc_ds_rf_observation_deck: {
         status: 'open',
@@ -1703,7 +1707,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_roof_platform: {
         status: 'open',
-        description: '回到頂樓露天平台。',
+        description: '來到頂樓露天平台。',
       },
       loc_ds_rf_sky_garden: {
         status: 'open',
@@ -1720,7 +1724,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_roof_platform: {
         status: 'open',
-        description: '回到頂樓露天平台。',
+        description: '來到頂樓露天平台。',
       },
     },
   },
@@ -1733,7 +1737,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_roof_platform: {
         status: 'open',
-        description: '回到頂樓露天平台。',
+        description: '來到頂樓露天平台。',
       },
     },
     unlock: {
@@ -1767,7 +1771,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_rf_roof_platform: {
         status: 'open',
-        description: '回到頂樓露天平台。',
+        description: '來到頂樓露天平台。',
       },
     },
     discovery: {
@@ -2001,7 +2005,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到7F電梯間。',
+        description: '沿著樓梯往下，來到7F電梯間。',
       },
       loc_ds_rf_roof_platform: {
         status: 'open',
@@ -2018,7 +2022,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
     },
   },
@@ -2031,7 +2035,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_elevator: {
         status: 'open',
-        description: '回到前台電梯間。',
+        description: '來到前台電梯間。',
       },
       loc_ds_7f_utilities_control: {
         status: 'open',
@@ -2056,7 +2060,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
     },
   },
@@ -2069,7 +2073,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
     },
     discovery: {
@@ -2093,7 +2097,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_7f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
     },
   },
@@ -2171,7 +2175,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到6F電梯間。',
+        description: '沿著樓梯往下，來到6F電梯間。',
       },
       loc_ds_7f_elevator: {
         status: 'open',
@@ -2188,7 +2192,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2201,7 +2205,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_6f_restroom_male: {
         status: 'temporary',
@@ -2389,7 +2393,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2402,7 +2406,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2415,7 +2419,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2428,7 +2432,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2441,7 +2445,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2454,7 +2458,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2467,7 +2471,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2480,7 +2484,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
     },
   },
@@ -2493,7 +2497,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到書局主走道。',
+        description: '來到書局主走道。',
       },
       loc_ds_6f_staff_corridor: {
         status: 'open',
@@ -2510,7 +2514,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_main_corridor: {
         status: 'open',
-        description: '回到前台書局。',
+        description: '來到前台書局。',
       },
       loc_ds_6f_staff_room: {
         status: 'open',
@@ -2546,7 +2550,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_6f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -2628,7 +2632,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到5F電梯間。',
+        description: '沿著樓梯往下，來到5F電梯間。',
       },
       loc_ds_6f_elevator: {
         status: 'open',
@@ -2645,7 +2649,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2658,7 +2662,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_5f_restroom_female: {
         status: 'temporary',
@@ -2842,7 +2846,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2855,7 +2859,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2868,7 +2872,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2881,7 +2885,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2894,7 +2898,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2907,7 +2911,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2920,7 +2924,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
     },
   },
@@ -2933,7 +2937,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到家電商場主走道。',
+        description: '來到家電商場主走道。',
       },
       loc_ds_5f_staff_corridor: {
         status: 'open',
@@ -2950,7 +2954,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_main_corridor: {
         status: 'open',
-        description: '回到前台商場。',
+        description: '來到前台商場。',
       },
       loc_ds_5f_staff_room: {
         status: 'open',
@@ -2986,7 +2990,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_5f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -3068,7 +3072,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到4F電梯間。',
+        description: '沿著樓梯往下，來到4F電梯間。',
       },
       loc_ds_5f_elevator: {
         status: 'open',
@@ -3085,7 +3089,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3098,7 +3102,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_4f_restroom_male: {
         status: 'temporary',
@@ -3282,7 +3286,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3295,7 +3299,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3308,7 +3312,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3321,7 +3325,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3334,7 +3338,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3347,7 +3351,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3360,7 +3364,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
     },
   },
@@ -3373,7 +3377,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到服飾商場主走道。',
+        description: '來到服飾商場主走道。',
       },
       loc_ds_4f_staff_corridor: {
         status: 'open',
@@ -3390,7 +3394,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_main_corridor: {
         status: 'open',
-        description: '回到前台商場。',
+        description: '來到前台商場。',
       },
       loc_ds_4f_staff_room: {
         status: 'open',
@@ -3426,7 +3430,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_4f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -3508,7 +3512,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到3F電梯間。',
+        description: '沿著樓梯往下，來到3F電梯間。',
       },
       loc_ds_4f_elevator: {
         status: 'open',
@@ -3525,7 +3529,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3538,7 +3542,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_3f_restroom_female: {
         status: 'temporary',
@@ -3714,7 +3718,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3727,7 +3731,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3740,7 +3744,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3753,7 +3757,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3766,7 +3770,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
     },
   },
@@ -3779,7 +3783,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到藥妝商場主走道。',
+        description: '來到藥妝商場主走道。',
       },
       loc_ds_3f_staff_corridor: {
         status: 'open',
@@ -3796,7 +3800,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_main_corridor: {
         status: 'open',
-        description: '回到前台商場。',
+        description: '來到前台商場。',
       },
       loc_ds_3f_staff_room: {
         status: 'open',
@@ -3847,7 +3851,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -3864,7 +3868,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_3f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -3946,7 +3950,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到2F電梯間。',
+        description: '沿著樓梯往下，來到2F電梯間。',
       },
       loc_ds_3f_elevator: {
         status: 'open',
@@ -3963,7 +3967,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -3976,7 +3980,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_2f_restroom_male: {
         status: 'temporary',
@@ -4164,7 +4168,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4177,7 +4181,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4190,7 +4194,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4203,7 +4207,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4216,7 +4220,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4229,7 +4233,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4242,7 +4246,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4255,7 +4259,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
     },
   },
@@ -4268,7 +4272,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到生鮮超市主走道。',
+        description: '來到生鮮超市主走道。',
       },
       loc_ds_2f_staff_corridor: {
         status: 'open',
@@ -4285,7 +4289,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_main_corridor: {
         status: 'open',
-        description: '回到前台超市。',
+        description: '來到前台超市。',
       },
       loc_ds_2f_staff_room: {
         status: 'open',
@@ -4351,7 +4355,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -4368,7 +4372,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -4385,7 +4389,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_2f_staff_corridor: {
         status: 'open',
-        description: '回到員工專用通道。',
+        description: '來到員工專用通道。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -4467,7 +4471,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_elevator: {
         status: 'open',
-        description: '沿著樓梯往下，回到1F電梯間。',
+        description: '沿著樓梯往下，來到1F電梯間。',
       },
       loc_ds_2f_elevator: {
         status: 'open',
@@ -4484,7 +4488,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_elevator: {
         status: 'open',
-        description: '沿著樓梯往上，回到1F電梯間。',
+        description: '沿著樓梯往上，來到1F電梯間。',
       },
       loc_ds_b1_elevator: {
         status: 'open',
@@ -4501,7 +4505,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4512,9 +4516,13 @@ export const defaultLocations: LocationNode[] = [
     areaId: 'area_department_store',
     displayStatus: 'visible',
     connections: {
+      loc_station_outdoor: {
+        status: 'open',
+        description: '從大門離開百貨公司。',
+      },
       loc_ds_1f_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_1f_restroom_female: {
         status: 'temporary',
@@ -4690,7 +4698,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4703,7 +4711,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4716,7 +4724,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4729,7 +4737,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4742,7 +4750,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4755,7 +4763,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到精品商場主走道。',
+        description: '來到精品商場主走道。',
       },
     },
   },
@@ -4768,7 +4776,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_1f_main_corridor: {
         status: 'open',
-        description: '回到前台商場。',
+        description: '來到前台商場。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -4850,7 +4858,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_elevator: {
         status: 'open',
-        description: '沿著樓梯往上，回到B1電梯間。',
+        description: '沿著樓梯往上，來到B1電梯間。',
       },
       loc_ds_b2_elevator: {
         status: 'open',
@@ -4867,7 +4875,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -4880,7 +4888,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_b1_restroom_female: {
         status: 'temporary',
@@ -5057,7 +5065,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5070,7 +5078,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5083,7 +5091,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5096,7 +5104,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5109,7 +5117,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5122,7 +5130,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5135,7 +5143,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5148,7 +5156,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5161,7 +5169,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到美食商場主走道。',
+        description: '來到美食商場主走道。',
       },
     },
   },
@@ -5174,7 +5182,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b1_main_corridor: {
         status: 'open',
-        description: '回到前台商場。',
+        description: '來到前台商場。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
@@ -5256,7 +5264,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b2_elevator: {
         status: 'open',
-        description: '沿著樓梯往上，回到B2電梯間。',
+        description: '沿著樓梯往上，來到B2電梯間。',
       },
       loc_ds_b3_elevator: {
         status: 'open',
@@ -5273,7 +5281,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b2_parking: {
         status: 'open',
-        description: '回到顧客停車場。',
+        description: '來到顧客停車場。',
       },
     },
   },
@@ -5286,7 +5294,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b2_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_b2_restroom_male: {
         status: 'temporary',
@@ -5473,7 +5481,7 @@ export const defaultLocations: LocationNode[] = [
     connections: {
       loc_ds_b3_elevator: {
         status: 'open',
-        description: '回到電梯間。',
+        description: '來到電梯間。',
       },
       loc_ds_cargo_elevator: {
         status: 'open',
