@@ -512,4 +512,253 @@ export const defaultIdentities: IdentityDef[] = [
     name: '新聞台主管',
     description: '電視台高階主管，可進入台長辦公室與高層辦公室。',
   },
+
+  // ==========================================
+  // 露天商店街相關身分 (Area 1.4)
+  // ==========================================
+  {
+    id: 'bookstore_clerk',
+    name: '青木書局店員',
+    description: '青木書局的店員，可自由進出內部員工休息區與地下倉庫。',
+  },
+  {
+    id: 'beautician',
+    name: '美髮美容師',
+    description: '美容院的專業美髮美容師。',
+  },
+  {
+    id: 'beauty_clerk',
+    name: '美容院店員',
+    description: '美容院店員，可進入員工休息室。',
+  },
+  {
+    id: 'gym_coach',
+    name: '健身房教練',
+    description: '健身房專業教練，可進入健身房辦公室。',
+  },
+  {
+    id: 'gym_receptionist',
+    name: '健身房櫃檯',
+    description: '健身房櫃檯人員。',
+  },
+  {
+    id: 'matchmaker_manager',
+    name: '婚友社會長',
+    description: '婚友會社負責人/會長，擁有婚友社全區域與 VIP 監控暗室通行權限。',
+  },
+  {
+    id: 'car_dealer_manager',
+    name: '4S汽車店經理',
+    description: '4S 汽車店經理，可進入經理辦公室與業務洽談區。',
+  },
+  {
+    id: 'car_dealer_staff',
+    name: '4S汽車店員工',
+    description: '4S 汽車店員工。',
+  },
+  {
+    id: 'pc_store_manager',
+    name: '電腦店店長',
+    description: '電腦店店長。',
+  },
+  {
+    id: 'pc_store_staff',
+    name: '電腦店工程師',
+    description: '電腦店維修工程師與員工。',
+  },
+  {
+    id: 'phone_store_manager',
+    name: '手機店店長',
+    description: '手機店店長。',
+  },
+  {
+    id: 'phone_store_staff',
+    name: '手機店維修師',
+    description: '手機店維修師與員工。',
+  },
+  {
+    id: 'electronics_parts_boss',
+    name: '電子材料行老闆',
+    description: '電子材料行老闆。',
+  },
+  {
+    id: 'electronics_parts_clerk',
+    name: '電子材料行店員',
+    description: '電子材料行店員。',
+  },
+  {
+    id: 'hardware_boss',
+    name: '五金行老闆',
+    description: '五金行老闆。',
+  },
+  {
+    id: 'hardware_clerk',
+    name: '五金行店員',
+    description: '五金行店員。',
+  },
+  {
+    id: 'clothing_manager',
+    name: '服裝店店長',
+    description: '服裝店店長，知曉特製試衣暗室的存在。',
+  },
+  {
+    id: 'clothing_staff',
+    name: '服裝店店員',
+    description: '服裝店員工。',
+  },
+  {
+    id: 'optician',
+    name: '驗光師',
+    description: '眼鏡行驗光師與店長。',
+  },
+  {
+    id: 'optical_staff',
+    name: '眼鏡店員工',
+    description: '眼鏡店員工。',
+  },
+  {
+    id: 'furniture_manager',
+    name: '家具店店長',
+    description: '家具店店長，擁有豪華隱藏臥室的進入權限。',
+  },
+  {
+    id: 'furniture_staff',
+    name: '家具店員工',
+    description: '家具店員工。',
+  },
+  {
+    id: 'watch_master',
+    name: '鐘錶師',
+    description: '鐘錶行精密維修師與老闆。',
+  },
+  {
+    id: 'seal_master',
+    name: '刻印師',
+    description: '印章店刻印師傅。',
+  },
+  {
+    id: 'wedding_manager',
+    name: '婚紗店總監',
+    description: '婚紗店總監，擁有貴賓新娘特化梳化密室權限。',
+  },
+  {
+    id: 'wedding_staff',
+    name: '婚紗店造型師',
+    description: '婚紗店造型師與員工。',
+  },
+  {
+    id: 'bride',
+    name: '新娘',
+    description: '即將舉辦婚禮的新娘客人。',
+  },
+  {
+    id: 'photographer',
+    name: '照相館攝影師',
+    description: '照相館專業攝影師。',
+  },
+  {
+    id: 'photo_staff',
+    name: '照相館店員',
+    description: '照相館店員與暗房助理。',
+  },
+  {
+    id: 'florist',
+    name: '花藝師',
+    description: '花店老闆與花藝師。',
+  },
+  {
+    id: 'flower_staff',
+    name: '花店員工',
+    description: '花店員工。',
+  },
+  {
+    id: 'gift_shop_manager',
+    name: '禮品店店長',
+    description: '禮品店店長。',
+  },
+  {
+    id: 'gift_shop_clerk',
+    name: '禮品店店員',
+    description: '禮品店店員。',
+  },
+  {
+    id: 'fast_food_manager',
+    name: '速食店店長',
+    description: '速食店店長。',
+  },
+  {
+    id: 'fast_food_clerk',
+    name: '速食店員工',
+    description: '速食店員工。',
+  },
+  {
+    id: 'stir_fry_boss',
+    name: '熱炒店老闆',
+    description: '熱炒店主廚與老闆。',
+  },
+  {
+    id: 'stir_fry_clerk',
+    name: '熱炒店員工',
+    description: '熱炒店服務生與員工。',
+  },
+  {
+    id: 'noodle_shop_boss',
+    name: '麵店老闆',
+    description: '傳統麵店老闆。',
+  },
+  {
+    id: 'noodle_shop_clerk',
+    name: '麵店店員',
+    description: '麵店店員。',
+  },
+  {
+    id: 'bento_shop_boss',
+    name: '便當店老闆',
+    description: '便當店老闆。',
+  },
+  {
+    id: 'bento_shop_clerk',
+    name: '便當店店員',
+    description: '便當店店員。',
+  },
+  {
+    id: 'barber',
+    name: '理髮師',
+    description: '傳統理髮店理髮師傅。',
+  },
+  {
+    id: 'barber_clerk',
+    name: '理髮店店員',
+    description: '理髮店店員。',
+  },
+  {
+    id: 'baker',
+    name: '麵包師',
+    description: '麵包店主廚與烘焙師。',
+  },
+  {
+    id: 'bakery_clerk',
+    name: '麵包店店員',
+    description: '麵包店店員。',
+  },
+  {
+    id: 'breakfast_shop_boss',
+    name: '早餐店老闆',
+    description: '傳統早餐店老闆。',
+  },
+  {
+    id: 'breakfast_shop_clerk',
+    name: '早餐店店員',
+    description: '早餐店店員。',
+  },
+  {
+    id: 'beverage_shop_manager',
+    name: '飲料店店長',
+    description: '連鎖飲料店店長。',
+  },
+  {
+    id: 'beverage_shop_clerk',
+    name: '飲料店店員',
+    description: '連鎖飲料店店員。',
+  },
 ];

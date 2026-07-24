@@ -104,11 +104,6 @@ export interface HypnosisEffectState {
 export type PlayerBodyPartStat = Record<string, number>;
 export type NpcBodyPartStat = Record<string, number>;
 
-export interface NpcLocationState {
-  locationId: string;
-  locationStatus: string;
-}
-
 // ==========================================
 // 玩家資料 (PlayerCoreData)
 // ==========================================
@@ -161,7 +156,8 @@ export interface MajorNpcState {
   activeBodyModifications: Record<string, ActiveBodyModState>;
   activeHypnosisEffects: Record<string, HypnosisEffectState>;
 
-  locationState?: NpcLocationState;
+  locationId?: string;
+  locationStatus?: string;
 }
 
 // ==========================================
@@ -173,5 +169,6 @@ export interface MinorNpcState {
   identities?: string[];
   gender?: 'male' | 'female' | 'other' | string;
   description?: string;
-  locationState?: NpcLocationState;
+  locationId?: string;
+  locationStatus?: string;
 }

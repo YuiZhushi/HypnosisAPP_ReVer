@@ -93,6 +93,17 @@ export const defaultAreas: Area[] = [
     displayStatus: 'visible',
     connections: {},
   },
+  // ==========================================
+  // 1.4: 齋明市中心區 - 露天商店街
+  // ==========================================
+  {
+    id: 'area_shopping_street',
+    name: '齋明市中心區－露天商店街',
+    description: '熱鬧蓬勃的露天商務與休閒街區，各式民生店家、精品專賣店與餐飲名店聚集於此。',
+    zoneId: 'zone_downtown',
+    displayStatus: 'visible',
+    connections: {},
+  },
 
   // ==========================================
   // 2. 學園文教區區域定義
@@ -10167,6 +10178,3176 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
     description: '媒體中心頂樓電梯控制機房。',
     connections: {
       loc_fs_media_7f_elevator: { status: 'open', description: '離開機房進入7F電梯間。' },
+    },
+  },
+];
+
+// ==========================================
+// 區域 1.4: 露天商店街地點定義 (Area 1.4)
+// ==========================================
+export const area1_4_ShoppingStreetLocations: LocationNode[] = [
+  // ------------------------------------------
+  // 1.4.1 戶外公共區域
+  // ------------------------------------------
+  {
+    id: 'loc_ss_main_street',
+    name: '商店街大道',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '寬敞熱鬧的露天商店街大道，兩側各式民生與休閒店家林立，人流如織。',
+    connections: {
+      loc_station_outdoor: { status: 'open', description: '穿過站前廣場步道走向車站' },
+      loc_fs_main_street: { status: 'open', description: '走向金融街大路口' },
+      loc_ss_plaza: { status: 'open', description: '走進露天廣場中心' },
+      loc_ss_ab_1f_main: { status: 'open', description: '推開玻璃門走進青木書局' },
+      loc_ss_bs_1f_lobby: { status: 'open', description: '走進美容院亮麗的大廳' },
+      loc_ss_gym_1f_reception: { status: 'open', description: '走進健身房大門' },
+      loc_ss_mm_1f_lobby: { status: 'open', description: '走進婚友社大廳' },
+      loc_ss_car_1f_showroom: { status: 'open', description: '走進寬敞的汽車展廳' },
+      loc_ss_pc_1f_store: { status: 'open', description: '走進電腦店門口' },
+      loc_ss_phone_1f_store: { status: 'open', description: '走進手機店' },
+      loc_ss_ep_1f_shelf: { status: 'open', description: '進入電子材料行' },
+      loc_ss_hw_1f_tools: { status: 'open', description: '走進五金行門口' },
+      loc_ss_cloth_1f_trending: { status: 'open', description: '推門進入流行服裝店' },
+      loc_ss_opt_1f_display: { status: 'open', description: '進入眼鏡行' },
+      loc_ss_furn_1f_living: { status: 'open', description: '走進大型家具展覽館' },
+      loc_ss_wt_1f_display: { status: 'open', description: '進入鐘錶行' },
+      loc_ss_sl_1f_counter: { status: 'open', description: '走進印章店小鋪' },
+      loc_ss_wd_1f_lobby: { status: 'open', description: '走進浪漫的婚紗店大廳' },
+      loc_ss_ps_1f_counter: { status: 'open', description: '進入照相行' },
+      loc_ss_fl_1f_fresh: { status: 'open', description: '走進花香滿溢的花店' },
+      loc_ss_gf_1f_festive: { status: 'open', description: '走進禮品店門口' },
+      loc_ss_ff_1f_counter: { status: 'open', description: '推門進入速食店' },
+      loc_ss_sf_1f_outdoor_seating: { status: 'open', description: '來到熱炒店露天用餐區' },
+      loc_ss_nd_1f_bar: { status: 'open', description: '推門進入麵店' },
+      loc_ss_bt_1f_counter: { status: 'open', description: '來到便當店打菜櫃檯前' },
+      loc_ss_bb_1f_waiting: { status: 'open', description: '走進傳統理髮店' },
+      loc_ss_bk_1f_display: { status: 'open', description: '推門進入麥香撲鼻的麵包店' },
+      loc_ss_bf_1f_counter: { status: 'open', description: '來到早餐店門前' },
+      loc_ss_bv_1f_counter: { status: 'open', description: '來到飲料店櫃檯前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_plaza',
+    name: '商店街休閒廣場',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '商店街內部的露天休憩廣場，設有噴水池、戶外長椅與休閒咖啡傘。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走回商店街主幹道' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.2 青木書局 (Area 1.4.2)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_ab_1f_main',
+    name: '青木書局1F綜合書區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '青木書局一樓大廳，陳列暢銷書與各類新書熱門展台。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出書局大門' },
+      loc_ss_ab_1f_novel: { status: 'open', description: '走到小說展售區' },
+      loc_ss_ab_1f_anime: { status: 'open', description: '走到動漫展售區' },
+      loc_ss_ab_1f_stationery: { status: 'open', description: '走到文具展示區' },
+      loc_ss_ab_1f_checkout: { status: 'open', description: '走到1F結帳櫃檯前' },
+      loc_ss_ab_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_novel',
+    name: '小說區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺滿各類流行小說、推理小說與輕小說的書架區。',
+    connections: {
+      loc_ss_ab_1f_main: { status: 'open', description: '回到綜合書區' },
+      loc_ss_ab_1f_anime: { status: 'open', description: '走到旁邊的動漫區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_anime',
+    name: '動漫區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '展示最新熱門漫畫、畫冊與動漫周邊的區域。',
+    connections: {
+      loc_ss_ab_1f_main: { status: 'open', description: '回到綜合書區' },
+      loc_ss_ab_1f_novel: { status: 'open', description: '走到小說區' },
+      loc_ss_ab_1f_stationery: { status: 'open', description: '走到文具區' },
+      loc_ss_ab_1f_to_b1_stair: { status: 'open', description: '走進向下樓梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_stationery',
+    name: '文具區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '各式精美文具、筆記本與辦公用品貨架。',
+    connections: {
+      loc_ss_ab_1f_main: { status: 'open', description: '回到綜合書區' },
+      loc_ss_ab_1f_checkout: { status: 'open', description: '走到結帳櫃檯' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '1F 收銀櫃檯與店員收銀工作區。',
+    connections: {
+      loc_ss_ab_1f_main: { status: 'open', description: '回到綜合書區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_to_2f_stair',
+    name: '青木書局1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '連接青木書局 1F 與 2F 的明亮樓梯間。',
+    connections: {
+      loc_ss_ab_1f_main: { status: 'open', description: '走下1F綜合書區' },
+      loc_ss_ab_2f_reference: { status: 'open', description: '走上2F參考書區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_1f_to_b1_stair',
+    name: '青木書局1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 成人專區的樓梯間，底部設有厚重門簾。',
+    connections: {
+      loc_ss_ab_1f_anime: { status: 'open', description: '走上1F動漫區' },
+      loc_ss_ab_b1_adult: { status: 'open', description: '掀開門簾走下B1進入成人專區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_reference',
+    name: '參考書區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 各類學生參考書、考試用書與檢定書籍專區。',
+    connections: {
+      loc_ss_ab_1f_to_2f_stair: { status: 'open', description: '走進向下樓梯間' },
+      loc_ss_ab_2f_pro: { status: 'open', description: '走到專業書籍區' },
+      loc_ss_ab_2f_foreign: { status: 'open', description: '走到外文書區' },
+      loc_ss_ab_2f_magazine: { status: 'open', description: '走到雜誌區' },
+      loc_ss_ab_2f_reading: { status: 'open', description: '走到閱讀區' },
+      loc_ss_ab_2f_to_3f_stair: { status: 'open', description: '走進向上樓梯間' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_pro',
+    name: '專業書籍區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列電腦、商管、醫學與各類專業學術書籍。',
+    connections: {
+      loc_ss_ab_2f_reference: { status: 'open', description: '回到參考書區' },
+      loc_ss_ab_2f_foreign: { status: 'open', description: '走到外文書區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_foreign',
+    name: '外文書區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '進口原文書籍與外語雜誌貨架。',
+    connections: {
+      loc_ss_ab_2f_reference: { status: 'open', description: '回到參考書區' },
+      loc_ss_ab_2f_magazine: { status: 'open', description: '走到雜誌區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_magazine',
+    name: '雜誌區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放時尚、生活、科技與各類月刊雜誌。',
+    connections: {
+      loc_ss_ab_2f_reference: { status: 'open', description: '回到參考書區' },
+      loc_ss_ab_2f_reading: { status: 'open', description: '走到閱讀區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_reading',
+    name: '閱讀區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '設有桌椅與靠窗座位供顧客靜心閱讀的區域。',
+    connections: {
+      loc_ss_ab_2f_reference: { status: 'open', description: '回到參考書區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_2f_to_3f_stair',
+    name: '青木書局2F至3F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 3F 員工與辦公區域的管制樓梯間。',
+    connections: {
+      loc_ss_ab_2f_reference: { status: 'open', description: '走下2F參考書區' },
+      loc_ss_ab_3f_staff_lounge: {
+        status: 'temporary',
+        description: '走上3F推門進入員工休息區',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bookstore_manager', 'bookstore_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ab_2f_to_3f_stair' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['bookstore_manager', 'bookstore_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_3f_staff_lounge',
+    name: '員工休息區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '書局員工茶水間與休息處，備有儲物櫃與休息沙發。',
+    connections: {
+      loc_ss_ab_2f_to_3f_stair: { status: 'open', description: '離開休息區走進樓梯間' },
+      loc_ss_ab_3f_manager: {
+        status: 'temporary',
+        description: '推開門進入店長辦公室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains',
+              value: 'bookstore_manager',
+            },
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_j2f8k9m3x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ab_3f_staff_lounge' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'bookstore_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_3f_manager',
+    name: '店長辦公室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '青木書局店長個人辦公室，存放營業帳冊與後勤文件。',
+    connections: {
+      loc_ss_ab_3f_staff_lounge: { status: 'open', description: '走出店長辦公室回到員工休息區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_b1_adult',
+    name: '成人專區 (門簾遮擋)',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: 'B1 獨立成區的成人專用圖書專區，設有門簾遮擋外部視線。',
+    connections: {
+      loc_ss_ab_1f_to_b1_stair: { status: 'open', description: '掀開門簾走上1F樓梯間' },
+      loc_ss_ab_b1_photo_books: { status: 'open', description: '進入寫真集展示區' },
+      loc_ss_ab_b1_doujin: { status: 'open', description: '進入同人誌展售區' },
+      loc_ss_ab_b1_storage: {
+        status: 'temporary',
+        description: '走向後方地下倉庫',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bookstore_manager', 'bookstore_clerk'],
+            },
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_y1m9k5z2p', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ab_b1_adult' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['bookstore_manager', 'bookstore_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_b1_photo_books',
+    name: '寫真集區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: 'B1 成人寫真集與畫冊展示貨架。',
+    connections: {
+      loc_ss_ab_b1_adult: { status: 'open', description: '回到成人專區中心' },
+      loc_ss_ab_b1_doujin: { status: 'open', description: '走到旁邊的同人誌區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_b1_doujin',
+    name: '同人誌區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '各類同人誌創作與限定刊物展售區。',
+    connections: {
+      loc_ss_ab_b1_adult: { status: 'open', description: '回到成人專區中心' },
+      loc_ss_ab_b1_photo_books: { status: 'open', description: '走到寫真集區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ab_b1_storage',
+    name: '地下倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放未上架書籍與存貨的書局地下倉庫。',
+    connections: {
+      loc_ss_ab_b1_adult: { status: 'open', description: '離開倉庫回到成人專區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.3 美容院 (Area 1.4.3)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bs_1f_lobby',
+    name: '美容院1F接待大廳',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '明亮時尚的美容院接待大廳與櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出美容院門口' },
+      loc_ss_bs_1f_hair: { status: 'open', description: '走進美髮區' },
+      loc_ss_bs_1f_wash: { status: 'open', description: '走到洗髮區' },
+      loc_ss_bs_1f_to_2f_stair: { status: 'open', description: '走進向上樓梯間' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bs_1f_hair',
+    name: '一般美髮區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '配備大鏡子與剪髮椅的美髮服務區。',
+    connections: {
+      loc_ss_bs_1f_lobby: { status: 'open', description: '回到接待大廳' },
+      loc_ss_bs_1f_wash: { status: 'open', description: '走進洗髮區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bs_1f_wash',
+    name: '洗髮區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '配有舒適躺椅與洗頭台的舒壓洗髮區。',
+    connections: {
+      loc_ss_bs_1f_lobby: { status: 'open', description: '回到接待大廳' },
+      loc_ss_bs_1f_hair: { status: 'open', description: '走進美髮區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bs_1f_to_2f_stair',
+    name: '美容院1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F SPA 與美容包廂的樓梯間。',
+    connections: {
+      loc_ss_bs_1f_lobby: { status: 'open', description: '走下1F大廳' },
+      loc_ss_bs_2f_spa: { status: 'open', description: '走上2F前往SPA包廂' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bs_2f_spa',
+    name: '美容SPA包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '獨立私密的護膚與 SPA 按摩體驗包廂。',
+    connections: {
+      loc_ss_bs_1f_to_2f_stair: { status: 'open', description: '離開包廂走進樓梯間' },
+      loc_ss_bs_2f_staff_lounge: {
+        status: 'temporary',
+        description: '走進員工休息室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['beautician', 'beauty_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_bs_2f_spa' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['beautician', 'beauty_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_bs_2f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '美容院美容師與員工專用休息更衣室。',
+    connections: {
+      loc_ss_bs_2f_spa: { status: 'open', description: '回到SPA包廂' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.4 健身房 (Area 1.4.4)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_gym_1f_reception',
+    name: '健身房1F接待處',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '健身房打卡入場與諮詢櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出健身房大門' },
+      loc_ss_gym_1f_weight: { status: 'open', description: '走進重訓區' },
+      loc_ss_gym_1f_cardio: { status: 'open', description: '走進有氧區' },
+      loc_ss_gym_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_1f_weight',
+    name: '重量訓練區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺滿啞鈴、槓鈴與各式大型重訓器材的區域。',
+    connections: {
+      loc_ss_gym_1f_reception: { status: 'open', description: '回到接待處' },
+      loc_ss_gym_1f_cardio: { status: 'open', description: '走到旁邊的有氧區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_1f_cardio',
+    name: '有氧區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列跑步機、飛輪與划船機的有氧訓練場地。',
+    connections: {
+      loc_ss_gym_1f_reception: { status: 'open', description: '回到接待處' },
+      loc_ss_gym_1f_weight: { status: 'open', description: '走到重量訓練區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_1f_to_2f_stair',
+    name: '健身房1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '連接 1F 運動區與 2F 團課教室更衣室的樓梯間。',
+    connections: {
+      loc_ss_gym_1f_reception: { status: 'open', description: '走下1F接待處' },
+      loc_ss_gym_2f_yoga: { status: 'open', description: '走上2F前往瑜珈教室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_2f_yoga',
+    name: '瑜珈與有氧教室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '鋪設木地板與全身鏡的團體瑜珈教室。',
+    connections: {
+      loc_ss_gym_1f_to_2f_stair: { status: 'open', description: '走進樓梯間' },
+      loc_ss_gym_2f_office: {
+        status: 'temporary',
+        description: '推門進入健身房辦公室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['gym_coach', 'gym_receptionist'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gym_2f_yoga' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['gym_coach', 'gym_receptionist'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_gym_2f_male_locker: {
+        status: 'temporary',
+        description: '走進男更衣室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gym_2f_yoga' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gym_2f_yoga' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_gym_2f_female_locker: {
+        status: 'temporary',
+        description: '走進女更衣室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gym_2f_yoga' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gym_2f_yoga' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_2f_male_locker',
+    name: '男更衣室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '健身房男性顧客更衣與置物櫃區域。',
+    connections: {
+      loc_ss_gym_2f_yoga: { status: 'open', description: '離開更衣室回到教室' },
+      loc_ss_gym_2f_shower: { status: 'open', description: '走進淋浴區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_2f_female_locker',
+    name: '女更衣室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '健身房女性顧客更衣與置物櫃區域。',
+    connections: {
+      loc_ss_gym_2f_yoga: { status: 'open', description: '離開更衣室回到教室' },
+      loc_ss_gym_2f_shower: { status: 'open', description: '走進淋浴區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_2f_shower',
+    name: '淋浴間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '提供運動後盥洗淋浴的隔間區。',
+    connections: {
+      loc_ss_gym_2f_male_locker: { status: 'open', description: '回到男更衣室' },
+      loc_ss_gym_2f_female_locker: { status: 'open', description: '回到女更衣室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gym_2f_office',
+    name: '辦公室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '健身房教練與管理人員辦公室。',
+    connections: {
+      loc_ss_gym_2f_yoga: { status: 'open', description: '回到瑜珈教室' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.5 婚友社 (Area 1.4.5)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_mm_1f_lobby',
+    name: '婚友社1F諮詢接待大廳',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '高雅溫馨的婚友社接待大廳。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出婚友社門口' },
+      loc_ss_mm_1f_lounge: { status: 'open', description: '走進會員交誼廳' },
+      loc_ss_mm_1f_cafe: { status: 'open', description: '走到咖啡吧台' },
+      loc_ss_mm_1f_boardgame: { status: 'open', description: '走到桌遊區' },
+      loc_ss_mm_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_1f_lounge',
+    name: '會員交誼廳',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '提供單身男女會員自由交流互動的舒適休閒廳。',
+    connections: {
+      loc_ss_mm_1f_lobby: { status: 'open', description: '回到接待大廳' },
+      loc_ss_mm_1f_cafe: { status: 'open', description: '走到咖啡吧台' },
+      loc_ss_mm_1f_boardgame: { status: 'open', description: '走到桌遊區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_1f_cafe',
+    name: '咖啡吧台',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '提供精緻咖啡與甜點破冰的吧台。',
+    connections: {
+      loc_ss_mm_1f_lounge: { status: 'open', description: '回到會員交誼廳' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_1f_boardgame',
+    name: '互動桌遊區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放破冰桌遊的小型互動圓桌區。',
+    connections: {
+      loc_ss_mm_1f_lounge: { status: 'open', description: '回到會員交誼廳' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_1f_to_2f_stair',
+    name: '婚友社1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F 一對一配對包廂的樓梯間。',
+    connections: {
+      loc_ss_mm_1f_lobby: { status: 'open', description: '走下1F接待大廳' },
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走上2F來到包廂走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_corridor',
+    name: '婚友社2F相親包廂走廊',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 相親包廂走廊，沿途排列著數間私密一對一對談室。',
+    connections: {
+      loc_ss_mm_1f_to_2f_stair: { status: 'open', description: '走到1F至2F樓梯間前' },
+      loc_ss_mm_2f_to_3f_stair: { status: 'open', description: '走到2F至3F樓梯間前' },
+      loc_ss_mm_2f_room1: { status: 'open', description: '推門進入一號包廂' },
+      loc_ss_mm_2f_room2: { status: 'open', description: '推門進入二號包廂' },
+      loc_ss_mm_2f_room3: { status: 'open', description: '推門進入三號包廂' },
+      loc_ss_mm_2f_room4: { status: 'open', description: '推門進入四號包廂' },
+      loc_ss_mm_2f_room5: { status: 'open', description: '推門進入五號包廂' },
+      loc_ss_mm_2f_room6: { status: 'open', description: '推門進入六號包廂' },
+      loc_ss_mm_2f_vip_matching: { status: 'open', description: '推門進入貴賓配對室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room1',
+    name: '一號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room2',
+    name: '二號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room3',
+    name: '三號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room4',
+    name: '四號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room5',
+    name: '五號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_room6',
+    name: '六號相親包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '私密的一對一相親包廂。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_vip_matching',
+    name: '貴賓配對室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '豪華配對包廂，設有單向透視鏡與高階音響設備。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走出配對室回到2F走廊' },
+      loc_ss_mm_2f_secret_obs: {
+        status: 'temporary',
+        description: '調查單向透視鏡旁暗門進入',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains',
+              value: 'matchmaker_manager',
+            },
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_m8k3v9c2x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_mm_2f_vip_matching' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'matchmaker_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_secret_obs',
+    name: 'VIP配對監控暗室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'hidden',
+    description: '位於貴賓配對室單向鏡後方的監控密室，可即時觀察配對室狀況。',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_mm_2f_vip_matching' },
+        {
+          targetType: 'npc',
+          targetNpcId: 'any_if',
+          subMatchMode: 'and',
+          subConditions: [
+            { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_mm_2f_vip_matching' },
+            { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'matchmaker_manager' },
+            {
+              targetType: 'npc',
+              subMatchMode: 'or',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    connections: {
+      loc_ss_mm_2f_vip_matching: { status: 'open', description: '走出暗門回到貴賓配對室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_2f_to_3f_stair',
+    name: '婚友社2F至3F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 3F 高階資料庫的防盜樓梯間。',
+    connections: {
+      loc_ss_mm_2f_corridor: { status: 'open', description: '走下2F包廂走廊' },
+      loc_ss_mm_3f_member_db: {
+        status: 'temporary',
+        description: '走上3F來到會員資料庫防盜門前',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['matchmaker_manager', 'matchmaker_staff'],
+            },
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_m9k4v2c7x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_mm_2f_to_3f_stair' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['matchmaker_manager', 'matchmaker_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_mm_3f_member_db',
+    name: '會員資料庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放單身男女會員個人隱私資料與家世檔案的高機密檔案室。',
+    connections: {
+      loc_ss_mm_2f_to_3f_stair: { status: 'open', description: '離開資料庫回到樓梯間' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.6 4S汽車店 (Area 1.4.6)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_car_1f_showroom',
+    name: '4S汽車店1F汽車展示中心',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '寬暢明亮的豪車展示大廳，陳列著最新款轎車與跑車。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出展廳門口' },
+      loc_ss_car_1f_reception: { status: 'open', description: '走到接待區' },
+      loc_ss_car_1f_workshop: { status: 'open', description: '走進維修保養廠' },
+      loc_ss_car_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_car_1f_reception',
+    name: '接待區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '顧客諮詢與賞車接待櫃檯。',
+    connections: {
+      loc_ss_car_1f_showroom: { status: 'open', description: '回到展示中心' },
+    },
+  },
+
+  {
+    id: 'loc_ss_car_1f_workshop',
+    name: '維修保養廠',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '車輛定保、改裝與檢修的專業作業區。',
+    connections: {
+      loc_ss_car_1f_showroom: { status: 'open', description: '回到展示中心' },
+    },
+  },
+
+  {
+    id: 'loc_ss_car_1f_to_2f_stair',
+    name: '4S汽車店1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F 洽談室與經理室的樓梯間。',
+    connections: {
+      loc_ss_car_1f_showroom: { status: 'open', description: '走下1F展廳' },
+      loc_ss_car_2f_negotiation: { status: 'open', description: '走上2F前往洽談室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_car_2f_negotiation',
+    name: '業務洽談室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '購車合約簽訂與分期業務洽談沙發區。',
+    connections: {
+      loc_ss_car_1f_to_2f_stair: { status: 'open', description: '離開洽談室走進樓梯間' },
+      loc_ss_car_2f_manager: { status: 'open', description: '推門進入經理辦公室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_car_2f_manager',
+    name: '經理辦公室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '汽車店經理辦公室與VIP客戶專屬簽約室。',
+    connections: {
+      loc_ss_car_2f_negotiation: { status: 'open', description: '回到業務洽談室' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.7 電腦店 (Area 1.4.7)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_pc_1f_store',
+    name: '電腦店1F產品展示區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列電競主機、筆電與週邊設備的展售門市。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出電腦店大門' },
+      loc_ss_pc_1f_to_b1_stair: { status: 'open', description: '走下樓梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_pc_1f_to_b1_stair',
+    name: '電腦店1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 倉庫與維修部的樓梯間。',
+    connections: {
+      loc_ss_pc_1f_store: { status: 'open', description: '走上1F展示區' },
+      loc_ss_pc_b1_storage: { status: 'open', description: '走下B1進入倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_pc_b1_storage',
+    name: '零組件倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放顯卡、CPU、主機板等高單價零件的地下倉庫。',
+    connections: {
+      loc_ss_pc_1f_to_b1_stair: { status: 'open', description: '走進向上樓梯間' },
+      loc_ss_pc_b1_repair: { status: 'open', description: '走進後方維修部' },
+    },
+  },
+
+  {
+    id: 'loc_ss_pc_b1_repair',
+    name: '硬體維修部',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '工程師進行電腦除錯、改裝與焊接維修的工作室。',
+    connections: {
+      loc_ss_pc_b1_storage: { status: 'open', description: '回到零組件倉庫' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.8 手機店 (Area 1.4.8)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_phone_1f_store',
+    name: '手機店1F展示櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺設各品牌旗艦智慧型手機的亮麗櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出手機店門口' },
+      loc_ss_phone_1f_repair: { status: 'open', description: '走進後方維修部' },
+      loc_ss_phone_1f_manager: { status: 'open', description: '推門進入店長室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_phone_1f_repair',
+    name: '手機維修部',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '更換螢幕、電池與主機板維修的封閉工作間。',
+    connections: {
+      loc_ss_phone_1f_store: { status: 'open', description: '回到展示櫃檯' },
+    },
+  },
+
+  {
+    id: 'loc_ss_phone_1f_manager',
+    name: '店長室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '手機店店長辦公與盤點庫存的小型辦公室。',
+    connections: {
+      loc_ss_phone_1f_store: { status: 'open', description: '回到展示櫃檯' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.9 電子材料行 (Area 1.4.9)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_ep_1f_shelf',
+    name: '電子材料行1F零件貨架區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '琳瑯滿目的電路板、晶片、電容與線材分門別類擺放的貨架區。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出電子材料行' },
+      loc_ss_ep_1f_checkout: { status: 'open', description: '走到櫃檯前' },
+      loc_ss_ep_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ep_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '結帳與零件量測輔助櫃檯。',
+    connections: {
+      loc_ss_ep_1f_shelf: { status: 'open', description: '回到貨架區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ep_1f_to_b1_stair',
+    name: '電子材料行1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 大量電子材料儲藏室的陡峭樓梯。',
+    connections: {
+      loc_ss_ep_1f_shelf: { status: 'open', description: '走上1F貨架區' },
+      loc_ss_ep_b1_storage: { status: 'open', description: '走下B1進入倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ep_b1_storage',
+    name: '雜亂的地下倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '堆滿舊型電子零件、廢棄儀器與整箱纜線的地下室。',
+    connections: {
+      loc_ss_ep_1f_to_b1_stair: { status: 'open', description: '離開倉庫走上1F' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.10 五金行 (Area 1.4.10)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_hw_1f_tools',
+    name: '五金行1F綜合工具區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放電鑽、螺絲起子、榔頭等修繕工具的傳統五金行大廳。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出五金行門口' },
+      loc_ss_hw_1f_building: { status: 'open', description: '走到建材展示區' },
+      loc_ss_hw_1f_plumbing: { status: 'open', description: '走到水材展示區' },
+      loc_ss_hw_1f_checkout: { status: 'open', description: '走到結帳櫃檯' },
+      loc_ss_hw_1f_storage: { status: 'open', description: '走進五金行倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_hw_1f_building',
+    name: '建材區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列水泥、塗料、木板與螺絲釘的建築材料區。',
+    connections: {
+      loc_ss_hw_1f_tools: { status: 'open', description: '回到工具區' },
+      loc_ss_hw_1f_plumbing: { status: 'open', description: '走到水材區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_hw_1f_plumbing',
+    name: '水材區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '水管、水龍頭、水泵與衛浴配件專區。',
+    connections: {
+      loc_ss_hw_1f_tools: { status: 'open', description: '回到工具區' },
+      loc_ss_hw_1f_building: { status: 'open', description: '走到建材區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_hw_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '五金行結帳櫃檯。',
+    connections: {
+      loc_ss_hw_1f_tools: { status: 'open', description: '回到工具區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_hw_1f_storage',
+    name: '五金行倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '後方備用大型工具與備料倉庫。',
+    connections: {
+      loc_ss_hw_1f_tools: { status: 'open', description: '回到工具區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.11 服裝店 (Area 1.4.11)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_cloth_1f_trending',
+    name: '服裝店1F最新流行服飾區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '潮流服飾專賣店一樓，展示當季流行男女時裝。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出服裝店門口' },
+      loc_ss_cloth_1f_men: { status: 'open', description: '走到男裝展示區' },
+      loc_ss_cloth_1f_women: { status: 'open', description: '走到女裝展示區' },
+      loc_ss_cloth_1f_kids: { status: 'open', description: '走到童裝展示區' },
+      loc_ss_cloth_1f_fitting_room: { status: 'open', description: '走進試衣間' },
+      loc_ss_cloth_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_men',
+    name: '男裝區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '休閒男裝與正裝展示假人模型區。',
+    connections: {
+      loc_ss_cloth_1f_trending: { status: 'open', description: '回到流行服飾區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_women',
+    name: '女裝區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '女用洋裝、上衣與各類時尚單品區。',
+    connections: {
+      loc_ss_cloth_1f_trending: { status: 'open', description: '回到流行服飾區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_kids',
+    name: '童裝區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '可愛童裝與親子裝陳列專區。',
+    connections: {
+      loc_ss_cloth_1f_trending: { status: 'open', description: '回到流行服飾區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_fitting_room',
+    name: '試衣間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '顧客試穿衣服的隔間，壁面鑲嵌著大型穿衣鏡。',
+    connections: {
+      loc_ss_cloth_1f_trending: { status: 'open', description: '離開試衣間' },
+      loc_ss_cloth_1f_secret_fitting: { status: 'open', description: '推開壁鏡隱藏門進入暗室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_secret_fitting',
+    name: '特製雙向鏡試衣暗室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'hidden',
+    description: '隱藏在試衣間穿衣鏡後方的私密窺視暗室，裝有雙向透視鏡。',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_cloth_1f_fitting_room' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_c4k8v2m9x', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    connections: {
+      loc_ss_cloth_1f_fitting_room: { status: 'open', description: '離開暗室回到試衣間' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_1f_to_2f_stair',
+    name: '服裝店1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F 折扣區與後勤區的樓梯間。',
+    connections: {
+      loc_ss_cloth_1f_trending: { status: 'open', description: '走下1F展售區' },
+      loc_ss_cloth_2f_discount: { status: 'open', description: '走上2F折扣區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_2f_discount',
+    name: '過季折扣區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 擺放特價與過季服飾的花車區。',
+    connections: {
+      loc_ss_cloth_1f_to_2f_stair: { status: 'open', description: '走進樓梯間' },
+      loc_ss_cloth_2f_staff_lounge: { status: 'open', description: '推門進入員工休息室' },
+      loc_ss_cloth_2f_storage: { status: 'open', description: '走進服裝倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_2f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '服裝店店員專用休息更衣室。',
+    connections: {
+      loc_ss_cloth_2f_discount: { status: 'open', description: '回到折扣區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_cloth_2f_storage',
+    name: '服裝倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺滿待上架服飾紙箱的庫房。',
+    connections: {
+      loc_ss_cloth_2f_discount: { status: 'open', description: '回到折扣區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.12 眼鏡行 (Area 1.4.12)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_opt_1f_display',
+    name: '眼鏡行1F眼鏡展示區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '排列各式名牌鏡框與太陽眼鏡的展示櫃。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出眼鏡行' },
+      loc_ss_opt_1f_test: { status: 'open', description: '走到測試區' },
+      loc_ss_opt_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_1f_test',
+    name: '簡易度數測試區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '一樓開放式的視力測量儀器區。',
+    connections: {
+      loc_ss_opt_1f_display: { status: 'open', description: '回到展示區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_1f_to_b1_stair',
+    name: '眼鏡行1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 暗房驗光室的隔音樓梯間。',
+    connections: {
+      loc_ss_opt_1f_display: { status: 'open', description: '走上1F展示區' },
+      loc_ss_opt_b1_darkroom: { status: 'open', description: '走下B1進入暗房驗光室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_b1_darkroom',
+    name: '暗房驗光室 (無對外窗)',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '完全避光的地下專業驗光暗室，配有高階測光儀。',
+    connections: {
+      loc_ss_opt_1f_to_b1_stair: { status: 'open', description: '離開驗光室走上1F' },
+      loc_ss_opt_b1_processing: { status: 'open', description: '走進加工室' },
+      loc_ss_opt_b1_staff_lounge: { status: 'open', description: '進入休息室' },
+      loc_ss_opt_b1_storage: { status: 'open', description: '進入小倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_b1_processing',
+    name: '鏡片加工室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '磨鏡片與安裝鏡框的技術工作室。',
+    connections: {
+      loc_ss_opt_b1_darkroom: { status: 'open', description: '回到驗光室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_b1_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '驗光師與店員休息室。',
+    connections: {
+      loc_ss_opt_b1_darkroom: { status: 'open', description: '回到驗光室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_opt_b1_storage',
+    name: '小倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放備用鏡片與鏡框組件的庫房。',
+    connections: {
+      loc_ss_opt_b1_darkroom: { status: 'open', description: '回到驗光室' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.13 家具行 (Area 1.4.13)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_furn_1f_living',
+    name: '家具行1F客廳家具展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '大型家具體驗館一樓，展出高級沙發、茶幾與電視櫃組合。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出家具館' },
+      loc_ss_furn_1f_kitchen: { status: 'open', description: '走到廚房展區' },
+      loc_ss_furn_1f_study: { status: 'open', description: '走到書房展區' },
+      loc_ss_furn_1f_dining: { status: 'open', description: '走到餐廳展區' },
+      loc_ss_furn_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+      loc_ss_furn_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_1f_kitchen',
+    name: '廚房家具展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '展示系統廚具、中島台與廚房收納櫃。',
+    connections: {
+      loc_ss_furn_1f_living: { status: 'open', description: '回到客廳展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_1f_study',
+    name: '書房家具展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列實木書桌、人體工學椅與整面書櫃牆。',
+    connections: {
+      loc_ss_furn_1f_living: { status: 'open', description: '回到客廳展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_1f_dining',
+    name: '餐廳家具展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '展出精美餐桌椅與餐酒櫃。',
+    connections: {
+      loc_ss_furn_1f_living: { status: 'open', description: '回到客廳展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_1f_to_2f_stair',
+    name: '家具行1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F 寢具與臥室展區的寬敞樓梯間。',
+    connections: {
+      loc_ss_furn_1f_living: { status: 'open', description: '走下1F展區' },
+      loc_ss_furn_2f_master_bed: { status: 'open', description: '走上2F展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_2f_master_bed',
+    name: '雙人臥室展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 主臥雙人床組與衣櫃展區。角落有一座大型旋轉書櫃牆。',
+    connections: {
+      loc_ss_furn_1f_to_2f_stair: { status: 'open', description: '走進樓梯間' },
+      loc_ss_furn_2f_single_bed: { status: 'open', description: '走到單人房區' },
+      loc_ss_furn_2f_kids_bed: { status: 'open', description: '走到兒童房區' },
+      loc_ss_furn_2f_mattress_trial: { status: 'open', description: '走到試躺區' },
+      loc_ss_furn_2f_secret_suite: { status: 'open', description: '推開旋轉書櫃進入暗室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_2f_secret_suite',
+    name: '旋轉書櫃後隱藏豪華臥室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'hidden',
+    description: '隱藏於旋轉書櫃牆後方的奢華臥室暗室，配備頂級名床與私密設備。',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_furn_2f_master_bed' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_f6k2v9m4x', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    connections: {
+      loc_ss_furn_2f_master_bed: { status: 'open', description: '走出暗室回到雙人臥室展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_2f_single_bed',
+    name: '單人臥室展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '單人床組與學生房家具專區。',
+    connections: {
+      loc_ss_furn_2f_master_bed: { status: 'open', description: '回到雙人房展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_2f_kids_bed',
+    name: '兒童房展區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '溫馨彩色的兒童雙層床與書桌展區。',
+    connections: {
+      loc_ss_furn_2f_master_bed: { status: 'open', description: '回到雙人房展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_2f_mattress_trial',
+    name: '床墊試躺區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放數張獨立筒床墊供顧客試躺體驗區。',
+    connections: {
+      loc_ss_furn_2f_master_bed: { status: 'open', description: '回到雙人房展區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_1f_to_b1_stair',
+    name: '家具行1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 大型家具地下倉庫的貨運樓梯間。',
+    connections: {
+      loc_ss_furn_1f_living: { status: 'open', description: '走上1F展區' },
+      loc_ss_furn_b1_storage: { status: 'open', description: '走下B1進入倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_furn_b1_storage',
+    name: '大型家具倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放未組裝家具板材與大型庫存的地下倉儲。',
+    connections: {
+      loc_ss_furn_1f_to_b1_stair: { status: 'open', description: '離開倉庫走進樓梯間' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.14 鐘錶行 (Area 1.4.14)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_wt_1f_display',
+    name: '鐘錶行1F名錶展示櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '典雅防彈玻璃玻璃櫃，展示名貴機械錶與古董鐘。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出鐘錶行' },
+      loc_ss_wt_1f_workshop: { status: 'open', description: '走進後方維修區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wt_1f_workshop',
+    name: '精密維修工作區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '鐘錶師配戴單眼放大鏡進行機芯修復的封閉工作檯。',
+    connections: {
+      loc_ss_wt_1f_display: { status: 'open', description: '回到展示櫃檯' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.15 印章店 (Area 1.4.15)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_sl_1f_counter',
+    name: '印章店1F櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列木雕印章、象牙印章與印泥的小店櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出印章店' },
+      loc_ss_sl_1f_workshop: { status: 'open', description: '走進刻印工作間' },
+    },
+  },
+
+  {
+    id: 'loc_ss_sl_1f_workshop',
+    name: '刻印工作室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '刻印師手工雕刻印章與雷射雕刻機作業室。',
+    connections: {
+      loc_ss_sl_1f_counter: { status: 'open', description: '回到櫃檯' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.16 婚紗店 (Area 1.4.16)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_wd_1f_lobby',
+    name: '婚紗店1F禮服展示大廳',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '華麗夢幻的婚紗展示大廳，懸掛著白紗與晚禮服。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出婚紗店' },
+      loc_ss_wd_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_1f_to_2f_stair',
+    name: '婚紗店1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '鋪設紅地毯通往 2F 試穿梳化間的樓梯間。',
+    connections: {
+      loc_ss_wd_1f_lobby: { status: 'open', description: '走下1F大廳' },
+      loc_ss_wd_2f_fitting_room: { status: 'open', description: '走上2F來到包廂前' },
+      loc_ss_wd_2f_to_3f_stair: { status: 'open', description: '走上梯間前往3F' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_2f_fitting_room',
+    name: '私密試穿包廂',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '新娘試穿婚紗的私密高檔包廂，設有一面落地隱密大壁鏡。',
+    connections: {
+      loc_ss_wd_1f_to_2f_stair: { status: 'open', description: '離開包廂回到走廊' },
+      loc_ss_wd_2f_makeup: { status: 'open', description: '走進梳化間' },
+      loc_ss_wd_2f_secret_chamber: { status: 'open', description: '推開隱密大壁鏡進入密室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_2f_secret_chamber',
+    name: '貴賓新娘特化梳化密室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'hidden',
+    description: '隱藏於試穿包廂壁鏡後方的私人特化密室，提供 VIP 專屬服飾與特殊裝扮服務。',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_wd_2f_fitting_room' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_w9k3v7m2x', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    connections: {
+      loc_ss_wd_2f_fitting_room: { status: 'open', description: '離開密室回到私密試穿包廂' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_2f_makeup',
+    name: '梳化間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '專業新娘化妝與髮型設計的工作鏡台。',
+    connections: {
+      loc_ss_wd_2f_fitting_room: { status: 'open', description: '回到試穿包廂' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_2f_to_3f_stair',
+    name: '婚紗店2F至3F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 3F 攝影棚與工作區的樓梯間。',
+    connections: {
+      loc_ss_wd_1f_to_2f_stair: { status: 'open', description: '走下2F包廂區' },
+      loc_ss_wd_3f_studio: { status: 'open', description: '走上3F進入攝影棚' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_3f_studio',
+    name: '專屬室內攝影棚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '佈置浪漫背景與閃光燈打光設備的婚紗攝影棚。',
+    connections: {
+      loc_ss_wd_2f_to_3f_stair: { status: 'open', description: '走出攝影棚回到樓梯間' },
+      loc_ss_wd_3f_prop_storage: {
+        status: 'temporary',
+        description: '進入道具庫',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['wedding_manager', 'wedding_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_wd_3f_studio' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['wedding_manager', 'wedding_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_wd_3f_staff_lounge: {
+        status: 'temporary',
+        description: '進入休息室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['wedding_manager', 'wedding_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_wd_3f_studio' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['wedding_manager', 'wedding_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_3f_prop_storage',
+    name: '拍攝道具倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放攝影佈景、捧花與拍攝造景道具的庫房。',
+    connections: {
+      loc_ss_wd_3f_studio: { status: 'open', description: '回到攝影棚' },
+    },
+  },
+
+  {
+    id: 'loc_ss_wd_3f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '攝影師與造型師休息更衣室。',
+    connections: {
+      loc_ss_wd_3f_studio: { status: 'open', description: '回到攝影棚' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.17 照相行 (Area 1.4.17)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_ps_1f_counter',
+    name: '照相行1F櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '證件照取件與相框展示櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出照相行' },
+      loc_ss_ps_1f_express: { status: 'open', description: '走到快照拍攝區' },
+      loc_ss_ps_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_1f_express',
+    name: '快照拍攝區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '拍證件照與快速取件的小型拍攝棚。',
+    connections: {
+      loc_ss_ps_1f_counter: { status: 'open', description: '回到櫃檯前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_1f_to_b1_stair',
+    name: '照相行1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 專業攝影棚與沖洗暗房的樓梯間。',
+    connections: {
+      loc_ss_ps_1f_counter: { status: 'open', description: '走上1F櫃檯' },
+      loc_ss_ps_b1_studio: { status: 'open', description: '走下B1進入專業攝影棚' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_b1_studio',
+    name: '專業攝影棚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: 'B1 藝術照與沙龍照專業攝影棚。',
+    connections: {
+      loc_ss_ps_1f_to_b1_stair: { status: 'open', description: '走進向上樓梯間' },
+      loc_ss_ps_b1_darkroom: {
+        status: 'temporary',
+        description: '掀開暗房紅簾進入沖洗間',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['photographer', 'photo_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ps_b1_studio' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['photographer', 'photo_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_ps_b1_prop_storage: {
+        status: 'temporary',
+        description: '進入道具庫',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['photographer', 'photo_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ps_b1_studio' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['photographer', 'photo_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_ps_b1_staff_lounge: {
+        status: 'temporary',
+        description: '進入休息室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['photographer', 'photo_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ps_b1_studio' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['photographer', 'photo_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_b1_darkroom',
+    name: '傳統沖洗暗房',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '使用安全紅光、傳統底片洗相與顯影化學藥劑的暗房。',
+    connections: {
+      loc_ss_ps_b1_studio: { status: 'open', description: '離開暗房回到攝影棚' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_b1_prop_storage',
+    name: '攝影道具倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放服裝、反光板與佈景道具的庫房。',
+    connections: {
+      loc_ss_ps_b1_studio: { status: 'open', description: '回到攝影棚' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ps_b1_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '照相館員工休息室。',
+    connections: {
+      loc_ss_ps_b1_studio: { status: 'open', description: '回到攝影棚' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.18 花店 (Area 1.4.18)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_fl_1f_fresh',
+    name: '花店1F鮮花展示區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '充滿芳香的花店一樓，擺滿各色切花與精美花束。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出花店門口' },
+      loc_ss_fl_1f_potted: { status: 'open', description: '走到盆栽展示區' },
+      loc_ss_fl_1f_garden: { status: 'open', description: '推門來到後方花圃' },
+      loc_ss_fl_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1' },
+    },
+  },
+
+  {
+    id: 'loc_ss_fl_1f_potted',
+    name: '盆栽區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放多肉植物、綠色觀葉植栽與花盆的區域。',
+    connections: {
+      loc_ss_fl_1f_fresh: { status: 'open', description: '回到鮮花區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_fl_1f_garden',
+    name: '後方小花圃',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '花店後方的戶外小花圃，栽培著四季花卉。',
+    connections: {
+      loc_ss_fl_1f_fresh: { status: 'open', description: '推門回到室內鮮花區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_fl_1f_to_b1_stair',
+    name: '花店1F至B1樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 B1 恆溫冷藏庫的樓梯間。',
+    connections: {
+      loc_ss_fl_1f_fresh: { status: 'open', description: '走上1F鮮花區' },
+      loc_ss_fl_b1_cold_storage: { status: 'open', description: '走下B1來到冷藏庫防寒門前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_fl_b1_cold_storage',
+    name: '恆溫冷藏庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '維繫鮮花新鮮度的地下大型恆溫冷藏庫。',
+    connections: {
+      loc_ss_fl_1f_to_b1_stair: { status: 'open', description: '離開冷藏庫走進樓梯間' },
+      loc_ss_fl_b1_wrap_studio: { status: 'open', description: '走進包裝工作室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_fl_b1_wrap_studio',
+    name: '包裝工作室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '花藝師包裝花束、裁剪枝葉與製作花籃的工作間。',
+    connections: {
+      loc_ss_fl_b1_cold_storage: { status: 'open', description: '回到冷藏庫門前' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.19 禮品店 (Area 1.4.19)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_gf_1f_festive',
+    name: '禮品店1F節慶禮品區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '陳列生日禮物、節慶飾品與音樂盒的精緻店家。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出禮品店門口' },
+      loc_ss_gf_1f_goods: { status: 'open', description: '走到雜貨區' },
+      loc_ss_gf_1f_wrap_area: { status: 'open', description: '走到手作包裝區' },
+      loc_ss_gf_1f_creative: { status: 'open', description: '走到文創區' },
+      loc_ss_gf_1f_checkout: { status: 'open', description: '走到結帳櫃檯' },
+      loc_ss_gf_1f_storage: {
+        status: 'temporary',
+        description: '推門進入後方倉庫',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['gift_shop_manager', 'gift_shop_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_gf_1f_festive' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['gift_shop_manager', 'gift_shop_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_gf_1f_goods',
+    name: '特色雜貨區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '展售創意雜貨與精美馬克杯貨架。',
+    connections: {
+      loc_ss_gf_1f_festive: { status: 'open', description: '回到節慶禮品區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gf_1f_wrap_area',
+    name: '手作包裝區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '提供包裝紙選購與免費禮盒緞帶包裝檯。',
+    connections: {
+      loc_ss_gf_1f_festive: { status: 'open', description: '回到節慶禮品區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gf_1f_creative',
+    name: '文創商品區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '獨立創作者文創小物與明信片展售專區。',
+    connections: {
+      loc_ss_gf_1f_festive: { status: 'open', description: '回到節慶禮品區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gf_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '禮品店結帳櫃檯。',
+    connections: {
+      loc_ss_gf_1f_festive: { status: 'open', description: '回到節慶禮品區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_gf_1f_storage',
+    name: '禮品倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '禮品店後方庫存倉庫。',
+    connections: {
+      loc_ss_gf_1f_festive: { status: 'open', description: '回到節慶禮品區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.20 速食店 (Area 1.4.20)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_ff_1f_counter',
+    name: '速食店1F點餐台',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '連鎖美式速食店點餐與取餐櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出速食店門口' },
+      loc_ss_ff_1f_seating: { status: 'open', description: '走到座位區' },
+      loc_ss_ff_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F' },
+      loc_ss_ff_1f_kitchen: {
+        status: 'temporary',
+        description: '推開彈簧門進入後廚',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['fast_food_manager', 'fast_food_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_1f_counter' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['fast_food_manager', 'fast_food_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_1f_seating',
+    name: '一樓座位區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '1F 靠窗與雙人用餐座位區。',
+    connections: {
+      loc_ss_ff_1f_counter: { status: 'open', description: '回到點餐台' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_1f_kitchen',
+    name: '速食店後廚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '炸薯條、煎漢堡肉與調配飲料的廚房作業區。',
+    connections: {
+      loc_ss_ff_1f_counter: { status: 'open', description: '回到點餐台' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_1f_to_2f_stair',
+    name: '速食店1F至2F樓梯間',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '通往 2F 用餐區與兒童區的樓梯間。',
+    connections: {
+      loc_ss_ff_1f_counter: { status: 'open', description: '走下1F點餐大廳' },
+      loc_ss_ff_2f_seating: { status: 'open', description: '走上2F用餐區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_2f_seating',
+    name: '聚餐座位區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 寬敞的多人用桌椅與沙發區。',
+    connections: {
+      loc_ss_ff_1f_to_2f_stair: { status: 'open', description: '走進樓梯間' },
+      loc_ss_ff_2f_play_area: { status: 'open', description: '走到遊戲區' },
+      loc_ss_ff_2f_staff_lounge: {
+        status: 'temporary',
+        description: '推門進入員工休息室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['fast_food_manager', 'fast_food_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_2f_seating' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['fast_food_manager', 'fast_food_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_ff_2f_male_wc: {
+        status: 'temporary',
+        description: '走進男廁所',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_2f_seating' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_2f_seating' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_ff_2f_female_wc: {
+        status: 'temporary',
+        description: '走進女廁所',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_2f_seating' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_ff_2f_seating' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_2f_play_area',
+    name: '兒童遊樂區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '設有球池與溜滑梯的兒童遊戲防撞區。',
+    connections: {
+      loc_ss_ff_2f_seating: { status: 'open', description: '回到聚餐座位區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_2f_male_wc',
+    name: '男廁所',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 男性洗手間。',
+    connections: {
+      loc_ss_ff_2f_seating: { status: 'open', description: '走出男廁回到座位區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_2f_female_wc',
+    name: '女廁所',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '2F 女性洗手間。',
+    connections: {
+      loc_ss_ff_2f_seating: { status: 'open', description: '走出女廁回到座位區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_ff_2f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '速食店員工休息更衣室。',
+    connections: {
+      loc_ss_ff_2f_seating: { status: 'open', description: '回到聚餐座位區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.21 熱炒店 (Area 1.4.21)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_sf_1f_outdoor_seating',
+    name: '熱炒店1F露天桌椅區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '充滿人間煙火氣的露天大圓桌用餐區。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走回商店街主幹道' },
+      loc_ss_sf_1f_indoor_seating: { status: 'open', description: '走進室內用餐區' },
+      loc_ss_sf_1f_front_kitchen: { status: 'open', description: '走到前台廚房前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_sf_1f_indoor_seating',
+    name: '室內用餐區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '熱炒店室內冷氣座位區。',
+    connections: {
+      loc_ss_sf_1f_outdoor_seating: { status: 'open', description: '走到露天區' },
+      loc_ss_sf_1f_front_kitchen: { status: 'open', description: '走到前台廚房' },
+      loc_ss_sf_1f_unisex_wc: { status: 'open', description: '走進廁所' },
+    },
+  },
+
+  {
+    id: 'loc_ss_sf_1f_front_kitchen',
+    name: '開放式前台廚房',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '擺放冷藏海鮮水槽與大火炒鍋的出菜台。',
+    connections: {
+      loc_ss_sf_1f_outdoor_seating: { status: 'open', description: '回到露天桌椅區' },
+      loc_ss_sf_1f_indoor_seating: { status: 'open', description: '回到室內用餐區' },
+      loc_ss_sf_1f_back_kitchen: {
+        status: 'temporary',
+        description: '進入後廚房',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['stir_fry_boss', 'stir_fry_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_sf_1f_front_kitchen' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['stir_fry_boss', 'stir_fry_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_sf_1f_back_kitchen',
+    name: '熱炒後廚房',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '備料、洗碗與高壓瓦斯大火烹飪的後廚。',
+    connections: {
+      loc_ss_sf_1f_front_kitchen: { status: 'open', description: '回到前台廚房' },
+    },
+  },
+
+  {
+    id: 'loc_ss_sf_1f_unisex_wc',
+    name: '男女共用廁所',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '熱炒店男女共用的洗手間。',
+    connections: {
+      loc_ss_sf_1f_indoor_seating: { status: 'open', description: '走出廁所回到室內用餐區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.22 麵店 (Area 1.4.22)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_nd_1f_bar',
+    name: '麵店1F吧檯座位區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '環繞煮麵區的木質吧檯座位。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出麵店' },
+      loc_ss_nd_1f_seating: { status: 'open', description: '走到一般座位區' },
+      loc_ss_nd_1f_cooking_area: { status: 'open', description: '走到煮麵吧檯前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_nd_1f_seating',
+    name: '一般座位區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '四人方桌用餐區。',
+    connections: {
+      loc_ss_nd_1f_bar: { status: 'open', description: '回到吧檯座位區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_nd_1f_cooking_area',
+    name: '煮麵區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '煮麵、切小菜與淋滷汁的工作區。',
+    connections: {
+      loc_ss_nd_1f_bar: { status: 'open', description: '回到吧檯座位區' },
+      loc_ss_nd_1f_kitchen: {
+        status: 'temporary',
+        description: '進入後廚房',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['noodle_shop_boss', 'noodle_shop_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_nd_1f_cooking_area' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['noodle_shop_boss', 'noodle_shop_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_nd_1f_kitchen',
+    name: '麵店後廚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '熬煮高湯與準備大湯鍋的後廚。',
+    connections: {
+      loc_ss_nd_1f_cooking_area: { status: 'open', description: '回到煮麵區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.23 便當店 (Area 1.4.23)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bt_1f_counter',
+    name: '便當店1F點餐與打菜區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '排隊打主菜與挑選三樣副菜的便當打菜櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出便當店' },
+      loc_ss_bt_1f_kitchen: {
+        status: 'temporary',
+        description: '推門進入後廚房',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bento_shop_boss', 'bento_shop_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_bt_1f_counter' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['bento_shop_boss', 'bento_shop_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_ss_bt_1f_prep_room: {
+        status: 'temporary',
+        description: '走進後方備料室',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bento_shop_boss', 'bento_shop_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_bt_1f_counter' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['bento_shop_boss', 'bento_shop_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_bt_1f_kitchen',
+    name: '便當店後廚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '炸雞排、控肉與大鍋炒菜的便當後廚房。',
+    connections: {
+      loc_ss_bt_1f_counter: { status: 'open', description: '回到打菜區' },
+      loc_ss_bt_1f_prep_room: { status: 'open', description: '走到備料室' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bt_1f_prep_room',
+    name: '備料室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '洗菜、切菜與洗碗的後勤備料房間。',
+    connections: {
+      loc_ss_bt_1f_counter: { status: 'open', description: '回到打菜區' },
+      loc_ss_bt_1f_kitchen: { status: 'open', description: '走到後廚' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.24 理髮店 (Area 1.4.24)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bb_1f_waiting',
+    name: '理髮店1F等待區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '傳統理髮店等候沙發區，擺放著報紙與雜誌。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出理髮店' },
+      loc_ss_bb_1f_haircut: { status: 'open', description: '走到理髮座椅區' },
+      loc_ss_bb_1f_shampoo: { status: 'open', description: '走到洗頭台區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bb_1f_haircut',
+    name: '理髮區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '懷舊三旋轉理髮椅與刮鬍用具區。',
+    connections: {
+      loc_ss_bb_1f_waiting: { status: 'open', description: '回到等待區' },
+      loc_ss_bb_1f_shampoo: { status: 'open', description: '走到洗頭台' },
+      loc_ss_bb_1f_storage: { status: 'open', description: '進入小倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bb_1f_shampoo',
+    name: '洗頭台',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '傳統瓷器洗頭槽區。',
+    connections: {
+      loc_ss_bb_1f_waiting: { status: 'open', description: '回到等待區' },
+      loc_ss_bb_1f_haircut: { status: 'open', description: '走到理髮區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bb_1f_storage',
+    name: '理髮店小倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放毛巾與理髮用品的雜物庫。',
+    connections: {
+      loc_ss_bb_1f_haircut: { status: 'open', description: '回到理髮區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.25 麵包店 (Area 1.4.25)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bk_1f_display',
+    name: '麵包店1F麵包展售區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '夾取吐司、菠蘿麵包與歐式麵包的高級玻璃麵包櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出麵包店' },
+      loc_ss_bk_1f_checkout: { status: 'open', description: '走到結帳櫃檯' },
+      loc_ss_bk_1f_baking_kitchen: {
+        status: 'temporary',
+        description: '走進烘焙工房',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['baker', 'bakery_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_ss_bk_1f_display' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['baker', 'bakery_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+
+  {
+    id: 'loc_ss_bk_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '麵包店打包與結帳收銀檯。',
+    connections: {
+      loc_ss_bk_1f_display: { status: 'open', description: '回到展售區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bk_1f_baking_kitchen',
+    name: '烘焙後廚',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '充滿麥香與烤箱熱氣的麵包揉麵與發酵烘焙工房。',
+    connections: {
+      loc_ss_bk_1f_display: { status: 'open', description: '回到展售區' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.26 早餐店 (Area 1.4.26)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bf_1f_counter',
+    name: '早餐店1F點餐台',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '清晨人頭攢動的傳統台式早餐店點餐櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出早餐店' },
+      loc_ss_bf_1f_seating: { status: 'open', description: '走到內用座位區' },
+      loc_ss_bf_1f_kitchen: { status: 'open', description: '走到煎台前' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bf_1f_seating',
+    name: '內用座位區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '內用早餐桌椅區。',
+    connections: {
+      loc_ss_bf_1f_counter: { status: 'open', description: '回到點餐台' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bf_1f_kitchen',
+    name: '煎台與後廚房',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '煎蛋餅、蘿蔔糕與煮豆漿的煎台區域。',
+    connections: {
+      loc_ss_bf_1f_counter: { status: 'open', description: '回到點餐台' },
+    },
+  },
+
+  // ------------------------------------------
+  // 1.4.27 連鎖飲料店 (Area 1.4.27)
+  // ------------------------------------------
+  {
+    id: 'loc_ss_bv_1f_counter',
+    name: '連鎖飲料店1F點餐櫃檯',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '手搖飲料店點餐與領取飲料櫃檯。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走出飲料店' },
+      loc_ss_bv_1f_mixing: { status: 'open', description: '走進調配吧檯內' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bv_1f_mixing',
+    name: '飲料調配區',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '搖奶茶、加珍珠、封口與加冰塊的作業區。',
+    connections: {
+      loc_ss_bv_1f_counter: { status: 'open', description: '回到點餐櫃檯' },
+      loc_ss_bv_1f_staff_lounge: { status: 'open', description: '進入員工休息室' },
+      loc_ss_bv_1f_storage: { status: 'open', description: '進入小倉庫' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bv_1f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '飲料店員工休息與更衣處。',
+    connections: {
+      loc_ss_bv_1f_mixing: { status: 'open', description: '回到調配區' },
+    },
+  },
+
+  {
+    id: 'loc_ss_bv_1f_storage',
+    name: '後方小倉庫',
+    areaId: 'area_shopping_street',
+    displayStatus: 'visible',
+    description: '存放茶葉、果糖桶與塑膠杯的庫房。',
+    connections: {
+      loc_ss_bv_1f_mixing: { status: 'open', description: '回到調配區' },
     },
   },
 ];
@@ -64960,6 +68141,7 @@ export const defaultLocations: LocationNode[] = [
   ...area1_1_StationLocations,
   ...area1_2_DepartmentStoreLocations,
   ...area1_3_FinancialStreetLocations,
+  ...area1_4_ShoppingStreetLocations,
   ...area2_1_SchoolMainLocations,
   ...area2_2_GymnasiumLocations,
   ...area2_3_ClubBuildingLocations,
