@@ -82,6 +82,17 @@ export const defaultAreas: Area[] = [
     displayStatus: 'visible',
     connections: {},
   },
+  // ==========================================
+  // 1.3: 齋明市中心區 - 金融街
+  // ==========================================
+  {
+    id: 'area_financial_street',
+    name: '齋明市中心區－金融街',
+    description: '高樓林立的金融與商業中心，銀行、證券交易所、商務大樓與演藝媒體巨頭皆座落於此。',
+    zoneId: 'zone_downtown',
+    displayStatus: 'visible',
+    connections: {},
+  },
 
   // ==========================================
   // 2. 學園文教區區域定義
@@ -147,7 +158,7 @@ export const defaultAreas: Area[] = [
 // ==========================================
 // Zone 3: 地點定義
 // ==========================================
-export const defaultLocations: LocationNode[] = [
+const area1_1_StationLocations: LocationNode[] = [
   // ==========================================
   // Area 1.1: 齋明市中心區 - 齋明市中央車站
   // ==========================================
@@ -169,6 +180,7 @@ export const defaultLocations: LocationNode[] = [
       loc_ug_stair_2: { status: 'open', description: '走下二號連外地下樓梯。' },
       loc_ug_stair_3: { status: 'open', description: '走下三號連外地下樓梯。' },
       loc_ds_1f_main_corridor: { status: 'open', description: '走進精品商場。' },
+      loc_fs_main_street: { status: 'open', description: '走向金融街大道。' },
     },
   },
   {
@@ -232,7 +244,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 40 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
                   ],
                 },
               ],
@@ -270,7 +282,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
                   ],
                 },
               ],
@@ -308,7 +320,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
                   ],
                 },
               ],
@@ -534,7 +546,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 40 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
                   ],
                 },
               ],
@@ -572,7 +584,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
                   ],
                 },
               ],
@@ -610,7 +622,7 @@ export const defaultLocations: LocationNode[] = [
                   subMatchMode: 'or',
                   subConditions: [
                     { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
                   ],
                 },
               ],
@@ -1549,6 +1561,9 @@ export const defaultLocations: LocationNode[] = [
       ],
     },
   },
+];
+
+const area1_2_DepartmentStoreLocations: LocationNode[] = [
   // ==========================================
   // Area 1.2: 齋明市中心區 - 百貨大樓
   // ==========================================
@@ -1913,7 +1928,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -2309,7 +2324,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -2766,7 +2781,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -3206,7 +3221,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -3646,7 +3661,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -4084,7 +4099,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -4626,7 +4641,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -4992,7 +5007,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -5398,7 +5413,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -5768,6 +5783,4395 @@ export const defaultLocations: LocationNode[] = [
       },
     },
   },
+];
+
+const area1_3_FinancialStreetLocations: LocationNode[] = [
+  // ==========================================
+  // Area 1.3: 齋明市中心區 - 金融街
+  // ==========================================
+  // ==========================================
+  // Area 1.3.1: 戶外公共區域
+  // ==========================================
+  {
+    id: 'loc_fs_main_street',
+    name: '金融街大道',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '寬闊繁華的金融街林蔭大道，兩旁聳立著金融機構與商業巨擘大樓。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '沿著林蔭大道前行進入金融廣場。' },
+      loc_station_outdoor: { status: 'open', description: '沿著道路走向車站方向。' },
+    },
+  },
+  {
+    id: 'loc_fs_financial_plaza',
+    name: '金融廣場',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '金融街中央的氣派露天廣場，圍繞著律師事務所、銀行總部、證券交易所、商務大樓與媒體中心。',
+    connections: {
+      loc_fs_main_street: { status: 'open', description: '走出廣場進入金融街大道。' },
+      loc_fs_law_1f_lobby: { status: 'open', description: '推開旋轉門進入律師事務所大廳。' },
+      loc_fs_bank_1f_lobby: { status: 'open', description: '走上階梯進入銀行總部營業大廳。' },
+      loc_fs_stock_1f_trading_floor: { status: 'open', description: '推開大門進入證券交易所交易大廳。' },
+      loc_fs_biz_1f_lobby: { status: 'open', description: '走進商務大樓氣派大廳。' },
+      loc_fs_media_1f_lobby: { status: 'open', description: '走進綜合演藝媒體中心大廳。' },
+    },
+  },
+
+  // ==========================================
+  // Area 1.3.2: 律師事務所
+  // ==========================================
+  {
+    id: 'loc_fs_law_1f_lobby',
+    name: '律師事務所 1F 聯合招待大廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所一樓招待大廳，大理石地板光潔照人，設有接待櫃檯。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '走出大門進入金融廣場。' },
+      loc_fs_law_1f_elevator: { status: 'open', description: '走進1F電梯間。' },
+      loc_fs_law_1f_stairwell_2f: { status: 'open', description: '走進樓梯間。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_1f_elevator',
+    name: '律師事務所 1F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所一樓電梯間。',
+    connections: {
+      loc_fs_law_1f_lobby: { status: 'open', description: '走出電梯間進入大廳。' },
+      loc_fs_law_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_law_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_law_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_law_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_1f_stairwell_2f',
+    name: '律師事務所 1F 至 2F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接一樓大廳與二樓諮詢區的鋼構樓梯間。',
+    connections: {
+      loc_fs_law_1f_lobby: { status: 'open', description: '沿樓梯往下走進1F大廳。' },
+      loc_fs_law_2f_consult: { status: 'open', description: '沿樓梯往上走進2F開放諮詢區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_consult',
+    name: '律師事務所 2F 開放諮詢區',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '開放式法律諮詢空間，提供初步法律意見與會客接洽。',
+    connections: {
+      loc_fs_law_1f_stairwell_2f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_law_2f_stairwell_3f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_law_2f_elevator: { status: 'open', description: '走進2F電梯間。' },
+      loc_fs_law_2f_meeting_1: { status: 'open', description: '走進一號會客室。' },
+      loc_fs_law_2f_meeting_2: { status: 'open', description: '走進二號會客室。' },
+      loc_fs_law_2f_meeting_3: { status: 'open', description: '走進三號會客室。' },
+      loc_fs_law_2f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_male_restroom',
+    name: '律師事務所 2F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '二樓男洗手間。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '走出男廁進入諮詢區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_meeting_1',
+    name: '律師事務所 一號會客室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '隔音良好的小型獨立會客室。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '走出會客室進入諮詢區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_meeting_2',
+    name: '律師事務所 二號會客室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '隔音良好的小型獨立會客室。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '走出會客室進入諮詢區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_meeting_3',
+    name: '律師事務所 三號會客室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '隔音良好的小型獨立會客室。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '走出會客室進入諮詢區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_elevator',
+    name: '律師事務所 2F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所二樓電梯間。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '走出電梯間進入諮詢區。' },
+      loc_fs_law_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_law_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_law_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_law_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_2f_stairwell_3f',
+    name: '律師事務所 2F 至 3F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接二樓諮詢區與三樓律師辦公區的樓梯間。',
+    connections: {
+      loc_fs_law_2f_consult: { status: 'open', description: '沿樓梯往下走進2F諮詢區。' },
+      loc_fs_law_3f_office: {
+        status: 'temporary',
+        description: '沿樓梯往上走進3F辦公區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_3f_office',
+    name: '律師事務所 3F 一般律師辦公區',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '事務所受僱律師與法務人員的主要辦公區域，擺滿案件卷宗。',
+    connections: {
+      loc_fs_law_2f_stairwell_3f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_law_3f_stairwell_4f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_law_3f_elevator: { status: 'open', description: '走進3F電梯間。' },
+      loc_fs_law_3f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_3f_female_restroom',
+    name: '律師事務所 3F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓女洗手間。',
+    connections: {
+      loc_fs_law_3f_office: { status: 'open', description: '走出女廁進入辦公區。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_3f_elevator',
+    name: '律師事務所 3F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所三樓電梯間。',
+    connections: {
+      loc_fs_law_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_law_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_law_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_law_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_law_3f_office: {
+        status: 'temporary',
+        description: '走出電梯間進入辦公區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_3f_stairwell_4f',
+    name: '律師事務所 3F 至 4F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接三樓辦公區與四樓檔案庫的安全樓梯間。',
+    connections: {
+      loc_fs_law_3f_office: { status: 'open', description: '沿樓梯往下走進3F辦公區。' },
+      loc_fs_law_4f_archives: {
+        status: 'temporary',
+        description: '沿樓梯往上走進4F檔案庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_archives',
+    name: '律師事務所 4F 檔案庫',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放事務所歷年訴訟案卷與法律文獻的核心檔案庫。',
+    connections: {
+      loc_fs_law_3f_stairwell_4f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_law_4f_stairwell_5f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_law_4f_elevator: { status: 'open', description: '走進4F電梯間。' },
+      loc_fs_law_4f_evidence: { status: 'open', description: '走進證物室。' },
+      loc_fs_law_4f_storage: { status: 'open', description: '進入封存檔案庫。' },
+      loc_fs_law_4f_confidential: {
+        status: 'temporary',
+        description: '推開防盜門進入保密資料室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w4c9k7v', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+          ],
+        },
+      },
+      loc_fs_law_4f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_evidence',
+    name: '律師事務所 證物室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '保管訴訟相關重要物證與證物的專用隔間。',
+    connections: {
+      loc_fs_law_4f_archives: { status: 'open', description: '走出證物室進入檔案庫。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_storage',
+    name: '律師事務所 封存用檔案庫',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放已完結古老民刑事案件的封存檔案室。',
+    connections: {
+      loc_fs_law_4f_archives: { status: 'open', description: '走出封存檔案庫進入檔案庫。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_confidential',
+    name: '律師事務所 保密資料室',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_law_4f_archives' },
+      ],
+    },
+    description: '極度機密的極高密級訴訟文件存放室，裝有厚重金屬防盜門。',
+    connections: {
+      loc_fs_law_4f_archives: { status: 'open', description: '走出保密資料室進入檔案庫。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_male_restroom',
+    name: '律師事務所 4F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓男洗手間。',
+    connections: {
+      loc_fs_law_4f_archives: { status: 'open', description: '走出男廁進入檔案庫。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_elevator',
+    name: '律師事務所 4F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所四樓電梯間。',
+    connections: {
+      loc_fs_law_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_law_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_law_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_law_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_law_4f_archives: {
+        status: 'temporary',
+        description: '走出電梯間進入檔案庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'lawyer' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_4f_stairwell_5f',
+    name: '律師事務所 4F 至 5F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接四樓檔案庫與五樓合夥人辦公室的樓梯間。',
+    connections: {
+      loc_fs_law_4f_archives: { status: 'open', description: '沿樓梯往下走進4F檔案庫。' },
+      loc_fs_law_5f_partner_office: { status: 'open', description: '沿樓梯往上走進5F合夥人辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_5f_partner_office',
+    name: '律師事務所 5F 高級合夥人辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '高級合夥人律師的奢華獨立辦公室，俯瞰金融廣場景象。',
+    connections: {
+      loc_fs_law_4f_stairwell_5f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_law_5f_elevator: { status: 'open', description: '走進5F電梯間。' },
+      loc_fs_law_5f_vip_room: { status: 'open', description: '走進高級會談室。' },
+      loc_fs_law_5f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_law_5f_vip_room',
+    name: '律師事務所 高級會談室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '專為重要客戶設的高規格私人會談室。',
+    connections: {
+      loc_fs_law_5f_partner_office: { status: 'open', description: '走出會談室進入辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_5f_female_restroom',
+    name: '律師事務所 5F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '五樓女洗手間。',
+    connections: {
+      loc_fs_law_5f_partner_office: { status: 'open', description: '走出女廁進入辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_5f_elevator',
+    name: '律師事務所 5F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '律師事務所五樓電梯間。',
+    connections: {
+      loc_fs_law_5f_partner_office: { status: 'open', description: '走出電梯間進入辦公室。' },
+      loc_fs_law_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_law_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_law_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_law_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_law_rf_machine_room: { status: 'open', description: '搭乘維護電梯前往頂樓機房。' },
+    },
+  },
+  {
+    id: 'loc_fs_law_rf_machine_room',
+    name: '律師事務所 頂樓電梯機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_law_5f_elevator' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    description: '律師事務所頂樓電梯控制機房。',
+    connections: {
+      loc_fs_law_5f_elevator: { status: 'open', description: '離開機房進入5F電梯間。' },
+    },
+  },
+
+  // ==========================================
+  // Area 1.3.3: 銀行總部
+  // ==========================================
+  {
+    id: 'loc_fs_bank_b1_vault_ante',
+    name: '銀行總部 B1 金庫前庭',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行地下厚重的防爆門前庭空間，設有重重保全關卡。',
+    connections: {
+      loc_fs_bank_b1_elevator: { status: 'open', description: '走進B1電梯間。' },
+      loc_fs_bank_b1_stairwell_1f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_bank_b1_vault: {
+        status: 'temporary',
+        description: '推開重型金庫鋼門進入保險庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_b1k8v3c9m', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bank_manager', 'bank_director'],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_b1_vault',
+    name: '銀行總部 B1 地下保險庫',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放黃金、高價值證券與客戶機密保管箱的金庫重地。',
+    connections: {
+      loc_fs_bank_b1_vault_ante: { status: 'open', description: '走出保險庫進入金庫前庭。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_b1_elevator',
+    name: '銀行總部 B1 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行總部地下一樓電梯間。',
+    connections: {
+      loc_fs_bank_b1_vault_ante: { status: 'open', description: '走出電梯間進入金庫前庭。' },
+      loc_fs_bank_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_bank_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_bank_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_bank_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_b1_stairwell_1f',
+    name: '銀行總部 B1 至 1F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接地下一樓金庫前庭與一樓營業大廳的安全樓梯間。',
+    connections: {
+      loc_fs_bank_b1_vault_ante: { status: 'open', description: '沿樓梯往下走進B1金庫前庭。' },
+      loc_fs_bank_1f_lobby: { status: 'open', description: '沿樓梯往上走進1F營業大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_lobby',
+    name: '銀行總部 1F 營業大廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '氣派雄偉的銀行挑高大廳，設有自動取款機與顧客候診區。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '走出大門進入金融廣場。' },
+      loc_fs_bank_1f_counter: { status: 'open', description: '走近櫃檯。' },
+      loc_fs_bank_1f_elevator: { status: 'open', description: '走進1F電梯間。' },
+      loc_fs_bank_1f_stairwell_2f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_bank_b1_stairwell_1f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_bank_1f_breakroom: {
+        status: 'temporary',
+        description: '推開管制門進入行員休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bank_clerk', 'bank_manager', 'bank_director'],
+            },
+          ],
+        },
+      },
+      loc_fs_bank_1f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_counter',
+    name: '銀行總部 1F 一般收付櫃檯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '處理日常存提款與一般金融業務的高防護防彈玻璃櫃檯。',
+    connections: {
+      loc_fs_bank_1f_lobby: { status: 'open', description: '離開櫃檯進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_breakroom',
+    name: '銀行總部 1F 行員休息室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供銀行基層行員茶飲休息與放置私人物品的專用休息室。',
+    connections: {
+      loc_fs_bank_1f_lobby: { status: 'open', description: '走出休息室進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_female_restroom',
+    name: '銀行總部 1F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '一樓女洗手間。',
+    connections: {
+      loc_fs_bank_1f_lobby: { status: 'open', description: '走出女廁進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_elevator',
+    name: '銀行總部 1F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行總部一樓電梯間。',
+    connections: {
+      loc_fs_bank_1f_lobby: { status: 'open', description: '走出電梯間進入營業大廳。' },
+      loc_fs_bank_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_bank_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_bank_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_bank_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_1f_stairwell_2f',
+    name: '銀行總部 1F 至 2F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接一樓大廳與二樓理財中心的樓梯間。',
+    connections: {
+      loc_fs_bank_1f_lobby: { status: 'open', description: '沿樓梯往下走進1F大廳。' },
+      loc_fs_bank_2f_wealth_center: { status: 'open', description: '沿樓梯往上走進2F理財中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_2f_wealth_center',
+    name: '銀行總部 2F 理財中心',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '辦理個人理財、基金投資與中高資產業務的專屬區域。',
+    connections: {
+      loc_fs_bank_1f_stairwell_2f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_bank_2f_stairwell_3f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_bank_2f_elevator: { status: 'open', description: '走進2F電梯間。' },
+      loc_fs_bank_2f_vip_room: {
+        status: 'temporary',
+        description: '走進貴賓招待室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bank_vip', 'bank_manager', 'bank_director'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['bank_manager', 'bank_director'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_bank_2f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_2f_vip_room',
+    name: '銀行總部 2F 貴賓招待室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '專為銀行VIP客戶提供私人諮詢與茶點的高級接待室。',
+    connections: {
+      loc_fs_bank_2f_wealth_center: { status: 'open', description: '走出招待室進入理財中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_2f_male_restroom',
+    name: '銀行總部 2F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '二樓男洗手間。',
+    connections: {
+      loc_fs_bank_2f_wealth_center: { status: 'open', description: '走出男廁進入理財中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_2f_elevator',
+    name: '銀行總部 2F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行總部二樓電梯間。',
+    connections: {
+      loc_fs_bank_2f_wealth_center: { status: 'open', description: '走出電梯間進入理財中心。' },
+      loc_fs_bank_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_bank_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_bank_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_bank_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_2f_stairwell_3f',
+    name: '銀行總部 2F 至 3F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接二樓理財中心與三樓貸款業務部的樓梯間。',
+    connections: {
+      loc_fs_bank_2f_wealth_center: { status: 'open', description: '沿樓梯往下走進2F理財中心。' },
+      loc_fs_bank_3f_loans_office: { status: 'open', description: '沿樓梯往上走進3F辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_3f_loans_office',
+    name: '銀行總部 3F 貸款與業務部辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '負責企業貸款、房貸與大型融資審核的辦公大廳。',
+    connections: {
+      loc_fs_bank_2f_stairwell_3f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_bank_3f_stairwell_4f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_bank_3f_elevator: { status: 'open', description: '走進3F電梯間。' },
+      loc_fs_bank_3f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_3f_female_restroom',
+    name: '銀行總部 3F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓女洗手間。',
+    connections: {
+      loc_fs_bank_3f_loans_office: { status: 'open', description: '走出女廁進入辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_3f_elevator',
+    name: '銀行總部 3F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行總部三樓電梯間。',
+    connections: {
+      loc_fs_bank_3f_loans_office: { status: 'open', description: '走出電梯間進入辦公室。' },
+      loc_fs_bank_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_bank_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_bank_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_bank_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_3f_stairwell_4f',
+    name: '銀行總部 3F 至 4F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接三樓業務部與四樓經理辦公室的樓梯間。',
+    connections: {
+      loc_fs_bank_3f_loans_office: { status: 'open', description: '沿樓梯往下走進3F辦公室。' },
+      loc_fs_bank_4f_manager_office: {
+        status: 'temporary',
+        description: '沿樓梯往上走進4F經理辦公室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bank_manager', 'bank_director'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['bank_manager', 'bank_director'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_4f_manager_office',
+    name: '銀行總部 4F 經理辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行分行總經理的獨立辦公室，陳設極其講究。',
+    connections: {
+      loc_fs_bank_3f_stairwell_4f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_bank_4f_elevator: { status: 'open', description: '走進4F電梯間。' },
+      loc_fs_bank_4f_boardroom: { status: 'open', description: '推開雙開木門進入總行會議室。' },
+      loc_fs_bank_4f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_4f_boardroom',
+    name: '銀行總部 4F 總行會議室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行高層董事召開重大投資策略會議的高級會議室。',
+    connections: {
+      loc_fs_bank_4f_manager_office: { status: 'open', description: '走出會議室進入經理辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_4f_male_restroom',
+    name: '銀行總部 4F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓男洗手間。',
+    connections: {
+      loc_fs_bank_4f_manager_office: { status: 'open', description: '走出男廁進入經理辦公室。' },
+    },
+  },
+  {
+    id: 'loc_fs_bank_4f_elevator',
+    name: '銀行總部 4F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '銀行總部四樓電梯間。',
+    connections: {
+      loc_fs_bank_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_bank_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_bank_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_bank_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_bank_rf_machine_room: { status: 'open', description: '搭乘維護電梯前往頂樓機房。' },
+      loc_fs_bank_4f_manager_office: {
+        status: 'temporary',
+        description: '走出電梯間進入經理辦公室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['bank_manager', 'bank_director'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['bank_manager', 'bank_director'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_bank_rf_machine_room',
+    name: '銀行總部 頂樓電梯機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_bank_4f_elevator' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    description: '銀行總部頂樓電梯控制機房。',
+    connections: {
+      loc_fs_bank_4f_elevator: { status: 'open', description: '離開機房進入4F電梯間。' },
+    },
+  },
+
+  // ==========================================
+  // Area 1.3.4: 證券交易所
+  // ==========================================
+  {
+    id: 'loc_fs_stock_1f_trading_floor',
+    name: '證券交易所 1F 交易大廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '巨大螢幕跳動著股價大盤數據的寬敞交易大廳，氣氛緊張活絡。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '走出大門進入金融廣場。' },
+      loc_fs_stock_1f_ticker_area: { status: 'open', description: '走近資訊看板區。' },
+      loc_fs_stock_1f_elevator: { status: 'open', description: '走進1F電梯間。' },
+      loc_fs_stock_1f_stairwell_2f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_stock_1f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_1f_ticker_area',
+    name: '證券交易所 1F 資訊看板區',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '即時顯示股票、期貨與匯率走勢大盤畫面的看板區域。',
+    connections: {
+      loc_fs_stock_1f_trading_floor: { status: 'open', description: '進入交易大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_1f_female_restroom',
+    name: '證券交易所 1F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '一樓女洗手間。',
+    connections: {
+      loc_fs_stock_1f_trading_floor: { status: 'open', description: '走出女廁進入交易大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_1f_elevator',
+    name: '證券交易所 1F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '證券交易所一樓電梯間。',
+    connections: {
+      loc_fs_stock_1f_trading_floor: { status: 'open', description: '走出電梯間進入交易大廳。' },
+      loc_fs_stock_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_stock_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_stock_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_1f_stairwell_2f',
+    name: '證券交易所 1F 至 2F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接一樓大廳與二樓證券商營業處的樓梯間。',
+    connections: {
+      loc_fs_stock_1f_trading_floor: { status: 'open', description: '沿樓梯往下走進1F交易大廳。' },
+      loc_fs_stock_2f_brokerage: { status: 'open', description: '沿樓梯往上走進2F營業處。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_2f_brokerage',
+    name: '證券交易所 2F 證券商營業處',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '各大經紀證券商下單與諮詢營業據點聚集地。',
+    connections: {
+      loc_fs_stock_1f_stairwell_2f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_stock_2f_stairwell_3f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_stock_2f_elevator: { status: 'open', description: '走進2F電梯間。' },
+      loc_fs_stock_2f_observation: { status: 'open', description: '走出玻璃門進入觀景台。' },
+      loc_fs_stock_2f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_2f_observation',
+    name: '證券交易所 2F 觀景台',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '俯瞰一樓交易大廳繁華熱鬧景致的空中觀景廊道。',
+    connections: {
+      loc_fs_stock_2f_brokerage: { status: 'open', description: '走出觀景台進入營業處。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_2f_male_restroom',
+    name: '證券交易所 2F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '二樓男洗手間。',
+    connections: {
+      loc_fs_stock_2f_brokerage: { status: 'open', description: '走出男廁進入營業處。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_2f_elevator',
+    name: '證券交易所 2F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '證券交易所二樓電梯間。',
+    connections: {
+      loc_fs_stock_2f_brokerage: { status: 'open', description: '走出電梯間進入營業處。' },
+      loc_fs_stock_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_stock_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_stock_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_2f_stairwell_3f',
+    name: '證券交易所 2F 至 3F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接二樓營業處與三樓貴賓交易室的樓梯間。',
+    connections: {
+      loc_fs_stock_2f_brokerage: { status: 'open', description: '沿樓梯往下走進2F營業處。' },
+      loc_fs_stock_3f_vip_room: {
+        status: 'temporary',
+        description: '沿樓梯往上走進3F貴賓交易室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['stock_vip', 'stock_manager', 'stock_broker_liaison'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['stock_vip', 'stock_manager', 'stock_broker_liaison'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_3f_vip_room',
+    name: '證券交易所 3F 貴賓交易室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '專為法人與大戶投資人設立的獨立高速對沖交易室。',
+    connections: {
+      loc_fs_stock_2f_stairwell_3f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_stock_3f_stairwell_4f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_stock_3f_elevator: { status: 'open', description: '走進3F電梯間。' },
+      loc_fs_stock_3f_clearing_center: { status: 'open', description: '進入結算中心。' },
+      loc_fs_stock_3f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_3f_clearing_center',
+    name: '證券交易所 3F 結算中心',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '負責全域股票交割與交割金交割結算的核心部門。',
+    connections: {
+      loc_fs_stock_3f_vip_room: { status: 'open', description: '走出結算中心進入貴賓交易室。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_3f_female_restroom',
+    name: '證券交易所 3F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓女洗手間。',
+    connections: {
+      loc_fs_stock_3f_vip_room: { status: 'open', description: '走出女廁進入貴賓交易室。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_3f_elevator',
+    name: '證券交易所 3F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '證券交易所三樓電梯間。',
+    connections: {
+      loc_fs_stock_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_stock_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_stock_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_stock_3f_vip_room: {
+        status: 'temporary',
+        description: '走出電梯間進入貴賓交易室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['stock_vip', 'stock_manager', 'stock_broker_liaison'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['stock_vip', 'stock_manager', 'stock_broker_liaison'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_3f_stairwell_4f',
+    name: '證券交易所 3F 至 4F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接三樓貴賓室與四樓數據機房的安全樓梯間。',
+    connections: {
+      loc_fs_stock_3f_vip_room: { status: 'open', description: '沿樓梯往下走進3F貴賓交易室。' },
+      loc_fs_stock_4f_server_room: {
+        status: 'temporary',
+        description: '沿樓梯往上走進4F數據機房。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['stock_manager', 'stock_it_engineer'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['stock_manager', 'stock_it_engineer'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_4f_server_room',
+    name: '證券交易所 4F 數據機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放高頻交易伺服器與證券數據庫的核心冷卻機房。',
+    connections: {
+      loc_fs_stock_3f_stairwell_4f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_stock_4f_elevator: { status: 'open', description: '走出數據機房進入4F電梯間。' },
+      loc_fs_stock_4f_sec_room: { status: 'open', description: '走進網路安控室。' },
+      loc_fs_stock_4f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_4f_sec_room',
+    name: '證券交易所 4F 網路安控室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '監控證券交易所網路安全與防止駭客攻擊的防禦中控室。',
+    connections: {
+      loc_fs_stock_4f_server_room: { status: 'open', description: '走出安控室進入數據機房。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_4f_male_restroom',
+    name: '證券交易所 4F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓男洗手間。',
+    connections: {
+      loc_fs_stock_4f_server_room: { status: 'open', description: '走出男廁進入數據機房。' },
+    },
+  },
+  {
+    id: 'loc_fs_stock_4f_elevator',
+    name: '證券交易所 4F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '證券交易所四樓電梯間。',
+    connections: {
+      loc_fs_stock_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_stock_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_stock_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_stock_rf_machine_room: { status: 'open', description: '搭乘維護電梯前往頂樓機房。' },
+      loc_fs_stock_4f_server_room: {
+        status: 'temporary',
+        description: '走出電梯間進入數據機房。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['stock_manager', 'stock_it_engineer'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['stock_manager', 'stock_it_engineer'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_stock_rf_machine_room',
+    name: '證券交易所 頂樓電梯機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_stock_4f_elevator' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    description: '證券交易所頂樓電梯控制機房。',
+    connections: {
+      loc_fs_stock_4f_elevator: { status: 'open', description: '離開機房進入4F電梯間。' },
+    },
+  },
+
+  // ==========================================
+  // Area 1.3.5: 商務大樓
+  // ==========================================
+  {
+    id: 'loc_fs_biz_b1_parking',
+    name: '商務大樓 B1 地下專屬停車場',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓地下高級地下車庫，停滿各式奢華轎車。',
+    connections: {
+      loc_fs_biz_b1_elevator: { status: 'open', description: '走進B1電梯間。' },
+      loc_fs_biz_b1_stairwell_1f: { status: 'open', description: '走進向上樓梯間。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_b1_elevator',
+    name: '商務大樓 B1 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓地下一樓電梯間。',
+    connections: {
+      loc_fs_biz_b1_parking: { status: 'open', description: '走出電梯間進入停車場。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_b1_stairwell_1f',
+    name: '商務大樓 B1 至 1F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接地下一樓停車場與一樓氣派大廳的安全樓梯間。',
+    connections: {
+      loc_fs_biz_b1_parking: { status: 'open', description: '沿樓梯往下走進B1停車場。' },
+      loc_fs_biz_1f_lobby: { status: 'open', description: '沿樓梯往上走進1F大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_lobby',
+    name: '商務大樓 1F 氣派大廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '氣派輝煌的大樓一樓大廳，門禁森嚴，設有咖啡店與警衛檯。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '走出大門進入金融廣場。' },
+      loc_fs_biz_1f_security: { status: 'open', description: '走進警衛室。' },
+      loc_fs_biz_1f_cafe: { status: 'open', description: '走進連鎖咖啡店。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '走進1F電梯間。' },
+      loc_fs_biz_1f_stairwell_2f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_biz_b1_stairwell_1f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_1f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_security',
+    name: '商務大樓 1F 大樓警衛室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '負責全棟商務大樓門禁安控與訪客登記的警衛室。',
+    connections: {
+      loc_fs_biz_1f_lobby: { status: 'open', description: '走出警衛室進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_cafe',
+    name: '商務大樓 1F 連鎖咖啡店',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓一樓的連鎖精品咖啡店，充滿商務人士談話聲。',
+    connections: {
+      loc_fs_biz_1f_lobby: { status: 'open', description: '走出咖啡店進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_female_restroom',
+    name: '商務大樓 1F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '一樓女洗手間。',
+    connections: {
+      loc_fs_biz_1f_lobby: { status: 'open', description: '走出女廁進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_elevator',
+    name: '商務大樓 1F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓一樓電梯間。',
+    connections: {
+      loc_fs_biz_1f_lobby: { status: 'open', description: '走出電梯間進入大廳。' },
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_1f_stairwell_2f',
+    name: '商務大樓 1F 至 2F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接一樓大廳與二樓共享辦公空間的樓梯間。',
+    connections: {
+      loc_fs_biz_1f_lobby: { status: 'open', description: '沿樓梯往下走進1F大廳。' },
+      loc_fs_biz_2f_coworking: { status: 'open', description: '沿樓梯往上走進2F共享辦公空間。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_coworking',
+    name: '商務大樓 2F 共享辦公空間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '開放式創客與新創企業共享辦公區域，設施現代化。',
+    connections: {
+      loc_fs_biz_1f_stairwell_2f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_2f_stairwell_3f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '走進2F電梯間。' },
+      loc_fs_biz_2f_foreign_office: { status: 'open', description: '推開玻璃門進入外商辦公室。' },
+      loc_fs_biz_2f_cafeteria: { status: 'open', description: '進入員工餐廳。' },
+      loc_fs_biz_2f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_foreign_office',
+    name: '商務大樓 2F 外商企業辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '跨國外商公司的駐辦區域。',
+    connections: {
+      loc_fs_biz_2f_coworking: { status: 'open', description: '走出辦公室進入共享空間。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_cafeteria',
+    name: '商務大樓 2F 員工餐廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '大樓租戶員工專用的精緻自助餐廳。',
+    connections: {
+      loc_fs_biz_2f_coworking: { status: 'open', description: '走出餐廳進入共享空間。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_male_restroom',
+    name: '商務大樓 2F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '二樓男洗手間。',
+    connections: {
+      loc_fs_biz_2f_coworking: { status: 'open', description: '走出男廁進入共享空間。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_elevator',
+    name: '商務大樓 2F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓二樓電梯間。',
+    connections: {
+      loc_fs_biz_2f_coworking: { status: 'open', description: '走出電梯間進入共享空間。' },
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_2f_stairwell_3f',
+    name: '商務大樓 2F 至 3F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接二樓共享空間與三樓會議樓層的樓梯間。',
+    connections: {
+      loc_fs_biz_2f_coworking: { status: 'open', description: '沿樓梯往下走進2F共享空間。' },
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '沿樓梯往上走進3F小型會議室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_hr_interview',
+    name: '商務大樓 3F 人資面試室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '企業進行高階求職人員面試的專用房間。',
+    connections: {
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '走出面試室進入3F走廊。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_accounting',
+    name: '商務大樓 3F 會計部辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '處理集團財務報表與審計業務的會計部。',
+    connections: {
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '走出會計部進入3F走廊。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_meeting_room',
+    name: '商務大樓 3F 小型會議室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓走廊與中小型會議室區域。',
+    connections: {
+      loc_fs_biz_2f_stairwell_3f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_3f_stairwell_4f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '走進3F電梯間。' },
+      loc_fs_biz_3f_hr_interview: { status: 'open', description: '走進人資面試室。' },
+      loc_fs_biz_3f_accounting: { status: 'open', description: '推門進入會計部。' },
+      loc_fs_biz_3f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_female_restroom',
+    name: '商務大樓 3F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓女洗手間。',
+    connections: {
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '走出女廁進入3F走廊。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_elevator',
+    name: '商務大樓 3F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓三樓電梯間。',
+    connections: {
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '走出電梯間進入3F走廊。' },
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_3f_stairwell_4f',
+    name: '商務大樓 3F 至 4F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接三樓會議室與四樓董事會議室的樓梯間。',
+    connections: {
+      loc_fs_biz_3f_meeting_room: { status: 'open', description: '沿樓梯往下走進3F會議室。' },
+      loc_fs_biz_4f_boardroom: { status: 'open', description: '沿樓梯往上走進4F董事會議室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_4f_boardroom',
+    name: '商務大樓 4F 董事會議室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '企業集團董事會舉行重大股東與董事決策會議的奢華會議室。',
+    connections: {
+      loc_fs_biz_3f_stairwell_4f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_4f_stairwell_5f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '走進4F電梯間。' },
+      loc_fs_biz_4f_vip_lounge: {
+        status: 'temporary',
+        description: '進入VIP接待室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'biz_vip' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'biz_vip' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_biz_4f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_4f_vip_lounge',
+    name: '商務大樓 4F VIP接待室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓高規格商務 VIP 客戶專屬貴賓接待室。',
+    connections: {
+      loc_fs_biz_4f_boardroom: { status: 'open', description: '走出接待室進入董事會議室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_4f_male_restroom',
+    name: '商務大樓 4F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓男洗手間。',
+    connections: {
+      loc_fs_biz_4f_boardroom: { status: 'open', description: '走出男廁進入董事會議室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_4f_elevator',
+    name: '商務大樓 4F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓四樓電梯間。',
+    connections: {
+      loc_fs_biz_4f_boardroom: { status: 'open', description: '走出電梯間進入4F走廊。' },
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_4f_stairwell_5f',
+    name: '商務大樓 4F 至 5F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接四樓董事會議室與五樓總裁辦公區的樓梯間。',
+    connections: {
+      loc_fs_biz_4f_boardroom: { status: 'open', description: '沿樓梯往下走進4F董事會議室。' },
+      loc_fs_biz_5f_secretary: {
+        status: 'temporary',
+        description: '沿樓梯往上走進5F秘書室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'biz_chief_secretary' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'biz_chief_secretary' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_secretary',
+    name: '商務大樓 5F 高級秘書室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '集團總裁秘書團隊辦公與過濾訪客的前置區域。',
+    connections: {
+      loc_fs_biz_4f_stairwell_5f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_5f_stairwell_rf: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '走進5F電梯間。' },
+      loc_fs_biz_5f_ceo_office: {
+        status: 'temporary',
+        description: '推開雙開大門進入總裁辦公室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'biz_ceo' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'biz_ceo' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_biz_5f_sky_club: {
+        status: 'temporary',
+        description: '推開會所大門進入會所。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_b9z5v2k8c', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+          ],
+        },
+      },
+      loc_fs_biz_5f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_ceo_office',
+    name: '商務大樓 5F 財閥總裁辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商業帝國最高掌權者的奢華獨立辦公室，擁有極佳全景落地窗視野。',
+    connections: {
+      loc_fs_biz_5f_secretary: { status: 'open', description: '走出總裁辦公室進入秘書室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_sky_club',
+    name: '商務大樓 5F 私人空中會所',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '專供頂級財閥與政商要員社交娛樂的私密空中會所。',
+    connections: {
+      loc_fs_biz_5f_secretary: { status: 'open', description: '走出會所進入秘書室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_female_restroom',
+    name: '商務大樓 5F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '五樓女洗手間。',
+    connections: {
+      loc_fs_biz_5f_secretary: { status: 'open', description: '走出女廁進入秘書室。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_elevator',
+    name: '商務大樓 5F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓五樓電梯間。',
+    connections: {
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '搭乘電梯前往頂樓。' },
+      loc_fs_biz_5f_secretary: {
+        status: 'temporary',
+        description: '走出電梯間進入秘書室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'biz_chief_secretary' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'biz_chief_secretary' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_biz_5f_stairwell_rf',
+    name: '商務大樓 5F 至頂樓樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接五樓秘書室與頂樓景觀花園的樓梯間。',
+    connections: {
+      loc_fs_biz_5f_secretary: { status: 'open', description: '沿樓梯往下走進5F秘書室。' },
+      loc_fs_biz_rf_sky_garden: { status: 'open', description: '沿樓梯往上走進頂樓花園。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_rf_sky_garden',
+    name: '商務大樓 頂樓空中景觀花園',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '位於大樓屋頂的美麗空中綠化花園，景緻怡人。',
+    connections: {
+      loc_fs_biz_5f_stairwell_rf: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_biz_rf_elevator: { status: 'open', description: '走進頂樓電梯間。' },
+      loc_fs_biz_rf_helipad: { status: 'open', description: '穿過景觀步道前往停機坪。' },
+      loc_fs_biz_rf_machine_room: { status: 'open', description: '爬上電梯間外牆鐵梯進入電梯機房。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_rf_helipad',
+    name: '商務大樓 頂樓停機坪',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供總裁與政商要員私人直升機起降的專用停機坪。',
+    connections: {
+      loc_fs_biz_rf_sky_garden: { status: 'open', description: '走出停機坪進入空中景觀花園。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_rf_elevator',
+    name: '商務大樓 RF 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '商務大樓頂樓電梯間。',
+    connections: {
+      loc_fs_biz_rf_sky_garden: { status: 'open', description: '走出電梯間進入景觀花園。' },
+      loc_fs_biz_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_biz_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_biz_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_biz_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_biz_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_biz_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+    },
+  },
+  {
+    id: 'loc_fs_biz_rf_machine_room',
+    name: '商務大樓 頂樓電梯機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_biz_rf_sky_garden' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    description: '商務大樓頂樓電梯控制機房。',
+    connections: {
+      loc_fs_biz_rf_sky_garden: { status: 'open', description: '離開機房進入頂樓空中景觀花園。' },
+    },
+  },
+
+  // ==========================================
+  // Area 1.3.6: 綜合演藝媒體中心
+  // ==========================================
+  {
+    id: 'loc_fs_media_b1_livehouse',
+    name: '媒體中心 B1 LiveHouse',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '音響效果震撼的地樂現場展演空間，常舉行偶像演出與地下音樂會。',
+    connections: {
+      loc_fs_media_b1_fan_meet: { status: 'open', description: '走向見面會場區。' },
+      loc_fs_media_b1_merch: { status: 'open', description: '走向周邊販賣區。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '走進客用電梯間。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '走進貨物電梯。' },
+      loc_fs_media_b1_stairwell_1f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_b1_backstage: {
+        status: 'temporary',
+        description: '進入後台休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_idol', 'media_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_idol', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_b1_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_backstage',
+    name: '媒體中心 B1 後台休息室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供表演偶像團體與樂團準備備場的獨立休息室。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出休息室進入LiveHouse。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_fan_meet',
+    name: '媒體中心 B1 粉絲見面會場',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '舉行握手會與粉絲互動簽名活動的會場。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出見面會場進入LiveHouse。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_merch',
+    name: '媒體中心 B1 周邊販賣區',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '販售藝人與偶像限定寫真與周邊商品的專櫃。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出販賣區進入LiveHouse。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_male_restroom',
+    name: '媒體中心 B1 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '地下一樓男洗手間。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出男廁進入LiveHouse。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_elevator',
+    name: '媒體中心 B1 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心地下一樓客用電梯間。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出電梯間進入LiveHouse。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_cargo_elevator',
+    name: '媒體中心 B1 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心地下一樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '走出貨梯進入LiveHouse。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_b1_stairwell_1f',
+    name: '媒體中心 B1 至 1F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接地下一樓 LiveHouse 與一樓大廳的樓梯間。',
+    connections: {
+      loc_fs_media_b1_livehouse: { status: 'open', description: '沿樓梯往下走進B1 LiveHouse。' },
+      loc_fs_media_1f_lobby: { status: 'open', description: '沿樓梯往上走進1F大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_lobby',
+    name: '媒體中心 1F 媒體大廳',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '演藝媒體中心一樓寬廣的挑高大廳，設有巨型娛樂電子看板。',
+    connections: {
+      loc_fs_financial_plaza: { status: 'open', description: '走出大門進入金融廣場。' },
+      loc_fs_media_1f_press_room: { status: 'open', description: '走進記者招待室。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '走進客用電梯間。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_1f_stairwell_2f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_b1_stairwell_1f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_1f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_press_room',
+    name: '媒體中心 1F 記者招待室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '舉辦新聞發布會與記者招待採訪的新聞發布廳。',
+    connections: {
+      loc_fs_media_1f_lobby: { status: 'open', description: '走出招待室進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_female_restroom',
+    name: '媒體中心 1F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '一樓女洗手間。',
+    connections: {
+      loc_fs_media_1f_lobby: { status: 'open', description: '走出女廁進入大廳。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_elevator',
+    name: '媒體中心 1F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心一樓客用電梯間。',
+    connections: {
+      loc_fs_media_1f_lobby: { status: 'open', description: '走出電梯間進入大廳。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_cargo_elevator',
+    name: '媒體中心 1F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心一樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_1f_lobby: { status: 'open', description: '走出貨梯進入大廳。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_1f_stairwell_2f',
+    name: '媒體中心 1F 至 2F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接一樓大廳與二樓劇場舞台的樓梯間。',
+    connections: {
+      loc_fs_media_1f_lobby: { status: 'open', description: '沿樓梯往下走進1F大廳。' },
+      loc_fs_media_2f_stage: { status: 'open', description: '沿樓梯往上走進2F劇場。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_stage',
+    name: '媒體中心 2F 劇場舞台',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '大型多功能演藝劇場舞台與觀眾席。',
+    connections: {
+      loc_fs_media_1f_stairwell_2f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_2f_stairwell_3f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '走進2F電梯間。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_2f_lift_control: { status: 'open', description: '進入升降機房。' },
+      loc_fs_media_2f_dressing: {
+        status: 'temporary',
+        description: '走向後台化妝間。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_theater_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_theater_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_2f_vip_box: {
+        status: 'temporary',
+        description: '走向貴賓包廂。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_vip', 'media_theater_staff', 'media_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_vip', 'media_theater_staff', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_2f_props: {
+        status: 'temporary',
+        description: '進入道具倉。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_2f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_dressing',
+    name: '媒體中心 2F 後台化妝間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '劇場演員與表演者梳化更衣的後台化妝間。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出化妝間進入劇場舞台。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_vip_box',
+    name: '媒體中心 2F 貴賓包廂',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '位於劇場二層俯瞰舞台最佳視角的高級包廂。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出包廂進入劇場舞台。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_props',
+    name: '媒體中心 2F 道具倉',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放演劇舞台道具與佈景器材的倉儲間。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出道具倉進入劇場舞台。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_lift_control',
+    name: '媒體中心 2F 升降機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '控制劇場舞台升降與旋轉台運作的控制機房。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出機房進入劇場舞台。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_male_restroom',
+    name: '媒體中心 2F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '二樓男洗手間。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出男廁進入劇場。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_elevator',
+    name: '媒體中心 2F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心二樓客用電梯間。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出電梯間進入劇場舞台。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_cargo_elevator',
+    name: '媒體中心 2F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心二樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '走出貨梯進入劇場舞台。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_2f_stairwell_3f',
+    name: '媒體中心 2F 至 3F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接二樓劇場與三樓時尚伸展台的樓梯間。',
+    connections: {
+      loc_fs_media_2f_stage: { status: 'open', description: '沿樓梯往下走進2F劇場。' },
+      loc_fs_media_3f_catwalk: { status: 'open', description: '沿樓梯往上走進3F秀場。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_catwalk',
+    name: '媒體中心 3F 伸展台',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '時尚走秀與模特兒表演專用的現代化伸展台。',
+    connections: {
+      loc_fs_media_2f_stairwell_3f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_3f_stairwell_4f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '走進3F電梯間。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_3f_fitting: {
+        status: 'temporary',
+        description: '進入試衣間。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_model' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_model' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_3f_agent_office: {
+        status: 'temporary',
+        description: '進入經紀人室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_model', 'media_agent'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_model', 'media_agent', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_3f_model_training: {
+        status: 'temporary',
+        description: '進入模特兒訓練室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_model', 'media_agent'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_model', 'media_agent', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_3f_backstage: {
+        status: 'temporary',
+        description: '走進秀場後台。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_model', 'media_agent'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_model', 'media_agent', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_3f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_fitting',
+    name: '媒體中心 3F 試衣間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '模特兒試穿走秀服飾與進行服裝搭配的獨立試衣間。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出試衣間進入伸展台區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_agent_office',
+    name: '媒體中心 3F 經紀人室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '模特兒經紀人洽談合約與通告排程的辦公室。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出經紀人室進入伸展台區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_model_training',
+    name: '媒體中心 3F 模特兒訓練室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '設有大鏡面牆壁供模特兒練習台步與體態姿勢的訓練室。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出訓練室進入伸展台區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_backstage',
+    name: '媒體中心 3F 時裝秀場後台',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '時裝秀登場前的緊迫更衣與造型後台。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出後台進入伸展台區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_female_restroom',
+    name: '媒體中心 3F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '三樓女洗手間。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出女廁進入伸展台區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_elevator',
+    name: '媒體中心 3F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心三樓客用電梯間。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出電梯間進入伸展台區。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_cargo_elevator',
+    name: '媒體中心 3F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心三樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '走出貨梯進入伸展台區。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_3f_stairwell_4f',
+    name: '媒體中心 3F 至 4F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接三樓秀場與四樓主攝影棚的樓梯間。',
+    connections: {
+      loc_fs_media_3f_catwalk: { status: 'open', description: '沿樓梯往下走進3F秀場。' },
+      loc_fs_media_4f_studio: { status: 'open', description: '沿樓梯往上走進4F攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_studio',
+    name: '媒體中心 4F 主攝影棚',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '配有大型綠幕與高階照明設備的影視與平格拍攝攝影棚。',
+    connections: {
+      loc_fs_media_3f_stairwell_4f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_4f_stairwell_5f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '走進4F電梯間。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_4f_makeup: { status: 'open', description: '走進專屬化妝間。' },
+      loc_fs_media_4f_equipment: {
+        status: 'temporary',
+        description: '走進器材庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_photographer', 'media_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_photographer', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_4f_darkroom: {
+        status: 'temporary',
+        description: '推開遮光門進入暗房。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_photographer' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_photographer' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_4f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_makeup',
+    name: '媒體中心 4F 專屬化妝間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供攝影主演與藝人拍攝前進行整體梳化的獨立化妝間。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出化妝間進入主攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_equipment',
+    name: '媒體中心 4F 器材庫',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '存放高階攝影機、鏡頭、滑軌與專業燈光的器材庫。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出器材庫進入主攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_darkroom',
+    name: '媒體中心 4F 沖洗暗房',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供攝影師手動沖洗傳統底片與照片的暗房。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出暗房進入主攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_male_restroom',
+    name: '媒體中心 4F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '四樓男洗手間。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出男廁進入主攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_elevator',
+    name: '媒體中心 4F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心四樓客用電梯間。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出電梯間進入主攝影棚。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_cargo_elevator',
+    name: '媒體中心 4F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心四樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '走出貨梯進入主攝影棚。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_4f_stairwell_5f',
+    name: '媒體中心 4F 至 5F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接四樓主攝影棚與五樓廣播中心的高級樓梯間。',
+    connections: {
+      loc_fs_media_4f_studio: { status: 'open', description: '沿樓梯往下走進4F主攝影棚。' },
+      loc_fs_media_5f_broadcast: { status: 'open', description: '沿樓梯往上走進5F廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_broadcast',
+    name: '媒體中心 5F 廣播播音室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '廣播電台主持節目播音與直播主錄音的主要播音大廳。',
+    connections: {
+      loc_fs_media_4f_stairwell_5f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_5f_stairwell_6f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '走進5F電梯間。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_5f_recording: {
+        status: 'temporary',
+        description: '推開雙層隔音門進入錄音棚。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_staff', 'media_radio_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_staff', 'media_radio_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_5f_audio_control: {
+        status: 'temporary',
+        description: '進入控制室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_audio_engineer', 'media_radio_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_audio_engineer', 'media_radio_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_5f_storage: {
+        status: 'temporary',
+        description: '進入器材間。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_staff', 'media_radio_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_staff', 'media_radio_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_5f_lounge: {
+        status: 'temporary',
+        description: '走進休息酒廊。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_radio_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_radio_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_5f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_recording',
+    name: '媒體中心 5F 錄音隔音棚',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '採用高標準專業隔音結構的優質錄音室。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出錄音棚進入廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_audio_control',
+    name: '媒體中心 5F 錄音控制室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '裝有高階混音器與聲音處理設備的錄音控制室。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出控制室進入廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_storage',
+    name: '媒體中心 5F 器材間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '保管麥克風、線材與廣播播音輔助設備的器材間。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出器材間進入廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_lounge',
+    name: '媒體中心 5F 休息酒廊',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '廣播節目主持人與嘉賓放鬆交談的酒吧休閒區。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出酒廊進入廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_female_restroom',
+    name: '媒體中心 5F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '五樓女洗手間。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出女廁進入廣播中心。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_elevator',
+    name: '媒體中心 5F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心五樓客用電梯間。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出電梯間進入廣播中心。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_cargo_elevator',
+    name: '媒體中心 5F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心五樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '走出貨梯進入廣播中心。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_5f_stairwell_6f',
+    name: '媒體中心 5F 至 6F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接五樓廣播中心與六樓新聞部的樓梯間。',
+    connections: {
+      loc_fs_media_5f_broadcast: { status: 'open', description: '沿樓梯往下走進5F廣播中心。' },
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '沿樓梯往上走進6F新聞部。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_tv_studio',
+    name: '媒體中心 6F 電視攝影棚',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '電視新聞播報與政論節目現場錄製的主攝影棚。',
+    connections: {
+      loc_fs_media_5f_stairwell_6f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_6f_stairwell_7f: { status: 'open', description: '走進向上樓梯間。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '走進6F電梯間。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_6f_newsroom: {
+        status: 'temporary',
+        description: '進入新聞編輯室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_6f_editing: {
+        status: 'temporary',
+        description: '進入後製剪輯室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_6f_anchor_room: {
+        status: 'temporary',
+        description: '進入主播休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_6f_control_room: {
+        status: 'temporary',
+        description: '進入編導中控室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_6f_staff_corridor: {
+        status: 'temporary',
+        description: '推開後台安全門進入後台通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['media_tv_staff', 'media_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'npc',
+                  fixedStat: 'identities',
+                  operator: 'contains_any',
+                  value: ['media_tv_staff', 'media_staff'],
+                },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_6f_male_restroom: {
+        status: 'temporary',
+        description: '推開門進入男廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_newsroom',
+    name: '媒體中心 6F 新聞編輯室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '記者與新聞編輯撰寫稿件與審稿的公開辦公區。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出編輯室進入電視攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_editing',
+    name: '媒體中心 6F 後製剪輯室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '新聞畫面與節目影片進行音訊特效剪輯的後製室。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出剪輯室進入電視攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_anchor_room',
+    name: '媒體中心 6F 主播休息室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '供新聞當家主播更衣、對稿與休息的私人休息室。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出休息室進入電視攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_control_room',
+    name: '媒體中心 6F 編導中控室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '電視節目導播切換畫面與音控的主控中心。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出中控室進入電視攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_staff_corridor',
+    name: '媒體中心 員工專用後台通道（6F）',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '工作人員與藝人快速穿梭於樓層間的獨立安全通道。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出後台通道進入電視攝影棚。' },
+      loc_fs_media_7f_staff_corridor: { status: 'open', description: '沿專用安全梯前往7F通道。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_male_restroom',
+    name: '媒體中心 6F 男廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '六樓男洗手間。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出男廁進入電視攝影棚。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_elevator',
+    name: '媒體中心 6F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心六樓客用電梯間。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出電梯間進入電視攝影棚。' },
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '搭乘電梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_cargo_elevator',
+    name: '媒體中心 6F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心六樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '走出貨梯進入電視攝影棚。' },
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往7F。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_6f_stairwell_7f',
+    name: '媒體中心 6F 至 7F 樓梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '連接六樓新聞部與七樓電視台高層辦公區的樓梯間。',
+    connections: {
+      loc_fs_media_6f_tv_studio: { status: 'open', description: '沿樓梯往下走進6F電視攝影棚。' },
+      loc_fs_media_7f_station_head: {
+        status: 'temporary',
+        description: '沿樓梯往上走進7F高層區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_station_head',
+    name: '媒體中心 7F 台長辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '電視台最高行政長官台長的奢華辦公大廳。',
+    connections: {
+      loc_fs_media_6f_stairwell_7f: { status: 'open', description: '走進向下樓梯間。' },
+      loc_fs_media_7f_elevator: { status: 'open', description: '走進7F電梯間。' },
+      loc_fs_media_7f_cargo_elevator: { status: 'open', description: '走進貨梯。' },
+      loc_fs_media_7f_exec_office: {
+        status: 'temporary',
+        description: '進入高層辦公室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_7f_staff_corridor: {
+        status: 'temporary',
+        description: '進入7F後台通道。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_staff' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_fs_media_7f_archive: {
+        status: 'temporary',
+        description: '推開重型密碼門進入機密資料庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_m7d3e9c4v', property: 'count' },
+              operator: '>=',
+              value: 1,
+            },
+          ],
+        },
+      },
+      loc_fs_media_7f_female_restroom: {
+        status: 'temporary',
+        description: '推開門進入女廁。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_exec_office',
+    name: '媒體中心 7F 電視台高層辦公室',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '電視台各部門總監與副台長的高階管理辦公室。',
+    connections: {
+      loc_fs_media_7f_station_head: { status: 'open', description: '走出高層辦公室進入台長辦公室區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_archive',
+    name: '媒體中心 7F 獨家機密資料庫',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '保存未公開調查報導、獨家爆料與政商黑幕影音備份的檔案庫。',
+    connections: {
+      loc_fs_media_7f_station_head: { status: 'open', description: '走出資料庫進入台長辦公室區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_staff_corridor',
+    name: '媒體中心 員工專用後台通道（7F）',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '七樓高層員工專用後台連通道。',
+    connections: {
+      loc_fs_media_7f_station_head: { status: 'open', description: '走出後台通道進入7F區。' },
+      loc_fs_media_6f_staff_corridor: { status: 'open', description: '沿專用安全梯進入6F通道。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_female_restroom',
+    name: '媒體中心 7F 女廁',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '七樓女洗手間。',
+    connections: {
+      loc_fs_media_7f_station_head: { status: 'open', description: '走出女廁進入7F區。' },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_elevator',
+    name: '媒體中心 7F 電梯間',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心七樓客用電梯間。',
+    connections: {
+      loc_fs_media_b1_elevator: { status: 'open', description: '搭乘電梯前往B1。' },
+      loc_fs_media_1f_elevator: { status: 'open', description: '搭乘電梯前往1F。' },
+      loc_fs_media_2f_elevator: { status: 'open', description: '搭乘電梯前往2F。' },
+      loc_fs_media_3f_elevator: { status: 'open', description: '搭乘電梯前往3F。' },
+      loc_fs_media_4f_elevator: { status: 'open', description: '搭乘電梯前往4F。' },
+      loc_fs_media_5f_elevator: { status: 'open', description: '搭乘電梯前往5F。' },
+      loc_fs_media_6f_elevator: { status: 'open', description: '搭乘電梯前往6F。' },
+      loc_fs_media_rf_machine_room: { status: 'open', description: '搭乘維護電梯前往頂樓機房。' },
+      loc_fs_media_7f_station_head: {
+        status: 'temporary',
+        description: '走出電梯間進入7F區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_7f_cargo_elevator',
+    name: '媒體中心 7F 貨梯',
+    areaId: 'area_financial_street',
+    displayStatus: 'visible',
+    description: '媒體中心七樓獨立大型貨運電梯。',
+    connections: {
+      loc_fs_media_b1_cargo_elevator: { status: 'open', description: '搭乘貨梯前往B1。' },
+      loc_fs_media_1f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往1F。' },
+      loc_fs_media_2f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往2F。' },
+      loc_fs_media_3f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往3F。' },
+      loc_fs_media_4f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往4F。' },
+      loc_fs_media_5f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往5F。' },
+      loc_fs_media_6f_cargo_elevator: { status: 'open', description: '搭乘貨梯前往6F。' },
+      loc_fs_media_7f_station_head: {
+        status: 'temporary',
+        description: '走出貨梯進入7F區。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'media_tv_director' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 45 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_fs_media_rf_machine_room',
+    name: '媒體中心 頂樓電梯機房',
+    areaId: 'area_financial_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'and',
+      discoveryConditions: [
+        { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_media_7f_elevator' },
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          operator: '>=',
+          value: 1,
+        },
+      ],
+    },
+    description: '媒體中心頂樓電梯控制機房。',
+    connections: {
+      loc_fs_media_7f_elevator: { status: 'open', description: '離開機房進入7F電梯間。' },
+    },
+  },
+];
+
+const area2_1_SchoolMainLocations: LocationNode[] = [
   // ==========================================
   // Area 2.1: 齋明學院 - 校舍本館
   // ==========================================
@@ -6351,7 +10755,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 60 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 80 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 90 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 60 },
                   ],
                 },
               ],
@@ -6445,7 +10849,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 60 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 80 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 90 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 60 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 60 },
                   ],
                 },
               ],
@@ -6510,7 +10914,7 @@ export const defaultLocations: LocationNode[] = [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 50 },
                 { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 50 },
                 { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 50 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 50 },
               ],
             },
           ],
@@ -6572,7 +10976,7 @@ export const defaultLocations: LocationNode[] = [
               subConditions: [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 60 },
                 { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 85 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>=', value: 60 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
               ],
             },
           ],
@@ -7030,7 +11434,7 @@ export const defaultLocations: LocationNode[] = [
               subConditions: [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 60 },
                 { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 40 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 40 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 40 },
               ],
             },
           ],
@@ -7148,7 +11552,7 @@ export const defaultLocations: LocationNode[] = [
               subConditions: [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
                 { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 20 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
               ],
             },
           ],
@@ -7222,7 +11626,7 @@ export const defaultLocations: LocationNode[] = [
               subMatchMode: 'or',
               subConditions: [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
               ],
             },
           ],
@@ -7308,6 +11712,9 @@ export const defaultLocations: LocationNode[] = [
     },
   },
 
+];
+
+const area2_2_GymnasiumLocations: LocationNode[] = [
   // ==========================================
   // Area 2.2: 齋明學院 - 體育館棟 (體育館本棟 & 附屬游泳館)
   // ==========================================
@@ -7779,7 +12186,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 20 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 10 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 50 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
                   ],
                 },
               ],
@@ -7850,7 +12257,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 60 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 40 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 40 },
                   ],
                 },
               ],
@@ -8403,7 +12810,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 20 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 10 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 50 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
                   ],
                 },
               ],
@@ -8464,7 +12871,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 60 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 40 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 40 },
                   ],
                 },
               ],
@@ -8767,7 +13174,7 @@ export const defaultLocations: LocationNode[] = [
               subConditions: [
                 { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
                 { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 20 },
-                { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
               ],
             },
           ],
@@ -9303,7 +13710,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 20 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 10 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 50 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 30 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 30 },
                   ],
                 },
               ],
@@ -9379,7 +13786,7 @@ export const defaultLocations: LocationNode[] = [
                     { targetType: 'npc', fixedStat: 'obedience', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'affection', operator: '>', value: 30 },
                     { targetType: 'npc', fixedStat: 'lust', operator: '>', value: 60 },
-                    { targetType: 'npc', fixedStat: 'Licentiousness', operator: '>', value: 40 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>', value: 40 },
                   ],
                 },
               ],
@@ -9697,6 +14104,9 @@ export const defaultLocations: LocationNode[] = [
     },
   },
 
+];
+
+const area2_3_ClubBuildingLocations: LocationNode[] = [
   // ==========================================
   // Area 2.3: 齋明學院 - 社團大樓
   // ==========================================
@@ -10549,7 +14959,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -10591,7 +15001,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -12026,7 +16436,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -13351,7 +17761,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -13393,7 +17803,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -14422,7 +18832,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -15337,7 +19747,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -15379,7 +19789,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -16324,7 +20734,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -16585,7 +20995,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -16687,7 +21097,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -16879,7 +21289,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -16921,7 +21331,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -17556,7 +21966,7 @@ export const defaultLocations: LocationNode[] = [
                         },
                         {
                           targetType: 'npc',
-                          fixedStat: 'Licentiousness',
+                          fixedStat: 'licentiousness',
                           operator: '>=',
                           value: 60,
                         },
@@ -17778,7 +22188,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -18465,7 +22875,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -18507,7 +22917,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -18678,9 +23088,11 @@ export const defaultLocations: LocationNode[] = [
       ],
     },
   },
+];
 
+const area2_4_FemaleDormLocations: LocationNode[] = [
   // ==========================================
-  // Area 2.4: 齋明學院 - 宿舍棟(女生 & 男生)
+  // Area 2.4: 齋明學院 - 宿舍棟(女生)
   // ==========================================
   // ==========================================
   // Area 2.4.1: 宿舍棟 - 女宿屋頂
@@ -18915,7 +23327,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -19053,7 +23465,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -25453,7 +29865,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -25591,7 +30003,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -25615,6 +30027,7 @@ export const defaultLocations: LocationNode[] = [
       loc_fd_4f_hall_10: { status: 'open', description: '女宿4010區內走廊' },
     },
   },
+
   {
     id: 'loc_fd_4f_elevator',
     name: '女宿4樓電梯間',
@@ -31928,7 +36341,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -32066,7 +36479,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -38402,7 +42815,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -38540,7 +42953,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -45449,7 +49862,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 60,
                     },
@@ -46062,8 +50475,14 @@ export const defaultLocations: LocationNode[] = [
     description: '女宿B1雜物儲藏室',
     connections: { loc_fd_b1_corridor: { status: 'open', description: '女宿B1走廊' } },
   },
+];
+
+const area2_5_MaleDormLocations: LocationNode[] = [
   // ==========================================
-  // Area 2.4.8: 宿舍棟 - 男宿屋頂
+  // Area 2.5: 齋明學院 - 宿舍棟(男生)
+  // ==========================================
+  // ==========================================
+  // Area 2.5.8: 宿舍棟 - 男宿屋頂
   // ==========================================
   {
     id: 'loc_md_roof_platform',
@@ -46215,7 +50634,7 @@ export const defaultLocations: LocationNode[] = [
     connections: { loc_md_roof_platform: { status: 'open', description: '男宿頂樓平台' } },
   },
   // ==========================================
-  // Area 2.4.9: 宿舍棟 - 男宿三樓
+  // Area 2.5.9: 宿舍棟 - 男宿三樓
   // ==========================================
   {
     id: 'loc_md_3f_corridor',
@@ -46383,7 +50802,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -46521,7 +50940,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -52687,7 +57106,7 @@ export const defaultLocations: LocationNode[] = [
     },
   },
   // ==========================================
-  // Area 2.4.10: 宿舍棟 - 男宿二樓
+  // Area 2.5.10: 宿舍棟 - 男宿二樓
   // ==========================================
   {
     id: 'loc_md_2f_corridor',
@@ -52855,7 +57274,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 50,
                     },
@@ -52993,7 +57412,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -59160,7 +63579,7 @@ export const defaultLocations: LocationNode[] = [
     },
   },
   // ==========================================
-  // Area 2.4.11: 宿舍棟 - 男宿一樓
+  // Area 2.5.11: 宿舍棟 - 男宿一樓
   // ==========================================
   {
     id: 'loc_md_1f_lobby',
@@ -59833,7 +64252,7 @@ export const defaultLocations: LocationNode[] = [
                     },
                     {
                       targetType: 'npc',
-                      fixedStat: 'Licentiousness',
+                      fixedStat: 'licentiousness',
                       operator: '>=',
                       value: 40,
                     },
@@ -60001,7 +64420,7 @@ export const defaultLocations: LocationNode[] = [
     connections: { loc_md_1f_lobby: { status: 'open', description: '男生宿舍大廳' } },
   },
   // ==========================================
-  // Area 2.4.12: 宿舍棟 - 男宿地下一樓
+  // Area 2.5.12: 宿舍棟 - 男宿地下一樓
   // ==========================================
   {
     id: 'loc_md_b1_corridor',
@@ -60236,7 +64655,7 @@ export const defaultLocations: LocationNode[] = [
     connections: { loc_md_b1_corridor: { status: 'open', description: '男宿B1走廊' } },
   },
   // ==========================================
-  // Area 2.4.13: 宿舍棟 - 聯絡天橋與餐廳
+  // Area 2.5.13: 宿舍棟 - 聯絡天橋與餐廳
   // ==========================================
   {
     id: 'loc_dorm_skybridge_2f',
@@ -60532,4 +64951,18 @@ export const defaultLocations: LocationNode[] = [
       loc_md_1f_lobby: { status: 'open', description: '男生宿舍大廳' },
     },
   },
+];
+
+// ==========================================
+// 統一匯出地點定義
+// ==========================================
+export const defaultLocations: LocationNode[] = [
+  ...area1_1_StationLocations,
+  ...area1_2_DepartmentStoreLocations,
+  ...area1_3_FinancialStreetLocations,
+  ...area2_1_SchoolMainLocations,
+  ...area2_2_GymnasiumLocations,
+  ...area2_3_ClubBuildingLocations,
+  ...area2_4_FemaleDormLocations,
+  ...area2_5_MaleDormLocations,
 ];

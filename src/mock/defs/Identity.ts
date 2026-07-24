@@ -398,4 +398,118 @@ export const defaultIdentities: IdentityDef[] = [
     name: '男宿住戶',
     description: '住在男生宿舍的學生，擁有進入男宿建築與房間的基本權限',
   },
+
+  // ==========================================
+  // 金融街相關身分
+  // ==========================================
+  {
+    id: 'lawyer',
+    name: '律師',
+    description: '律師身分，可進入律師事務所內部管制區域與檔案庫。',
+  },
+  {
+    id: 'bank_clerk',
+    name: '銀行行員',
+    description: '銀行行員，可進入銀行行員休息室。',
+  },
+  {
+    id: 'bank_vip',
+    name: '銀行VIP',
+    description: '銀行貴賓客戶，可使用銀行貴賓招待室。',
+  },
+  {
+    id: 'bank_director',
+    name: '銀行總行主管',
+    description: '銀行總行高階主管，擁有銀行全區域通行權限。',
+  },
+  {
+    id: 'stock_vip',
+    name: '證券交易所VIP',
+    description: '證券交易所貴賓客戶，可進入證交所貴賓交易室。',
+  },
+  {
+    id: 'stock_manager',
+    name: '證券交易所主管',
+    description: '證券交易所高階主管，擁有證交所全區域與機房通行權限。',
+  },
+  {
+    id: 'stock_broker_liaison',
+    name: '證券商聯絡員',
+    description: '證券商派駐聯絡員，可進入證交所貴賓交易室。',
+  },
+  {
+    id: 'stock_it_engineer',
+    name: '證券交易所資訊工程師',
+    description: '證券交易所資訊技術工程師，可進入數據機房與網路安控室。',
+  },
+  {
+    id: 'biz_vip',
+    name: '商務大樓VIP',
+    description: '商務大樓 VIP 貴賓，可使用 4F VIP 接待室。',
+  },
+  {
+    id: 'biz_chief_secretary',
+    name: '商務大樓總裁秘書長',
+    description: '商務大樓總裁秘書長，可進入 5F 高級秘書室。',
+  },
+  {
+    id: 'biz_ceo',
+    name: '商務大樓總裁',
+    description: '商務大樓總裁，擁有商務大樓最高層權限。',
+  },
+  {
+    id: 'media_staff',
+    name: '媒體中心員工',
+    description: '綜合演藝媒體中心一般員工，可進入後勤與專用通道。',
+  },
+  {
+    id: 'media_idol',
+    name: '偶像',
+    description: '演藝偶像，可進入 LiveHouse 後台休息室。',
+  },
+  {
+    id: 'media_theater_staff',
+    name: '媒體劇場員工',
+    description: '劇場工作人員，可進入劇場後台與化妝間。',
+  },
+  {
+    id: 'media_vip',
+    name: '媒體中心貴賓',
+    description: '媒體中心貴賓，可使用劇場貴賓包廂。',
+  },
+  {
+    id: 'media_model',
+    name: '模特兒',
+    description: '時尚模特兒，可進入試衣間與秀場後台。',
+  },
+  {
+    id: 'media_agent',
+    name: '模特兒經紀人',
+    description: '模特兒經紀人，可進入經紀人室、訓練室與秀場後台。',
+  },
+  {
+    id: 'media_photographer',
+    name: '攝影師',
+    description: '專業攝影師，可進入器材庫與沖洗暗房。',
+  },
+  {
+    id: 'media_radio_staff',
+    name: '媒體廣播員工',
+    description: '廣播電台工作人員，可進入播音室、錄音棚與休息酒廊。',
+  },
+  {
+    id: 'media_audio_engineer',
+    name: '錄音師',
+    description: '專業錄音工程師，可進入錄音控制室。',
+  },
+  {
+    id: 'media_tv_staff',
+    name: '新聞台員工',
+    description: '電視新聞台工作人員，可進入編輯室、剪輯室與主播休息室。',
+  },
+  {
+    id: 'media_tv_director',
+    name: '新聞台主管',
+    description: '電視台高階主管，可進入台長辦公室與高層辦公室。',
+  },
 ];

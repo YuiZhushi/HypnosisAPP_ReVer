@@ -8,7 +8,7 @@ export type PlayerFixedStat =
 
 export type NpcFixedStat =
   | 'gender' | 'identities'
-  | 'alertness' | 'affection' | 'obedience' | 'lust' | 'Licentiousness'
+  | 'alertness' | 'affection' | 'obedience' | 'lust' | 'licentiousness'
   | 'locationId';
 
 export type EnvironmentStat =
