@@ -104,6 +104,17 @@ export const defaultAreas: Area[] = [
     displayStatus: 'visible',
     connections: {},
   },
+  // ==========================================
+  // 1.5: 齋明市中心區 - 娛樂街
+  // ==========================================
+  {
+    id: 'area_entertainment_street',
+    name: '齋明市中心區－娛樂街',
+    description: '齋明市中心商業區的娛樂街，匯聚了電競網吧、寵物咖啡廳、桌遊店、街機中心、KTV、演出廣場、卡牌店、動漫周邊店、漫畫店、錄影帶出租店、電影院、女僕咖啡廳、刺青工作室、撞球酒吧與密室逃脫館等潮流次文化與娛樂場所。',
+    zoneId: 'zone_downtown',
+    displayStatus: 'visible',
+    connections: {},
+  },
 
   // ==========================================
   // 2. 學園文教區區域定義
@@ -169,10 +180,10 @@ export const defaultAreas: Area[] = [
 // ==========================================
 // Zone 3: 地點定義
 // ==========================================
+// ==========================================
+// Area 1.1: 齋明市中心區 - 齋明市中央車站
+// ==========================================
 const area1_1_StationLocations: LocationNode[] = [
-  // ==========================================
-  // Area 1.1: 齋明市中心區 - 齋明市中央車站
-  // ==========================================
   // ==========================================
   // Area 1.1.1: 齋明市中心區 -  戶外與轉乘區
   // ==========================================
@@ -423,7 +434,7 @@ const area1_1_StationLocations: LocationNode[] = [
           unlockConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_h2k4m9p7t', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_h2k4m9p7t', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -508,7 +519,7 @@ const area1_1_StationLocations: LocationNode[] = [
       unlockConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_h2k4m9p7t', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_h2k4m9p7t', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -676,7 +687,7 @@ const area1_1_StationLocations: LocationNode[] = [
           unlockConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_k4m9r2d7h', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_k4m9r2d7h', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -775,7 +786,7 @@ const area1_1_StationLocations: LocationNode[] = [
       unlockConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_k4m9r2d7h', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_k4m9r2d7h', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -1070,7 +1081,7 @@ const area1_1_StationLocations: LocationNode[] = [
           unlockConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s3b8w5y2m', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s3b8w5y2m', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -1147,7 +1158,7 @@ const area1_1_StationLocations: LocationNode[] = [
       unlockConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_s3b8w5y2m', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_s3b8w5y2m', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -1199,7 +1210,7 @@ const area1_1_StationLocations: LocationNode[] = [
           unlockConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b9u4s7o3k', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b9u4s7o3k', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -1333,7 +1344,7 @@ const area1_1_StationLocations: LocationNode[] = [
       unlockConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_b9u4s7o3k', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_b9u4s7o3k', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -1375,7 +1386,7 @@ const area1_1_StationLocations: LocationNode[] = [
           unlockConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_u3m8p2k5z', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_u3m8p2k5z', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -1547,7 +1558,7 @@ const area1_1_StationLocations: LocationNode[] = [
       unlockConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_u3m8p2k5z', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_u3m8p2k5z', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -1574,10 +1585,10 @@ const area1_1_StationLocations: LocationNode[] = [
   },
 ];
 
+// ==========================================
+// Area 1.2: 齋明市中心區 - 百貨大樓
+// ==========================================
 const area1_2_DepartmentStoreLocations: LocationNode[] = [
-  // ==========================================
-  // Area 1.2: 齋明市中心區 - 百貨大樓
-  // ==========================================
   // ==========================================
   // Area 1.2.1: 百貨大樓 - 頂樓
   // ==========================================
@@ -1672,7 +1683,7 @@ const area1_2_DepartmentStoreLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k7f2m9v3x',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -1774,7 +1785,7 @@ const area1_2_DepartmentStoreLocations: LocationNode[] = [
           dynamicStat: {
             collection: 'inventory',
             entityId: 'item_k7f2m9v3x',
-            property: 'count',
+            property: 'quantity',
           },
           operator: '>=',
           value: 1,
@@ -5796,10 +5807,10 @@ const area1_2_DepartmentStoreLocations: LocationNode[] = [
   },
 ];
 
+// ==========================================
+// Area 1.3: 齋明市中心區 - 金融街
+// ==========================================
 const area1_3_FinancialStreetLocations: LocationNode[] = [
-  // ==========================================
-  // Area 1.3: 齋明市中心區 - 金融街
-  // ==========================================
   // ==========================================
   // Area 1.3.1: 戶外公共區域
   // ==========================================
@@ -6126,7 +6137,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -6173,7 +6184,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_l4w4c9k7v', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w4c9k7v', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -6283,7 +6294,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_l4w7a9k2x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -6415,7 +6426,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_law_5f_elevator' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -6447,7 +6458,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b1k8v3c9m', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b1k8v3c9m', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -6996,7 +7007,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_bank_4f_elevator' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -7367,7 +7378,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -7491,7 +7502,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s4k9m2c7x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -7539,7 +7550,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_stock_4f_elevator' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -8107,7 +8118,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b9z5v2k8c', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b9z5v2k8c', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -8285,7 +8296,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_biz_rf_sky_garden' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -9985,7 +9996,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
           temporaryConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_m7d3e9c4v', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_m7d3e9c4v', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -10169,7 +10180,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'locationId', operator: '==', value: 'loc_fs_media_7f_elevator' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_m3c8r9k2w', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -10183,7 +10194,7 @@ const area1_3_FinancialStreetLocations: LocationNode[] = [
 ];
 
 // ==========================================
-// 區域 1.4: 露天商店街地點定義 (Area 1.4)
+// Area 1.4: 露天商店街地點定義 (Area 1.4)
 // ==========================================
 export const area1_4_ShoppingStreetLocations: LocationNode[] = [
   // ------------------------------------------
@@ -10467,7 +10478,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
             },
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_j2f8k9m3x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_j2f8k9m3x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -10537,7 +10548,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
             },
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_y1m9k5z2p', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_y1m9k5z2p', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -11121,7 +11132,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
             },
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_m8k3v9c2x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_m8k3v9c2x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -11220,7 +11231,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
             },
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_m9k4v2c7x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_m9k4v2c7x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -11618,7 +11629,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_cloth_1f_fitting_room' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_c4k8v2m9x', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_c4k8v2m9x', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -11853,7 +11864,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_furn_2f_master_bed' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_f6k2v9m4x', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_f6k2v9m4x', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -12025,7 +12036,7 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
         { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_ss_wd_2f_fitting_room' },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_w9k3v7m2x', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_w9k3v7m2x', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -13352,10 +13363,2863 @@ export const area1_4_ShoppingStreetLocations: LocationNode[] = [
   },
 ];
 
+// ==========================================
+// Area 1.5: 齋明市中心區 - 娛樂街 地點定義
+// ==========================================
+const area1_5_EntertainmentStreetLocations: LocationNode[] = [
+  // 1.5.1 戶外公共區域
+  {
+    id: 'loc_es_main_street',
+    name: '娛樂街大道',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '齋明市中心商業區的娛樂街大道，集結各式夜生活與次文化店鋪。',
+    connections: {
+      loc_ss_main_street: { status: 'open', description: '走向商店街大道。' },
+      loc_es_net_1f_counter: { status: 'open', description: '推門進入網吧大廳。' },
+      loc_es_pet_1f_interaction: { status: 'open', description: '推門進入寵物咖啡廳。' },
+      loc_es_bg_1f_store: { status: 'open', description: '走進桌遊店。' },
+      loc_es_ac_1f_claw: { status: 'open', description: '走進街機中心門口。' },
+      loc_es_ktv_1f_lobby: { status: 'open', description: '推門進入卡拉OK大廳。' },
+      loc_es_stage_1f_outdoor: { status: 'open', description: '走到露天表演廣場。' },
+      loc_es_tcg_1f_counter: { status: 'open', description: '走進卡牌店。' },
+      loc_es_merch_1f_anime: { status: 'open', description: '走進周邊商品店。' },
+      loc_es_manga_1f_new: { status: 'open', description: '推門進入漫畫店。' },
+      loc_es_video_1f_dvd: { status: 'open', description: '走進錄影帶出租店。' },
+      loc_es_cinema_1f_lobby: { status: 'open', description: '推門進入電影院售票大廳。' },
+      loc_es_bv2_1f_counter: { status: 'open', description: '走到飲料店點餐窗口。' },
+      loc_es_maid_1f_lobby: { status: 'open', description: '推門進入女僕咖啡廳。' },
+      loc_es_tattoo_1f_reception: { status: 'open', description: '推門進入刺青工作室。' },
+      loc_es_bar_1f_pub: { status: 'open', description: '推門進入撞球飛鏢酒吧。' },
+      loc_es_escape_1f_lobby: { status: 'open', description: '進入密室逃脫館大廳。' },
+    },
+  },
+
+  // 1.5.2 網吧
+  {
+    id: 'loc_es_net_1f_counter',
+    name: '網吧1F櫃檯與服務區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '網吧1F入口櫃檯與結帳服務區。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出網吧門口。' },
+      loc_es_net_1f_open_seats: { status: 'open', description: '走到開放式座位區。' },
+      loc_es_net_1f_drinks_manga: { status: 'open', description: '走到飲料漫畫區。' },
+      loc_es_net_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_net_1f_open_seats',
+    name: '開放式電競座位區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺滿高階電競主機與螢幕的開放式座位區。',
+    connections: {
+      loc_es_net_1f_counter: { status: 'open', description: '回到櫃檯區。' },
+    },
+  },
+  {
+    id: 'loc_es_net_1f_drinks_manga',
+    name: '飲料與漫畫區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供無限暢飲飲料台與熱門漫畫書架。',
+    connections: {
+      loc_es_net_1f_counter: { status: 'open', description: '回到櫃檯區。' },
+    },
+  },
+  {
+    id: 'loc_es_net_1f_to_2f_stair',
+    name: '網吧1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '連接1F大廳與2F包廂區的樓梯間。',
+    connections: {
+      loc_es_net_1f_counter: { status: 'open', description: '走下1F大廳。' },
+      loc_es_net_2f_corridor: { status: 'open', description: '走上2F來到包廂走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_net_2f_corridor',
+    name: '2F包廂走廊',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '2F燈光昏暗的包廂走廊。',
+    connections: {
+      loc_es_net_1f_to_2f_stair: { status: 'open', description: '走到樓梯間前。' },
+      loc_es_net_2f_double_box: { status: 'open', description: '走進雙人包廂區。' },
+      loc_es_net_2f_single_box: { status: 'open', description: '走進單人包廂區。' },
+      loc_es_net_2f_staff_lounge: {
+        status: 'temporary',
+        description: '推門進入員工休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['netcafe_manager', 'netcafe_clerk'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_n9k3v2c8x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_net_2f_corridor' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_net_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['netcafe_manager', 'netcafe_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_net_2f_server_room: {
+        status: 'temporary',
+        description: '刷卡進入機房。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['netcafe_manager', 'netcafe_clerk'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_n9k3v2c8x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_net_2f_corridor' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_net_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['netcafe_manager', 'netcafe_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_net_2f_double_box',
+    name: '雙人沙發包廂區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '配有雙人沙發與獨立間隔的隱密的雙人包廂。',
+    connections: {
+      loc_es_net_2f_corridor: { status: 'open', description: '回到走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_net_2f_single_box',
+    name: '單人隱密包廂區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供完全私密個人空間的單人包廂。',
+    connections: {
+      loc_es_net_2f_corridor: { status: 'open', description: '回到走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_net_2f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '網吧員工專用休息室。',
+    connections: {
+      loc_es_net_2f_corridor: { status: 'open', description: '走出休息室回到走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_net_2f_server_room',
+    name: '網吧伺服器機房與備用監控室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_n3b9v2c4x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_net_2f_corridor' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['netcafe_manager', 'netcafe_clerk'] },
+      ],
+    },
+    description: '放置主伺服器機櫃與監視主機的重地。',
+    connections: {
+      loc_es_net_2f_corridor: { status: 'open', description: '離開機房回到走廊。' },
+    },
+  },
+
+  // 1.5.3 寵物咖啡廳
+  {
+    id: 'loc_es_pet_1f_interaction',
+    name: '寵物咖啡廳1F互動區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '貓狗自由走動嬉戲的1F大廳互動區。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出咖啡廳門口。' },
+      loc_es_pet_1f_bar: { status: 'open', description: '走到點餐吧檯。' },
+      loc_es_pet_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_pet_1f_bar',
+    name: '點餐吧檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '點選飲料與寵物點心的吧檯。',
+    connections: {
+      loc_es_pet_1f_interaction: { status: 'open', description: '回到互動區。' },
+    },
+  },
+  {
+    id: 'loc_es_pet_1f_to_2f_stair',
+    name: '寵物咖啡廳1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '連接1F互動區與2F特寵區的樓梯間。',
+    connections: {
+      loc_es_pet_1f_interaction: { status: 'open', description: '走下1F互動區。' },
+      loc_es_pet_2f_exotic_room: { status: 'open', description: '走上2F特寵包廂。' },
+    },
+  },
+  {
+    id: 'loc_es_pet_2f_exotic_room',
+    name: '2F特寵與爬蟲類包廂',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '展示特殊寵物與爬蟲類的溫室包廂。',
+    connections: {
+      loc_es_pet_1f_to_2f_stair: { status: 'open', description: '走進樓梯間。' },
+      loc_es_pet_2f_manager: {
+        status: 'temporary',
+        description: '推門進入店長室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'pet_cafe_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_p4k8v2m9x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_pet_2f_exotic_room' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_pet_2f_exotic_room' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'pet_cafe_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_pet_2f_manager',
+    name: '店長室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '寵物咖啡廳店長的辦公室。',
+    connections: {
+      loc_es_pet_2f_exotic_room: { status: 'open', description: '回到特寵包廂。' },
+      loc_es_pet_2f_cat_care: { status: 'open', description: '走進後台照護室。' },
+    },
+  },
+  {
+    id: 'loc_es_pet_2f_cat_care',
+    name: '貓咪後台照護與隔離處置室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_p8d2v7m4x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_e8s9v4c2x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_pet_2f_manager' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'pet_cafe_manager' },
+      ],
+    },
+    description: '進行生病寵物隔離照護與處置的後台區域。',
+    connections: {
+      loc_es_pet_2f_manager: { status: 'open', description: '回到店長室。' },
+    },
+  },
+
+  // 1.5.4 桌遊店
+  {
+    id: 'loc_es_bg_1f_store',
+    name: '桌遊店1F販售區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '陳列各式桌遊盒裝與配件的販售大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出桌遊店。' },
+      loc_es_bg_1f_open_tables: { status: 'open', description: '走到開放大桌區。' },
+      loc_es_bg_1f_bar: { status: 'open', description: '走到吧台前。' },
+      loc_es_bg_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_bg_1f_open_tables',
+    name: '開放大桌桌遊區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供玩家租桌遊玩的大型長桌區。',
+    connections: {
+      loc_es_bg_1f_store: { status: 'open', description: '回到販售區。' },
+    },
+  },
+  {
+    id: 'loc_es_bg_1f_bar',
+    name: '吧台',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供零食與飲料點餐的吧台。',
+    connections: {
+      loc_es_bg_1f_store: { status: 'open', description: '回到販售區。' },
+    },
+  },
+  {
+    id: 'loc_es_bg_1f_to_2f_stair',
+    name: '桌遊店1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往2F包廂區與劇本殺密室的樓梯。',
+    connections: {
+      loc_es_bg_1f_store: { status: 'open', description: '走下1F販售區。' },
+      loc_es_bg_2f_murder_mystery_room: { status: 'open', description: '走上2F劇本殺區。' },
+    },
+  },
+  {
+    id: 'loc_es_bg_2f_murder_mystery_room',
+    name: '劇本殺專屬密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '精心佈置場景與道具的劇本殺遊玩主題房。',
+    connections: {
+      loc_es_bg_1f_to_2f_stair: { status: 'open', description: '離開密室走進樓梯間。' },
+      loc_es_bg_2f_booth_area: { status: 'open', description: '走到包廂區。' },
+      loc_es_bg_2f_vip_trpg: {
+        status: 'temporary',
+        description: '刷卡進入VIP密室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['boardgame_manager', 'boardgame_clerk'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_b9k2v7m4x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_bg_2f_murder_mystery_room' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_bg_2f_murder_mystery_room' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['boardgame_manager', 'boardgame_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_bg_2f_booth_area',
+    name: '私密包廂區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '隔音良好的私密桌遊包廂。',
+    connections: {
+      loc_es_bg_2f_murder_mystery_room: { status: 'open', description: '回到劇本殺區。' },
+    },
+  },
+  {
+    id: 'loc_es_bg_2f_vip_trpg',
+    name: 'TRPG重度沈浸VIP密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_b7m4v9c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_bg_2f_murder_mystery_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['boardgame_manager', 'boardgame_clerk'] },
+      ],
+    },
+    description: '配有專屬音效燈光控制與跑團道具的高級 TRPG 沉浸密室。',
+    connections: {
+      loc_es_bg_2f_murder_mystery_room: { status: 'open', description: '回到劇本殺專屬密室。' },
+    },
+  },
+
+  // 1.5.5 街機中心
+  {
+    id: 'loc_es_ac_1f_claw',
+    name: '街機中心1F娃娃機區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺滿各類景品與娃娃機的街機中心1F入口。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出街機中心門口。' },
+      loc_es_ac_1f_music: { status: 'open', description: '走到音遊區。' },
+      loc_es_ac_1f_coin: { status: 'open', description: '走到推幣機區。' },
+      loc_es_ac_1f_exchange: { status: 'open', description: '走到兌幣服務台前。' },
+      loc_es_ac_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_1f_music',
+    name: '音樂遊戲區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '音樂強勁節奏明快的音遊機台區。',
+    connections: {
+      loc_es_ac_1f_claw: { status: 'open', description: '回到娃娃機區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_1f_coin',
+    name: '推幣機台區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '落幣聲不絕於耳的推幣機專區。',
+    connections: {
+      loc_es_ac_1f_claw: { status: 'open', description: '回到娃娃機區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_1f_exchange',
+    name: '兌幣服務台',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供代幣兌換與贈品兌換的服務台。',
+    connections: {
+      loc_es_ac_1f_claw: { status: 'open', description: '回到娃娃機區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_1f_to_2f_stair',
+    name: '街機中心1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '連接1F娃娃機區與2F格鬥區的樓梯。',
+    connections: {
+      loc_es_ac_1f_claw: { status: 'open', description: '走下1F娃娃機區。' },
+      loc_es_ac_2f_fight_race: { status: 'open', description: '走上2F格鬥賽車區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_2f_fight_race',
+    name: '街機中心2F格鬥與賽車區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺設大型對戰格鬥框體與賽車座艙機台的2F。',
+    connections: {
+      loc_es_ac_1f_to_2f_stair: { status: 'open', description: '走進向下樓梯間。' },
+      loc_es_ac_2f_shooting: { status: 'open', description: '走到射擊遊戲區。' },
+      loc_es_ac_2f_basketball: { status: 'open', description: '走到籃球機區。' },
+      loc_es_ac_2f_smoking_room: { status: 'open', description: '推門進入吸菸室。' },
+      loc_es_ac_2f_to_3f_stair: { status: 'open', description: '走上向上樓梯間。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_2f_shooting',
+    name: '射擊遊戲區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '配有光學槍與體感椅子的射擊遊戲區。',
+    connections: {
+      loc_es_ac_2f_fight_race: { status: 'open', description: '回到格鬥區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_2f_basketball',
+    name: '籃球機區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '考驗投籃速度與準度的籃球機台。',
+    connections: {
+      loc_es_ac_2f_fight_race: { status: 'open', description: '回到格鬥區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_2f_smoking_room',
+    name: '暗角吸菸室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '煙霧繚繞的封閉式吸菸室。',
+    connections: {
+      loc_es_ac_2f_fight_race: { status: 'open', description: '離開吸菸室。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_2f_to_3f_stair',
+    name: '街機中心2F至3F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往3F高階 VR 體驗區的梯間。',
+    connections: {
+      loc_es_ac_2f_fight_race: { status: 'open', description: '走下2F。' },
+      loc_es_ac_3f_vr_zone: { status: 'open', description: '走上3F VR區。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_3f_vr_zone',
+    name: '街機中心3F大型VR體驗區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '設有動態懸吊與全景頭戴設備的大型 VR 體驗場。',
+    connections: {
+      loc_es_ac_2f_to_3f_stair: { status: 'open', description: '走進樓梯間。' },
+      loc_es_ac_3f_control_room: {
+        status: 'temporary',
+        description: '推門進入中控室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['arcade_manager', 'arcade_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ac_3f_vr_zone' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['arcade_manager', 'arcade_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_ac_3f_control_room',
+    name: '員工中控室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '控制全館機台電源與 VR 串流的主控室。',
+    connections: {
+      loc_es_ac_3f_vr_zone: { status: 'open', description: '回到VR體驗區。' },
+      loc_es_ac_3f_vr_testing: { status: 'open', description: '走進VR調校暗室。' },
+    },
+  },
+  {
+    id: 'loc_es_ac_3f_vr_testing',
+    name: 'VR機台測試與調校暗室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_a9c2v8m4x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ac_3f_control_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['arcade_manager', 'arcade_staff'] },
+      ],
+    },
+    description: '維修與測試開發中 VR 機台與沉浸模擬器的秘密房間。',
+    connections: {
+      loc_es_ac_3f_control_room: { status: 'open', description: '回到中控室。' },
+    },
+  },
+
+  // 1.5.6 卡拉OK (KTV)
+  {
+    id: 'loc_es_ktv_1f_lobby',
+    name: '卡拉OK 1F接待大廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '霓虹燈光閃爍的 KTV 1F 開放式接待大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出KTV門口。' },
+      loc_es_ktv_1f_bar: { status: 'open', description: '走到歡樂吧。' },
+      loc_es_ktv_1f_buffet: { status: 'open', description: '走到自助餐區。' },
+      loc_es_ktv_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_1f_bar',
+    name: '歡樂吧',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供各式軟性飲料與酒類的吧檯。',
+    connections: {
+      loc_es_ktv_1f_lobby: { status: 'open', description: '回到接待大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_1f_buffet',
+    name: '自助餐區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '提供開胃小吃與熱食點心的自助餐檯。',
+    connections: {
+      loc_es_ktv_1f_lobby: { status: 'open', description: '回到接待大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_1f_to_2f_stair',
+    name: 'KTV 1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '連接大廳與2F包廂區的鋪地毯樓梯。',
+    connections: {
+      loc_es_ktv_1f_lobby: { status: 'open', description: '走下1F大廳。' },
+      loc_es_ktv_2f_corridor: { status: 'open', description: '走上2F走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_2f_corridor',
+    name: 'KTV 2F包廂走廊',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '兩旁排列一般唱歌包廂的長走廊。',
+    connections: {
+      loc_es_ktv_1f_to_2f_stair: { status: 'open', description: '走到1F至2F樓梯間前。' },
+      loc_es_ktv_2f_standard_room: { status: 'open', description: '推門進入包廂。' },
+      loc_es_ktv_2f_to_3f_stair: { status: 'open', description: '走到2F至3F樓梯間前。' },
+      loc_es_ktv_2f_male_wc: {
+        status: 'temporary',
+        description: '走進男洗手間。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ktv_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'and',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ktv_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 65 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 40 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_ktv_2f_female_wc: {
+        status: 'temporary',
+        description: '走進女洗手間。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ktv_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'and',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+                  ],
+                },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ktv_2f_corridor' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 85 },
+                    { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 60 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_ktv_2f_standard_room',
+    name: '一般唱歌包廂',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '標準中型 KTV 歡唱包廂。',
+    connections: {
+      loc_es_ktv_2f_corridor: { status: 'open', description: '走出包廂回到2F走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_2f_male_wc',
+    name: '男洗手間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '2F男士洗手間。',
+    connections: {
+      loc_es_ktv_2f_corridor: { status: 'open', description: '走出男洗手間回到走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_2f_female_wc',
+    name: '女洗手間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '2F女士洗手間。',
+    connections: {
+      loc_es_ktv_2f_corridor: { status: 'open', description: '走出女洗手間回到走廊。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_2f_to_3f_stair',
+    name: 'KTV 2F至3F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往3F豪華總統包廂區域的樓梯。',
+    connections: {
+      loc_es_ktv_2f_corridor: { status: 'open', description: '走下2F走廊。' },
+      loc_es_ktv_3f_president_suite: { status: 'open', description: '走上3F進入總統大包廂。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_3f_president_suite',
+    name: 'KTV 3F總統大包廂',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '佔地廣闊配有私人酒吧與舞臺的豪華總統大包廂。',
+    connections: {
+      loc_es_ktv_2f_to_3f_stair: { status: 'open', description: '離開包廂回到樓梯間。' },
+      loc_es_ktv_3f_secret_audio: { status: 'open', description: '推開音響後方暗門進入控音室。' },
+      loc_es_ktv_3f_equipment_room: {
+        status: 'temporary',
+        description: '進入機房倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['ktv_manager', 'ktv_staff'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_k8v3m2c9x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ktv_3f_president_suite' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_ktv_3f_president_suite' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['ktv_manager', 'ktv_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_ktv_3f_secret_audio',
+    name: '總統包廂私人控音密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_k4p9v2c8x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_p9s4v2c8x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ktv_3f_president_suite' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['ktv_manager', 'ktv_staff'] },
+      ],
+    },
+    description: '隱藏在總統包廂牆面後方的私人控音與雙向監視密室。',
+    connections: {
+      loc_es_ktv_3f_president_suite: { status: 'open', description: '走出密室回到總統包廂。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_3f_equipment_room',
+    name: '機房倉庫',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '存放音響擴大機與線材的 3F 設備倉庫。',
+    connections: {
+      loc_es_ktv_3f_president_suite: { status: 'open', description: '回到總統包廂。' },
+      loc_es_ktv_rf_roof_patio: { status: 'open', description: '推開消防門來到頂樓露台。' },
+    },
+  },
+  {
+    id: 'loc_es_ktv_rf_roof_patio',
+    name: 'KTV頂樓私人露台角落',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_e9r4v2c7x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ktv_3f_equipment_room' },
+          ],
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['ktv_manager', 'ktv_staff'] },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ktv_3f_equipment_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_ktv_3f_equipment_room' },
+      ],
+    },
+    description: '視野開闊、可鳥瞰整條娛樂街夜景的私人露台角落。',
+    connections: {
+      loc_es_ktv_3f_equipment_room: { status: 'open', description: '推門回到機房倉庫。' },
+    },
+  },
+
+  // 1.5.7 演出廣場
+  {
+    id: 'loc_es_stage_1f_outdoor',
+    name: '露天展演舞台',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '供地下樂團與街頭藝人表演的露天舞台。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走回娛樂街大道。' },
+      loc_es_stage_1f_audience: { status: 'open', description: '走到觀眾區。' },
+      loc_es_stage_1f_backstage_tent: {
+        status: 'temporary',
+        description: '進入後台帳篷。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['performer', 'stage_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_stage_1f_outdoor' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['performer', 'stage_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_stage_1f_audience',
+    name: '觀眾站立區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '舞台前方聚集觀眾觀賞表演的空地。',
+    connections: {
+      loc_es_stage_1f_outdoor: { status: 'open', description: '回到舞台前。' },
+      loc_es_stage_1f_control_tower: {
+        status: 'temporary',
+        description: '爬上控制塔。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['performer', 'stage_staff'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_stage_1f_audience' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['performer', 'stage_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_stage_1f_backstage_tent',
+    name: '舞台後方準備帳篷',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '表演者換裝休息與放置樂器的後台帳篷。',
+    connections: {
+      loc_es_stage_1f_outdoor: { status: 'open', description: '走出帳篷回到舞台。' },
+    },
+  },
+  {
+    id: 'loc_es_stage_1f_control_tower',
+    name: '舞台燈光與音響控制塔',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_s8l4v9c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_b9n4v8c2x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_stage_1f_audience' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['performer', 'stage_staff'] },
+      ],
+    },
+    description: '高出地面、掌控整場演出聲音與燈光效果的操控台。',
+    connections: {
+      loc_es_stage_1f_audience: { status: 'open', description: '爬下控制塔回到觀眾區。' },
+    },
+  },
+
+  // 1.5.8 卡牌店
+  {
+    id: 'loc_es_tcg_1f_counter',
+    name: '卡牌店1F櫃檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '販售卡牌補充包與單卡交易的結帳櫃檯。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出卡牌店。' },
+      loc_es_tcg_1f_rare_cards: { status: 'open', description: '走到稀有卡櫃前。' },
+      loc_es_tcg_1f_battle_tables: { status: 'open', description: '走到對戰長桌區。' },
+      loc_es_tcg_1f_trade_corner: { status: 'open', description: '走到交易區。' },
+    },
+  },
+  {
+    id: 'loc_es_tcg_1f_rare_cards',
+    name: '稀有卡陳列櫃',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '展示高價值與夢幻稀有卡片的防彈玻璃櫃區。',
+    connections: {
+      loc_es_tcg_1f_counter: { status: 'open', description: '回到櫃檯。' },
+      loc_es_tcg_b1_vault: {
+        status: 'temporary',
+        description: '進入金庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'tcg_shop_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_t8k2v9m4x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_tcg_1f_rare_cards' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_tcg_1f_rare_cards' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'tcg_shop_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_tcg_1f_battle_tables',
+    name: '對戰長桌區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '供玩家進行集換式卡牌對戰與賽事的長桌區。',
+    connections: {
+      loc_es_tcg_1f_counter: { status: 'open', description: '回到櫃檯。' },
+    },
+  },
+  {
+    id: 'loc_es_tcg_1f_trade_corner',
+    name: '玩家私下交易區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '玩家私下交換與議價卡片的小角落。',
+    connections: {
+      loc_es_tcg_1f_counter: { status: 'open', description: '回到櫃檯。' },
+    },
+  },
+  {
+    id: 'loc_es_tcg_b1_vault',
+    name: '地下卡牌保管庫與金庫',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_t9v4c2m8x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_m9d8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_tcg_1f_rare_cards' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'tcg_shop_manager' },
+      ],
+    },
+    description: '位於地下、配備恆溫恆濕與重型保險門的絕版卡牌保管金庫。',
+    connections: {
+      loc_es_tcg_1f_rare_cards: { status: 'open', description: '爬上樓梯回到稀有卡櫃前。' },
+    },
+  },
+
+  // 1.5.9 周邊店
+  {
+    id: 'loc_es_merch_1f_anime',
+    name: '周邊店1F動漫區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '陳列熱門動漫公仔、壓克力立牌與海報的1F大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出周邊店。' },
+      loc_es_merch_1f_idol: { status: 'open', description: '走到偶像周邊區。' },
+      loc_es_merch_1f_checkout: { status: 'open', description: '走到結帳櫃檯。' },
+      loc_es_merch_1f_storage: {
+        status: 'temporary',
+        description: '進入後方倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['merch_shop_manager', 'merch_clerk'],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_merch_1f_anime' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['merch_shop_manager', 'merch_clerk'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_merch_1f_idol',
+    name: '偶像周邊區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺滿應援棒、手幅與偶像周邊商品。',
+    connections: {
+      loc_es_merch_1f_anime: { status: 'open', description: '回到動漫區。' },
+    },
+  },
+  {
+    id: 'loc_es_merch_1f_checkout',
+    name: '結帳櫃檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '辦理結帳與預購商品的櫃檯。',
+    connections: {
+      loc_es_merch_1f_anime: { status: 'open', description: '回到動漫區。' },
+    },
+  },
+  {
+    id: 'loc_es_merch_1f_storage',
+    name: '後方倉庫',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '存放未拆封周邊貨物的後台倉庫。',
+    connections: {
+      loc_es_merch_1f_anime: { status: 'open', description: '回到動漫區。' },
+      loc_es_merch_1f_sample_room: { status: 'open', description: '走進秘密展示間。' },
+    },
+  },
+  {
+    id: 'loc_es_merch_1f_sample_room',
+    name: '珍藏樣品與限定品秘密展示間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m8l4v2c9x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_merch_1f_storage' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['merch_shop_manager', 'merch_clerk'] },
+      ],
+    },
+    description: '僅對 VIP 與工作人員開放展示限量原型與非賣樣品的秘密房間。',
+    connections: {
+      loc_es_merch_1f_storage: { status: 'open', description: '回到後方倉庫。' },
+    },
+  },
+
+  // 1.5.10 漫畫店
+  {
+    id: 'loc_es_manga_1f_new',
+    name: '漫畫店1F新書區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '陳列最新出版熱門漫畫與輕小說的1F大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出漫畫店。' },
+      loc_es_manga_1f_used_counter: { status: 'open', description: '走到二手櫃檯。' },
+      loc_es_manga_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+    },
+  },
+  {
+    id: 'loc_es_manga_1f_used_counter',
+    name: '二手書收購櫃檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '收購與估價舊漫畫書的櫃檯。',
+    connections: {
+      loc_es_manga_1f_new: { status: 'open', description: '回到新書區。' },
+    },
+  },
+  {
+    id: 'loc_es_manga_1f_to_2f_stair',
+    name: '漫畫店1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往2F成人區的樓梯。',
+    connections: {
+      loc_es_manga_1f_new: { status: 'open', description: '走下1F新書區。' },
+      loc_es_manga_2f_adult: { status: 'open', description: '走上2F成人專區。' },
+    },
+  },
+  {
+    id: 'loc_es_manga_2f_adult',
+    name: '珍藏本與成人專區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '設有簾子遮擋、專門陳列限制級漫畫與珍藏同人誌的2F。',
+    connections: {
+      loc_es_manga_1f_to_2f_stair: { status: 'open', description: '走進樓梯間。' },
+      loc_es_manga_2f_storage: { status: 'open', description: '走進倉庫。' },
+      loc_es_manga_2f_forbidden_vault: {
+        status: 'temporary',
+        description: '進入收藏暗室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'manga_shop_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_m2k9v4c7x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_manga_2f_adult' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_manga_2f_adult' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'manga_shop_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_manga_2f_storage',
+    name: '倉庫',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '存放未整理二手書與退刊書籍的倉庫。',
+    connections: {
+      loc_es_manga_2f_adult: { status: 'open', description: '回到成人專區。' },
+    },
+  },
+  {
+    id: 'loc_es_manga_2f_forbidden_vault',
+    name: '絕版禁書與私人收藏暗室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m9g4v2c7x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_e8s9v4c2x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_manga_2f_adult' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'manga_shop_manager' },
+      ],
+    },
+    description: '挪開後方大書架後呈現的極珍貴禁書與私人收藏暗室。',
+    connections: {
+      loc_es_manga_2f_adult: { status: 'open', description: '挪動書架回到成人專區。' },
+    },
+  },
+
+  // 1.5.11 錄影帶出租店
+  {
+    id: 'loc_es_video_1f_dvd',
+    name: '錄影帶出租店1F DVD區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺滿流行電影與電視劇 DVD 的1F大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出錄影帶店。' },
+      loc_es_video_1f_counter: { status: 'open', description: '走到櫃檯前。' },
+      loc_es_video_1f_to_b1_stair: { status: 'open', description: '走下梯間前往B1。' },
+    },
+  },
+  {
+    id: 'loc_es_video_1f_counter',
+    name: '櫃檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '辦理影片出租與歸還的櫃檯。',
+    connections: {
+      loc_es_video_1f_dvd: { status: 'open', description: '回到DVD區。' },
+    },
+  },
+  {
+    id: 'loc_es_video_1f_to_b1_stair',
+    name: '錄影帶店1F至B1樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '走下B1限制級影片區的窄樓梯。',
+    connections: {
+      loc_es_video_1f_dvd: { status: 'open', description: '走上1F DVD區。' },
+      loc_es_video_b1_restricted: { status: 'open', description: '走下B1限制級區。' },
+    },
+  },
+  {
+    id: 'loc_es_video_b1_restricted',
+    name: 'B1限制級影片區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '燈光昏紅暗沉、陳列成人與限制級影片的B1。',
+    connections: {
+      loc_es_video_1f_to_b1_stair: { status: 'open', description: '走進樓梯間。' },
+      loc_es_video_b1_large_booth: { status: 'open', description: '走進大放映包廂。' },
+      loc_es_video_b1_small_booth: { status: 'open', description: '走進小放映包廂。' },
+      loc_es_video_b1_private_screening: {
+        status: 'temporary',
+        description: '進入放映密室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'video_rental_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_v9k4c2m8x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_video_b1_restricted' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_video_b1_restricted' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'video_rental_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_video_b1_large_booth',
+    name: '大放映包廂',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '可供三人以上觀影的大型包廂。',
+    connections: {
+      loc_es_video_b1_restricted: { status: 'open', description: '回到限制級區。' },
+    },
+  },
+  {
+    id: 'loc_es_video_b1_small_booth',
+    name: '小放映包廂',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '私密的小型單/雙人觀影包廂。',
+    connections: {
+      loc_es_video_b1_restricted: { status: 'open', description: '回到限制級區。' },
+    },
+  },
+  {
+    id: 'loc_es_video_b1_private_screening',
+    name: '地下私密放映密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_v8g9c2m4x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_video_b1_restricted' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'video_rental_manager' },
+      ],
+    },
+    description: '藏於最深處、配備極專業音響與膠卷播放器的特別放映密室。',
+    connections: {
+      loc_es_video_b1_restricted: { status: 'open', description: '回到限制級影片區。' },
+    },
+  },
+
+  // 1.5.12 電影院
+  {
+    id: 'loc_es_cinema_1f_lobby',
+    name: '電影院1F售票大廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '寬敞明亮、掛滿新片海報的電影院1F售票大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出電影院。' },
+      loc_es_cinema_1f_snacks: { status: 'open', description: '走到餐飲部。' },
+      loc_es_cinema_1f_to_2f_stair: { status: 'open', description: '走上梯間前往2F。' },
+      loc_es_cinema_1f_male_wc: {
+        status: 'temporary',
+        description: '走進男廁所。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'male' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_cinema_1f_lobby' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'male' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'and',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 20 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 35 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_cinema_1f_female_wc: {
+        status: 'temporary',
+        description: '走進女廁所。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'gender', operator: '==', value: 'female' },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_cinema_1f_lobby' },
+                { targetType: 'npc', fixedStat: 'gender', operator: '==', value: 'female' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'and',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'alertness', operator: '<', value: 10 },
+                    { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 55 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_cinema_1f_snacks',
+    name: '爆米花餐飲部',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '飄著甜美爆米花與可樂香氣的餐飲販售部。',
+    connections: {
+      loc_es_cinema_1f_lobby: { status: 'open', description: '回到售票大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_1f_male_wc',
+    name: '男廁所',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '大廳旁男士洗衛生間。',
+    connections: {
+      loc_es_cinema_1f_lobby: { status: 'open', description: '走出男廁回到大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_1f_female_wc',
+    name: '女廁所',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '大廳旁女士衛生間。',
+    connections: {
+      loc_es_cinema_1f_lobby: { status: 'open', description: '走出女廁回到大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_1f_to_2f_stair',
+    name: '電影院1F至2F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往影廳入場門口與2F的樓梯通道。',
+    connections: {
+      loc_es_cinema_1f_lobby: { status: 'open', description: '走下1F大廳。' },
+      loc_es_cinema_2f_hall1: { status: 'open', description: '進入一號影廳。' },
+      loc_es_cinema_2f_hall2: { status: 'open', description: '進入二號影廳。' },
+      loc_es_cinema_2f_staff_lounge: { status: 'open', description: '推門進入員工休息室。' },
+      loc_es_cinema_2f_to_3f_stair: { status: 'open', description: '走上向上樓梯間。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_2f_hall1',
+    name: '一號影廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '播放熱門商業大片的標準大型影廳。',
+    connections: {
+      loc_es_cinema_1f_to_2f_stair: { status: 'open', description: '離開影廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_2f_hall2',
+    name: '二號影廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '播放藝術與動畫電影的中型影廳。',
+    connections: {
+      loc_es_cinema_1f_to_2f_stair: { status: 'open', description: '離開影廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_2f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '影院員工休息與置物間。',
+    connections: {
+      loc_es_cinema_1f_to_2f_stair: { status: 'open', description: '回到樓梯間。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_2f_to_3f_stair',
+    name: '電影院2F至3F樓梯間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '通往3F VIP包廂廳與放映室的梯間。',
+    connections: {
+      loc_es_cinema_1f_to_2f_stair: { status: 'open', description: '走下2F。' },
+      loc_es_cinema_3f_vip_hall: { status: 'open', description: '走上3F進入VIP影廳。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_3f_vip_hall',
+    name: '情侶VIP影廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '配置雙人高級皮沙發與私密包廂的情侶影廳。',
+    connections: {
+      loc_es_cinema_2f_to_3f_stair: { status: 'open', description: '離開VIP影廳。' },
+      loc_es_cinema_3f_projection_room: {
+        status: 'temporary',
+        description: '進入放映機房。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'cinema_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_c9k2v7m4x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_cinema_3f_vip_hall' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_cinema_3f_vip_hall' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'cinema_manager' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_cinema_3f_projection_room',
+    name: '放映機房',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '放置數位相位放映機與音響解碼主機的掌控重地。',
+    connections: {
+      loc_es_cinema_3f_vip_hall: { status: 'open', description: '走出放映機房回到VIP影廳。' },
+      loc_es_cinema_3f_old_projector_tower: { status: 'open', description: '沿著鐵梯爬上廢棄放映塔。' },
+    },
+  },
+  {
+    id: 'loc_es_cinema_3f_old_projector_tower',
+    name: '舊式膠卷廢棄放映塔',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_c8b9v4c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_cinema_3f_projection_room' },
+          ],
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'cinema_manager' },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_cinema_3f_projection_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_cinema_3f_projection_room' },
+      ],
+    },
+    description: '放置舊時代膠卷放映機與廢棄電影鐵盒的角落閣樓。',
+    connections: {
+      loc_es_cinema_3f_projection_room: { status: 'open', description: '爬下鐵梯回到放映機房。' },
+    },
+  },
+
+  // 1.5.13 連鎖飲料店
+  {
+    id: 'loc_es_bv2_1f_counter',
+    name: '連鎖飲料店1F點餐窗口',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '連鎖手搖飲料店的面街點餐與取餐窗口。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出飲料店。' },
+      loc_es_bv2_1f_mixing: { status: 'open', description: '走進手搖作業區。' },
+    },
+  },
+  {
+    id: 'loc_es_bv2_1f_mixing',
+    name: '手搖作業區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '調配茶飲、加料與封口的作業工作台。',
+    connections: {
+      loc_es_bv2_1f_counter: { status: 'open', description: '回到點餐窗口。' },
+      loc_es_bv2_1f_prep_room: { status: 'open', description: '進入後廚備料室。' },
+    },
+  },
+  {
+    id: 'loc_es_bv2_1f_prep_room',
+    name: '後廚備料室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '煮茶、熬煮珍珠與存放原物料的後廚備料區。',
+    connections: {
+      loc_es_bv2_1f_mixing: { status: 'open', description: '回到手搖作業區。' },
+    },
+  },
+
+  // 1.5.14 女僕咖啡廳
+  {
+    id: 'loc_es_maid_1f_lobby',
+    name: '女僕咖啡廳1F接待大廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '粉色溫馨夢幻、由女僕親切迎賓「歡迎回家」的接待大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出女僕咖啡廳。' },
+      loc_es_maid_1f_dining: { status: 'open', description: '走進主人用餐區。' },
+      loc_es_maid_1f_stage: { status: 'open', description: '走到舞台前。' },
+    },
+  },
+  {
+    id: 'loc_es_maid_1f_dining',
+    name: '主人用餐區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '供顧客享用女僕繪畫蛋包飯與魔法繪圖飲料的餐桌區。',
+    connections: {
+      loc_es_maid_1f_lobby: { status: 'open', description: '回到接待大廳。' },
+      loc_es_maid_1f_dressing_room: {
+        status: 'temporary',
+        description: '推門進入更衣室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['maid_manager', 'maid'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_m3v8c2k9p', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_maid_1f_dining' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_maid_1f_dining' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['maid_manager', 'maid'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_maid_1f_staff_lounge: {
+        status: 'temporary',
+        description: '進入休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['maid_manager', 'maid'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_m3v8c2k9p', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_maid_1f_dining' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_maid_1f_dining' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['maid_manager', 'maid'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_maid_1f_stage',
+    name: '魔法舞台',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '女僕進行表演歌舞與拍立得互動合影的微型舞台。',
+    connections: {
+      loc_es_maid_1f_lobby: { status: 'open', description: '回到大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_maid_1f_dressing_room',
+    name: '女僕更衣室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '供女僕更換工作服與打理妝容的專屬更衣室。',
+    connections: {
+      loc_es_maid_1f_dining: { status: 'open', description: '離開更衣室回到用餐區。' },
+      loc_es_maid_1f_private_lounge: { status: 'open', description: '進入私人試衣密室。' },
+    },
+  },
+  {
+    id: 'loc_es_maid_1f_private_lounge',
+    name: '女僕專屬私人休息兼試衣密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m4d9v2c8x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_p9s4v2c8x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_maid_1f_dressing_room' },
+          ],
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'or',
+          subConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'maid_manager' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'maid' },
+                {
+                  targetType: 'player',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'player', fixedStat: 'obedience', operator: '>=', value: 50 },
+                    { targetType: 'player', fixedStat: 'affection', operator: '>=', value: 50 },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    description: '隱藏在更衣室隔壁、配備舒適沙發與全身鏡的私密休息密室。',
+    connections: {
+      loc_es_maid_1f_dressing_room: { status: 'open', description: '走出密室回到更衣室。' },
+    },
+  },
+  {
+    id: 'loc_es_maid_1f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '女僕咖啡廳後臺員工休憩空間。',
+    connections: {
+      loc_es_maid_1f_dining: { status: 'open', description: '回到用餐區。' },
+    },
+  },
+
+  // 1.5.15 刺青與穿孔工作室
+  {
+    id: 'loc_es_tattoo_1f_reception',
+    name: '刺青工作室1F接待區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '充滿哥特與搖滾風格裝潢的刺青工作室接待前台。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出刺青工作室。' },
+      loc_es_tattoo_1f_sterilize: { status: 'open', description: '走到消毒室。' },
+      loc_es_tattoo_1f_design_room: { status: 'open', description: '走到討論間。' },
+      loc_es_tattoo_1f_tattoo_room: { status: 'open', description: '走進刺青房。' },
+      loc_es_tattoo_1f_piercing_room: { status: 'open', description: '走進穿孔室。' },
+      loc_es_tattoo_1f_staff_lounge: { status: 'open', description: '回到接待區。' },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_sterilize',
+    name: '器材消毒室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '放置高壓滅菌鍋與一次性刺青針頭的消毒室。',
+    connections: {
+      loc_es_tattoo_1f_reception: { status: 'open', description: '回到接待區。' },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_design_room',
+    name: '紋樣討論間',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '刺青師與客人翻閱圖稿冊與討論定稿的畫室。',
+    connections: {
+      loc_es_tattoo_1f_reception: { status: 'open', description: '回到接待區。' },
+      loc_es_tattoo_1f_vip_tattoo: {
+        status: 'temporary',
+        description: '推開牆面暗門進入VIP暗室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            { targetType: 'player', fixedStat: 'identities', operator: 'contains', value: 'tattoo_artist' },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_t9k4v2c7x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_tattoo_1f_design_room' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_tattoo_1f_design_room' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains', value: 'tattoo_artist' },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_tattoo_room',
+    name: '獨立刺青房',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '衛生隔離、配有刺青椅與專業照明的刺青施作室。',
+    connections: {
+      loc_es_tattoo_1f_reception: { status: 'open', description: '回到接待區。' },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_piercing_room',
+    name: '穿孔室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '進行人體穿孔與飾品佩戴的消毒操作室。',
+    connections: {
+      loc_es_tattoo_1f_reception: { status: 'open', description: '回到接待區。' },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_vip_tattoo',
+    name: '私密紋身VIP專用暗室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_t7s4v9c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_tattoo_1f_design_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['tattoo_artist', 'tattoo_vip'] },
+      ],
+    },
+    description: '絕密隔音、專門進行私密部位紋身與特殊客製化的 VIP 暗室。',
+    connections: {
+      loc_es_tattoo_1f_design_room: { status: 'open', description: '走出暗室回到討論間。' },
+    },
+  },
+  {
+    id: 'loc_es_tattoo_1f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '刺青師與工作人員的休憩場所。',
+    connections: {
+      loc_es_tattoo_1f_reception: { status: 'open', description: '回到接待區。' },
+    },
+  },
+
+  // 1.5.16 撞球飛鏢酒吧
+  {
+    id: 'loc_es_bar_1f_pub',
+    name: '撞球酒吧1F酒吧檯',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '爵士樂迴盪、擺滿各式美酒的酒吧檯。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出酒吧門口。' },
+      loc_es_bar_1f_darts: { status: 'open', description: '走到飛鏢區。' },
+      loc_es_bar_1f_billiards: { status: 'open', description: '走到撞球區。' },
+      loc_es_bar_1f_dim_corner: { status: 'open', description: '走到角落座位。' },
+      loc_es_bar_1f_seating: { status: 'open', description: '走到一般座位區。' },
+    },
+  },
+  {
+    id: 'loc_es_bar_1f_darts',
+    name: '飛鏢機區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺設軟靶飛鏢機與比分螢幕的投鏢區。',
+    connections: {
+      loc_es_bar_1f_pub: { status: 'open', description: '回到酒吧檯。' },
+    },
+  },
+  {
+    id: 'loc_es_bar_1f_billiards',
+    name: '撞球檯區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '綠絨桌布、配有懸吊照明的專業撞球桌區。',
+    connections: {
+      loc_es_bar_1f_pub: { status: 'open', description: '回到酒吧檯。' },
+    },
+  },
+  {
+    id: 'loc_es_bar_1f_dim_corner',
+    name: '昏暗角落座位',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '酒吧最隱蔽、燈光極度昏暗的角落沙發。',
+    connections: {
+      loc_es_bar_1f_pub: { status: 'open', description: '回到酒吧檯。' },
+      loc_es_bar_b1_underground_vip: { status: 'open', description: '沿密道走下地下招待室。' },
+    },
+  },
+  {
+    id: 'loc_es_bar_1f_seating',
+    name: '座位區',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '散落著小圓桌與高腳椅的開放座位區。',
+    connections: {
+      loc_es_bar_1f_pub: { status: 'open', description: '回到酒吧檯。' },
+    },
+  },
+  {
+    id: 'loc_es_bar_b1_underground_vip',
+    name: '地下賭局與私人VIP招待室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_b8i9v4c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_t9s8v2c4x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_bar_1f_dim_corner' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['bar_tender', 'bar_staff', 'bar_vip'] },
+      ],
+    },
+    description: '位於酒吧地下、舉辦高額地下賭局與私人招待的豪華VIP密室。',
+    connections: {
+      loc_es_bar_1f_dim_corner: { status: 'open', description: '走上階梯回到角落座位。' },
+    },
+  },
+
+  // 1.5.17 密室逃脫館
+  {
+    id: 'loc_es_escape_1f_lobby',
+    name: '密室逃脫館1F解說大廳',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '充滿神秘機關裝飾與主題海報的1F行前解說大廳。',
+    connections: {
+      loc_es_main_street: { status: 'open', description: '走出密室逃脫館。' },
+      loc_es_escape_1f_horror_room: { status: 'open', description: '進入恐怖主題密室。' },
+      loc_es_escape_1f_scifi_room: { status: 'open', description: '進入科幻主題密室。' },
+      loc_es_escape_1f_ruins_room: { status: 'open', description: '進入廢墟主題密室。' },
+      loc_es_escape_1f_control_room: {
+        status: 'temporary',
+        description: '進入監控導播室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['escape_room_manager', 'escape_room_staff'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_e4k9v2m7x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['escape_room_manager', 'escape_room_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_escape_1f_prop_storage: {
+        status: 'temporary',
+        description: '進入道具倉庫。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['escape_room_manager', 'escape_room_staff'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_e4k9v2m7x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['escape_room_manager', 'escape_room_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      loc_es_escape_1f_staff_lounge: {
+        status: 'temporary',
+        description: '進入休息室。',
+        temporary: {
+          matchMode: 'or',
+          temporaryConditions: [
+            {
+              targetType: 'player',
+              fixedStat: 'identities',
+              operator: 'contains_any',
+              value: ['escape_room_manager', 'escape_room_staff'],
+            },
+            {
+              targetType: 'player',
+              subMatchMode: 'and',
+              subConditions: [
+                {
+                  targetType: 'player',
+                  dynamicStat: { collection: 'inventory', entityId: 'item_e4k9v2m7x', property: 'quantity' },
+                  operator: '>=',
+                  value: 1,
+                },
+                { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+              ],
+            },
+            {
+              targetType: 'npc',
+              targetNpcId: 'any_if',
+              subMatchMode: 'and',
+              subConditions: [
+                { targetType: 'npc', fixedStat: 'locationId', operator: '==', value: 'loc_es_escape_1f_lobby' },
+                { targetType: 'npc', fixedStat: 'identities', operator: 'contains_any', value: ['escape_room_manager', 'escape_room_staff'] },
+                {
+                  targetType: 'npc',
+                  subMatchMode: 'or',
+                  subConditions: [
+                    { targetType: 'npc', fixedStat: 'obedience', operator: '>=', value: 30 },
+                    { targetType: 'npc', fixedStat: 'affection', operator: '>=', value: 30 },
+                    {
+                      targetType: 'npc',
+                      subMatchMode: 'or',
+                      subConditions: [
+                        { targetType: 'npc', fixedStat: 'lust', operator: '>=', value: 50 },
+                        { targetType: 'npc', fixedStat: 'licentiousness', operator: '>=', value: 30 },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_horror_room',
+    name: '恐怖主題密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '燈光慘白、背景音效驚悚的中世紀大宅恐怖主題密室。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到解說大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_scifi_room',
+    name: '科幻主題密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '擺設雷射光柵與太空港開關的未來科幻密室。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到解說大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_ruins_room',
+    name: '廢墟主題密室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '布置如末日探險古代遺跡的廢墟主題密室。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到解說大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_control_room',
+    name: '監控導播室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '工作人員觀察玩家解謎進度與發放提示的監控中控室。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到解說大廳。' },
+      loc_es_escape_1f_secret_obs: { status: 'open', description: '進入觀察暗道。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_secret_obs',
+    name: '恐怖主題密室觀察暗道',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_e7t4v9c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_p9s4v2c8x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_escape_1f_control_room' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['escape_room_manager', 'escape_room_staff'] },
+      ],
+    },
+    description: '沿著恐怖密室牆壁延伸、可透射雙向鏡觀看玩家反應的秘密觀察暗道。',
+    connections: {
+      loc_es_escape_1f_control_room: { status: 'open', description: '走出暗道回到導播室。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_prop_storage',
+    name: '道具倉庫',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '存放備用密室解謎道具與怪獸裝扮的後台倉庫。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到大廳。' },
+      loc_es_escape_1f_maintenance_tunnel: { status: 'open', description: '進入應急維修通道。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_staff_lounge',
+    name: '員工休息室',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'visible',
+    description: '密室工作人員與 NPC 扮演者的休憩室。',
+    connections: {
+      loc_es_escape_1f_lobby: { status: 'open', description: '回到大廳。' },
+    },
+  },
+  {
+    id: 'loc_es_escape_1f_maintenance_tunnel',
+    name: '密室機關總控與應急維修通道',
+    areaId: 'area_entertainment_street',
+    displayStatus: 'hidden',
+    discovery: {
+      discoveryMatchMode: 'or',
+      discoveryConditions: [
+        {
+          targetType: 'player',
+          dynamicStat: { collection: 'inventory', entityId: 'item_m7m4v9c2x', property: 'quantity' },
+          operator: '>=',
+          value: 1,
+        },
+        {
+          targetType: 'player',
+          subMatchMode: 'and',
+          subConditions: [
+            {
+              targetType: 'player',
+              dynamicStat: { collection: 'inventory', entityId: 'item_e8s9v4c2x', property: 'quantity' },
+              operator: '>=',
+              value: 1,
+            },
+            { targetType: 'player', fixedStat: 'currentLocationId', operator: '==', value: 'loc_es_escape_1f_prop_storage' },
+          ],
+        },
+        { targetType: 'player', fixedStat: 'identities', operator: 'contains_any', value: ['escape_room_manager', 'escape_room_staff'] },
+      ],
+    },
+    description: '穿越各主題密室機關與電路管線的緊急維修與應急總控通道。',
+    connections: {
+      loc_es_escape_1f_prop_storage: { status: 'open', description: '爬出維修口回到道具倉庫。' },
+    },
+  },
+];
+
+// ==========================================
+// Area 2.1: 齋明學院 - 校舍本館
+// ==========================================
 const area2_1_SchoolMainLocations: LocationNode[] = [
-  // ==========================================
-  // Area 2.1: 齋明學院 - 校舍本館
-  // ==========================================
   // ==========================================
   // Area 2.1.1: 校舍本館 - 屋頂
   // ==========================================
@@ -13391,7 +16255,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_z5p2t8n1k', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_z5p2t8n1k', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -13462,7 +16326,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
         },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_10sc63znx', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_10sc63znx', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -13473,7 +16337,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'npc',
-              dynamicStat: { collection: 'inventory', entityId: 'item_10sc63znx', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_10sc63znx', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -13578,7 +16442,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_a8k4p9z2w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_a8k4p9z2w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -13677,7 +16541,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_g3h9k5x7t', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_g3h9k5x7t', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -13794,7 +16658,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_sx3pnzcv1', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_sx3pnzcv1', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14065,7 +16929,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
         },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14111,7 +16975,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14240,7 +17104,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_y2r7w9x3v', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_y2r7w9x3v', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14381,7 +17245,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
       discoveryConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14395,7 +17259,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_r5t7p9m1w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_r5t7p9m1w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14471,7 +17335,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
       discoveryConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14549,13 +17413,13 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
       discoveryConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_2k4e1lkeu', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14570,7 +17434,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_x4b6c8d2f', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_x4b6c8d2f', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14682,7 +17546,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_f9g2h4j6k', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_f9g2h4j6k', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14757,7 +17621,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_n3p9v7z1w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_n3p9v7z1w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14826,7 +17690,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
       discoveryConditions: [
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14840,7 +17704,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14882,7 +17746,7 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s6zlj8wrj', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s6zlj8wrj', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -14895,10 +17759,10 @@ const area2_1_SchoolMainLocations: LocationNode[] = [
 
 ];
 
+// ==========================================
+// Area 2.2: 齋明學院 - 體育館棟 (體育館本棟 & 附屬游泳館)
+// ==========================================
 const area2_2_GymnasiumLocations: LocationNode[] = [
-  // ==========================================
-  // Area 2.2: 齋明學院 - 體育館棟 (體育館本棟 & 附屬游泳館)
-  // ==========================================
   // ==========================================
   // Area 2.2.1: 體育館棟(本棟) - 屋頂
   // ==========================================
@@ -14949,7 +17813,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -14964,7 +17828,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15035,7 +17899,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_y7k5p2z9q', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_y7k5p2z9q', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15110,7 +17974,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_d8p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_d8p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15185,7 +18049,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_f2t8p6w1x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_f2t8p6w1x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15254,7 +18118,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_a4p7s9w2d', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_a4p7s9w2d', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15460,7 +18324,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -15537,7 +18401,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s8t2p9w4x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s8t2p9w4x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15614,7 +18478,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_g3k9p7z2w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_g3k9p7z2w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15693,7 +18557,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
             },
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s6zlj8wrj', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s6zlj8wrj', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15754,7 +18618,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b6v2p7w9x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b6v2p7w9x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -15831,7 +18695,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -15846,7 +18710,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16079,7 +18943,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_s5q9t1z2w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_s5q9t1z2w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16179,7 +19043,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_k2r8p6w4x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_k2r8p6w4x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16248,7 +19112,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b4p9t2z7w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b4p9t2z7w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16317,7 +19181,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_p2z9t1w4x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_p2z9t1w4x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16375,7 +19239,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -16418,7 +19282,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_q3r7s9t1x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_q3r7s9t1x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16485,7 +19349,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_b8p2t9w4x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_b8p2t9w4x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16552,7 +19416,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_p3q5r7s9t', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_p3q5r7s9t', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16615,13 +19479,13 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw 或 剪報 item_ku943qp8h
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_ku943qp8h', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_ku943qp8h', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -16636,7 +19500,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16675,7 +19539,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -16690,7 +19554,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16729,7 +19593,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -16744,7 +19608,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -16994,7 +19858,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_p8t2p9w4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_p8t2p9w4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -17059,7 +19923,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_p6w2t9z4x', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_p6w2t9z4x', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -17166,7 +20030,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_p5z2p9w4t', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_p5z2p9w4t', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -17247,7 +20111,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
         // 發現條件: 玩家持有日記 item_p5uqzoltw
         {
           targetType: 'player',
-          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'count' },
+          dynamicStat: { collection: 'inventory', entityId: 'item_p5uqzoltw', property: 'quantity' },
           operator: '>=',
           value: 1,
         },
@@ -17262,7 +20126,7 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
           subConditions: [
             {
               targetType: 'player',
-              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'count' },
+              dynamicStat: { collection: 'inventory', entityId: 'item_v5p9t2z4w', property: 'quantity' },
               operator: '>=',
               value: 1,
             },
@@ -17287,10 +20151,10 @@ const area2_2_GymnasiumLocations: LocationNode[] = [
 
 ];
 
+// ==========================================
+// Area 2.3: 齋明學院 - 社團大樓
+// ==========================================
 const area2_3_ClubBuildingLocations: LocationNode[] = [
-  // ==========================================
-  // Area 2.3: 齋明學院 - 社團大樓
-  // ==========================================
   // ==========================================
   // Area 2.3.1: 社團大樓 - 屋頂
   // ==========================================
@@ -17332,7 +20196,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_e2t9p6z4w',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -17885,7 +20749,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_c7k5p1w3x',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -17971,7 +20835,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
           dynamicStat: {
             collection: 'inventory',
             entityId: 'item_j9k0l1m2n',
-            property: 'count',
+            property: 'quantity',
           },
           operator: '>=',
           value: 1,
@@ -17989,7 +20853,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_c7k5p1w3x',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -18023,7 +20887,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_j9k0l1m2n',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -18053,7 +20917,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_b9p2w1t4z',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -18075,7 +20939,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_c7k5p1w3x',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -19450,7 +22314,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_o9c3c8l1t',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -19478,7 +22342,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_o9c3c8l1t',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -20753,7 +23617,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_e5p0s9t2z',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -24574,7 +27438,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_v4k9p8z2w',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -25184,7 +28048,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_c7k5p1w3x',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -25419,7 +28283,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_r9q4z8k7m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -25457,7 +28321,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_v4k9p8z2w',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -25815,7 +28679,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_e2t9p6z4w',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -25969,7 +28833,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_s6zlj8wrj',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -25991,7 +28855,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_j9k0l1m2n',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -26157,7 +29021,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_b9p2w1t4z',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26201,7 +29065,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_b9p2w1t4z',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26253,7 +29117,7 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_b9p2w1t4z',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26271,10 +29135,10 @@ const area2_3_ClubBuildingLocations: LocationNode[] = [
   },
 ];
 
+// ==========================================
+// Area 2.4: 齋明學院 - 宿舍棟(女生)
+// ==========================================
 const area2_4_FemaleDormLocations: LocationNode[] = [
-  // ==========================================
-  // Area 2.4: 齋明學院 - 宿舍棟(女生)
-  // ==========================================
   // ==========================================
   // Area 2.4.1: 宿舍棟 - 女宿屋頂
   // ==========================================
@@ -26317,7 +29181,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26764,7 +29628,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_s6zlj8wrj',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -26851,7 +29715,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_k3d7f9h2m',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -26889,7 +29753,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26899,7 +29763,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26979,7 +29843,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -26989,7 +29853,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27069,7 +29933,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27079,7 +29943,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27159,7 +30023,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27169,7 +30033,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27249,7 +30113,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27259,7 +30123,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27339,7 +30203,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27349,7 +30213,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27494,7 +30358,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27504,7 +30368,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27584,7 +30448,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27594,7 +30458,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27674,7 +30538,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27684,7 +30548,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27764,7 +30628,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27774,7 +30638,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27854,7 +30718,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27864,7 +30728,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27944,7 +30808,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -27954,7 +30818,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28099,7 +30963,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28109,7 +30973,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28189,7 +31053,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28199,7 +31063,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28279,7 +31143,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28289,7 +31153,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28369,7 +31233,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28379,7 +31243,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28459,7 +31323,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28469,7 +31333,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28549,7 +31413,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28559,7 +31423,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28704,7 +31568,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28714,7 +31578,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28794,7 +31658,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28804,7 +31668,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28884,7 +31748,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28894,7 +31758,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28974,7 +31838,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -28984,7 +31848,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29064,7 +31928,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29074,7 +31938,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29154,7 +32018,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29164,7 +32028,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29309,7 +32173,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29319,7 +32183,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29399,7 +32263,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29409,7 +32273,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29489,7 +32353,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29499,7 +32363,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29579,7 +32443,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29589,7 +32453,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29669,7 +32533,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29679,7 +32543,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29759,7 +32623,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29769,7 +32633,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29914,7 +32778,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -29924,7 +32788,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30004,7 +32868,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30014,7 +32878,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30094,7 +32958,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30104,7 +32968,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30184,7 +33048,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30194,7 +33058,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30274,7 +33138,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30284,7 +33148,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30364,7 +33228,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30374,7 +33238,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30519,7 +33383,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30529,7 +33393,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30609,7 +33473,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30619,7 +33483,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30699,7 +33563,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30709,7 +33573,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30789,7 +33653,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30799,7 +33663,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30879,7 +33743,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30889,7 +33753,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30969,7 +33833,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -30979,7 +33843,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31124,7 +33988,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31134,7 +33998,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31214,7 +34078,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31224,7 +34088,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31304,7 +34168,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31314,7 +34178,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31394,7 +34258,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31404,7 +34268,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31484,7 +34348,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31494,7 +34358,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31574,7 +34438,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31584,7 +34448,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31729,7 +34593,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31739,7 +34603,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31819,7 +34683,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31829,7 +34693,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31909,7 +34773,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31919,7 +34783,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -31999,7 +34863,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32009,7 +34873,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32089,7 +34953,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32099,7 +34963,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32179,7 +35043,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32189,7 +35053,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32346,7 +35210,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32356,7 +35220,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32436,7 +35300,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32446,7 +35310,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32526,7 +35390,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32536,7 +35400,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32616,7 +35480,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32626,7 +35490,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32706,7 +35570,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32716,7 +35580,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32796,7 +35660,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_5106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -32806,7 +35670,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33365,7 +36229,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33375,7 +36239,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33455,7 +36319,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33465,7 +36329,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33545,7 +36409,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33555,7 +36419,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33635,7 +36499,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33645,7 +36509,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33725,7 +36589,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33735,7 +36599,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33815,7 +36679,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33825,7 +36689,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33970,7 +36834,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -33980,7 +36844,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34060,7 +36924,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34070,7 +36934,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34150,7 +37014,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34160,7 +37024,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34240,7 +37104,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34250,7 +37114,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34330,7 +37194,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34340,7 +37204,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34420,7 +37284,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34430,7 +37294,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34575,7 +37439,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34585,7 +37449,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34665,7 +37529,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34675,7 +37539,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34755,7 +37619,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34765,7 +37629,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34845,7 +37709,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34855,7 +37719,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34935,7 +37799,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -34945,7 +37809,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35025,7 +37889,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35035,7 +37899,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35180,7 +38044,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35190,7 +38054,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35270,7 +38134,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35280,7 +38144,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35360,7 +38224,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35370,7 +38234,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35450,7 +38314,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35460,7 +38324,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35540,7 +38404,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35550,7 +38414,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35630,7 +38494,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35640,7 +38504,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35785,7 +38649,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35795,7 +38659,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35875,7 +38739,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35885,7 +38749,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35965,7 +38829,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -35975,7 +38839,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36055,7 +38919,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36065,7 +38929,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36145,7 +39009,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36155,7 +39019,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36235,7 +39099,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36245,7 +39109,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36390,7 +39254,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36400,7 +39264,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36480,7 +39344,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36490,7 +39354,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36570,7 +39434,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36580,7 +39444,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36660,7 +39524,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36670,7 +39534,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36750,7 +39614,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36760,7 +39624,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36840,7 +39704,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36850,7 +39714,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -36995,7 +39859,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37005,7 +39869,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37085,7 +39949,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37095,7 +39959,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37175,7 +40039,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37185,7 +40049,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37265,7 +40129,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37275,7 +40139,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37355,7 +40219,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37365,7 +40229,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37445,7 +40309,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37455,7 +40319,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37600,7 +40464,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37610,7 +40474,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37690,7 +40554,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37700,7 +40564,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37780,7 +40644,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37790,7 +40654,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37870,7 +40734,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37880,7 +40744,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37960,7 +40824,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -37970,7 +40834,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38050,7 +40914,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38060,7 +40924,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38205,7 +41069,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38215,7 +41079,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38295,7 +41159,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38305,7 +41169,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38385,7 +41249,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38395,7 +41259,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38475,7 +41339,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38485,7 +41349,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38565,7 +41429,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38575,7 +41439,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38655,7 +41519,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38665,7 +41529,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38822,7 +41686,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38832,7 +41696,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38912,7 +41776,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -38922,7 +41786,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39002,7 +41866,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39012,7 +41876,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39092,7 +41956,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39102,7 +41966,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39182,7 +42046,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39192,7 +42056,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39272,7 +42136,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_4106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39282,7 +42146,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39839,7 +42703,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39849,7 +42713,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39929,7 +42793,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -39939,7 +42803,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40019,7 +42883,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40029,7 +42893,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40109,7 +42973,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40119,7 +42983,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40199,7 +43063,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40209,7 +43073,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40289,7 +43153,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40299,7 +43163,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40444,7 +43308,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40454,7 +43318,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40534,7 +43398,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40544,7 +43408,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40624,7 +43488,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40634,7 +43498,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40714,7 +43578,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40724,7 +43588,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40804,7 +43668,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40814,7 +43678,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40894,7 +43758,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -40904,7 +43768,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41049,7 +43913,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41059,7 +43923,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41139,7 +44003,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41149,7 +44013,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41229,7 +44093,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41239,7 +44103,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41319,7 +44183,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41329,7 +44193,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41409,7 +44273,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41419,7 +44283,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41499,7 +44363,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41509,7 +44373,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41654,7 +44518,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41664,7 +44528,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41744,7 +44608,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41754,7 +44618,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41834,7 +44698,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41844,7 +44708,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41924,7 +44788,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -41934,7 +44798,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42014,7 +44878,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42024,7 +44888,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42104,7 +44968,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42114,7 +44978,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42259,7 +45123,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42269,7 +45133,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42349,7 +45213,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42359,7 +45223,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42439,7 +45303,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42449,7 +45313,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42529,7 +45393,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42539,7 +45403,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42619,7 +45483,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42629,7 +45493,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42709,7 +45573,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42719,7 +45583,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42864,7 +45728,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42874,7 +45738,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42954,7 +45818,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -42964,7 +45828,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43044,7 +45908,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43054,7 +45918,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43134,7 +45998,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43144,7 +46008,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43224,7 +46088,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43234,7 +46098,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43314,7 +46178,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43324,7 +46188,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43469,7 +46333,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43479,7 +46343,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43559,7 +46423,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43569,7 +46433,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43649,7 +46513,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43659,7 +46523,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43739,7 +46603,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43749,7 +46613,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43829,7 +46693,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43839,7 +46703,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43919,7 +46783,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -43929,7 +46793,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44074,7 +46938,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44084,7 +46948,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44164,7 +47028,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44174,7 +47038,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44254,7 +47118,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44264,7 +47128,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44344,7 +47208,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44354,7 +47218,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44434,7 +47298,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44444,7 +47308,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44524,7 +47388,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44534,7 +47398,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44679,7 +47543,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44689,7 +47553,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44769,7 +47633,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44779,7 +47643,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44859,7 +47723,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44869,7 +47733,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44949,7 +47813,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -44959,7 +47823,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45039,7 +47903,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45049,7 +47913,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45129,7 +47993,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45139,7 +48003,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45296,7 +48160,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45306,7 +48170,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45386,7 +48250,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45396,7 +48260,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45476,7 +48340,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45486,7 +48350,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45566,7 +48430,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45576,7 +48440,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45656,7 +48520,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45666,7 +48530,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45746,7 +48610,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_3106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -45756,7 +48620,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46314,7 +49178,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46324,7 +49188,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46404,7 +49268,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46414,7 +49278,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46494,7 +49358,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46504,7 +49368,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46584,7 +49448,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46594,7 +49458,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46674,7 +49538,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46684,7 +49548,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46764,7 +49628,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46774,7 +49638,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46919,7 +49783,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -46929,7 +49793,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47009,7 +49873,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47019,7 +49883,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47099,7 +49963,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47109,7 +49973,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47189,7 +50053,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47199,7 +50063,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47279,7 +50143,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47289,7 +50153,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47369,7 +50233,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47379,7 +50243,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47524,7 +50388,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47534,7 +50398,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47614,7 +50478,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47624,7 +50488,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47704,7 +50568,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47714,7 +50578,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47794,7 +50658,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47804,7 +50668,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47884,7 +50748,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47894,7 +50758,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47974,7 +50838,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -47984,7 +50848,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48129,7 +50993,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48139,7 +51003,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48219,7 +51083,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48229,7 +51093,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48309,7 +51173,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48319,7 +51183,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48399,7 +51263,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48409,7 +51273,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48489,7 +51353,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48499,7 +51363,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48579,7 +51443,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48589,7 +51453,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48734,7 +51598,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48744,7 +51608,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48824,7 +51688,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48834,7 +51698,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48914,7 +51778,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -48924,7 +51788,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49004,7 +51868,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49014,7 +51878,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49094,7 +51958,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49104,7 +51968,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49184,7 +52048,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49194,7 +52058,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49339,7 +52203,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49349,7 +52213,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49429,7 +52293,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49439,7 +52303,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49519,7 +52383,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49529,7 +52393,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49609,7 +52473,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49619,7 +52483,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49699,7 +52563,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49709,7 +52573,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49789,7 +52653,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49799,7 +52663,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49944,7 +52808,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -49954,7 +52818,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50034,7 +52898,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50044,7 +52908,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50124,7 +52988,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50134,7 +52998,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50214,7 +53078,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50224,7 +53088,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50304,7 +53168,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50314,7 +53178,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50394,7 +53258,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50404,7 +53268,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50549,7 +53413,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50559,7 +53423,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50639,7 +53503,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50649,7 +53513,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50729,7 +53593,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50739,7 +53603,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50819,7 +53683,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50829,7 +53693,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50909,7 +53773,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50919,7 +53783,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -50999,7 +53863,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51009,7 +53873,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51154,7 +54018,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51164,7 +54028,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51244,7 +54108,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51254,7 +54118,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51334,7 +54198,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51344,7 +54208,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51424,7 +54288,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51434,7 +54298,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51514,7 +54378,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51524,7 +54388,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51604,7 +54468,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51614,7 +54478,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51771,7 +54635,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51781,7 +54645,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51861,7 +54725,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51871,7 +54735,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51951,7 +54815,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -51961,7 +54825,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52041,7 +54905,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52051,7 +54915,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52131,7 +54995,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52141,7 +55005,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52221,7 +55085,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_female_2106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52231,7 +55095,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52322,7 +55186,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_s6zlj8wrj',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52397,7 +55261,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_r4w8e1q5t',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -52407,7 +55271,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53090,7 +55954,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_k3d7f9h2m',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -53138,7 +56002,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_k3d7f9h2m',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -53148,7 +56012,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_r4w8e1q5t',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -53359,7 +56223,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_m6n2p8v3j',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53369,7 +56233,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53455,7 +56319,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_h7f3k9d5b',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53465,7 +56329,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53574,7 +56438,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
                   dynamicStat: {
                     collection: 'inventory',
                     entityId: 'item_k3d7f9h2m',
-                    property: 'count',
+                    property: 'quantity',
                   },
                   operator: '>=',
                   value: 1,
@@ -53616,7 +56480,7 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k3d7f9h2m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -53658,10 +56522,10 @@ const area2_4_FemaleDormLocations: LocationNode[] = [
   },
 ];
 
+// ==========================================
+// Area 2.5: 齋明學院 - 宿舍棟(男生)
+// ==========================================
 const area2_5_MaleDormLocations: LocationNode[] = [
-  // ==========================================
-  // Area 2.5: 齋明學院 - 宿舍棟(男生)
-  // ==========================================
   // ==========================================
   // Area 2.5.8: 宿舍棟 - 男宿屋頂
   // ==========================================
@@ -53791,7 +56655,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54298,7 +57162,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54308,7 +57172,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54388,7 +57252,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54398,7 +57262,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54478,7 +57342,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54488,7 +57352,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54568,7 +57432,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54578,7 +57442,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54658,7 +57522,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54668,7 +57532,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54748,7 +57612,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54758,7 +57622,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54903,7 +57767,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54913,7 +57777,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -54993,7 +57857,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55003,7 +57867,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55083,7 +57947,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55093,7 +57957,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55173,7 +58037,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55183,7 +58047,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55263,7 +58127,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55273,7 +58137,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55353,7 +58217,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55363,7 +58227,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55508,7 +58372,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55518,7 +58382,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55598,7 +58462,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55608,7 +58472,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55688,7 +58552,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55698,7 +58562,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55778,7 +58642,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55788,7 +58652,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55868,7 +58732,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55878,7 +58742,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55958,7 +58822,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -55968,7 +58832,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56113,7 +58977,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56123,7 +58987,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56203,7 +59067,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56213,7 +59077,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56293,7 +59157,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56303,7 +59167,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56383,7 +59247,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56393,7 +59257,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56473,7 +59337,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56483,7 +59347,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56563,7 +59427,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56573,7 +59437,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56718,7 +59582,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56728,7 +59592,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56808,7 +59672,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56818,7 +59682,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56898,7 +59762,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56908,7 +59772,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56988,7 +59852,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -56998,7 +59862,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57078,7 +59942,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57088,7 +59952,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57168,7 +60032,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57178,7 +60042,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57323,7 +60187,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57333,7 +60197,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57413,7 +60277,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57423,7 +60287,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57503,7 +60367,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57513,7 +60377,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57593,7 +60457,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57603,7 +60467,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57683,7 +60547,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57693,7 +60557,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57773,7 +60637,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57783,7 +60647,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57928,7 +60792,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -57938,7 +60802,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58018,7 +60882,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58028,7 +60892,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58108,7 +60972,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58118,7 +60982,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58198,7 +61062,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58208,7 +61072,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58288,7 +61152,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58298,7 +61162,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58378,7 +61242,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58388,7 +61252,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58533,7 +61397,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58543,7 +61407,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58623,7 +61487,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58633,7 +61497,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58713,7 +61577,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58723,7 +61587,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58803,7 +61667,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58813,7 +61677,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58893,7 +61757,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58903,7 +61767,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58983,7 +61847,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -58993,7 +61857,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59138,7 +62002,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59148,7 +62012,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59228,7 +62092,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59238,7 +62102,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59318,7 +62182,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59328,7 +62192,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59408,7 +62272,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59418,7 +62282,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59498,7 +62362,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59508,7 +62372,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59588,7 +62452,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59598,7 +62462,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59755,7 +62619,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59765,7 +62629,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59845,7 +62709,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59855,7 +62719,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59935,7 +62799,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -59945,7 +62809,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60025,7 +62889,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60035,7 +62899,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60115,7 +62979,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60125,7 +62989,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60205,7 +63069,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_3106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60215,7 +63079,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60771,7 +63635,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2011',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60781,7 +63645,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60861,7 +63725,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2012',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60871,7 +63735,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60951,7 +63815,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2013',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -60961,7 +63825,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61041,7 +63905,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2014',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61051,7 +63915,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61131,7 +63995,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2015',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61141,7 +64005,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61221,7 +64085,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2016',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61231,7 +64095,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61376,7 +64240,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2021',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61386,7 +64250,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61466,7 +64330,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2022',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61476,7 +64340,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61556,7 +64420,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2023',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61566,7 +64430,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61646,7 +64510,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2024',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61656,7 +64520,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61736,7 +64600,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2025',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61746,7 +64610,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61826,7 +64690,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2026',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61836,7 +64700,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61981,7 +64845,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2031',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -61991,7 +64855,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62071,7 +64935,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2032',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62081,7 +64945,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62161,7 +65025,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2033',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62171,7 +65035,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62251,7 +65115,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2034',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62261,7 +65125,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62341,7 +65205,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2035',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62351,7 +65215,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62431,7 +65295,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2036',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62441,7 +65305,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62586,7 +65450,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2041',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62596,7 +65460,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62676,7 +65540,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2042',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62686,7 +65550,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62766,7 +65630,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2043',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62776,7 +65640,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62856,7 +65720,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2044',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62866,7 +65730,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62946,7 +65810,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2045',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -62956,7 +65820,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63036,7 +65900,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2046',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63046,7 +65910,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63191,7 +66055,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2051',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63201,7 +66065,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63281,7 +66145,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2052',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63291,7 +66155,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63371,7 +66235,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2053',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63381,7 +66245,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63461,7 +66325,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2054',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63471,7 +66335,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63551,7 +66415,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2055',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63561,7 +66425,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63641,7 +66505,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2056',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63651,7 +66515,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63796,7 +66660,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2061',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63806,7 +66670,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63886,7 +66750,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2062',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63896,7 +66760,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63976,7 +66840,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2063',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -63986,7 +66850,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64066,7 +66930,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2064',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64076,7 +66940,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64156,7 +67020,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2065',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64166,7 +67030,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64246,7 +67110,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2066',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64256,7 +67120,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64401,7 +67265,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2071',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64411,7 +67275,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64491,7 +67355,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2072',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64501,7 +67365,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64581,7 +67445,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2073',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64591,7 +67455,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64671,7 +67535,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2074',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64681,7 +67545,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64761,7 +67625,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2075',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64771,7 +67635,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64851,7 +67715,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2076',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -64861,7 +67725,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65006,7 +67870,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2081',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65016,7 +67880,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65096,7 +67960,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2082',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65106,7 +67970,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65186,7 +68050,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2083',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65196,7 +68060,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65276,7 +68140,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2084',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65286,7 +68150,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65366,7 +68230,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2085',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65376,7 +68240,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65456,7 +68320,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2086',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65466,7 +68330,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65611,7 +68475,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2091',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65621,7 +68485,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65701,7 +68565,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2092',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65711,7 +68575,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65791,7 +68655,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2093',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65801,7 +68665,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65881,7 +68745,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2094',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65891,7 +68755,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65971,7 +68835,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2095',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -65981,7 +68845,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66061,7 +68925,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2096',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66071,7 +68935,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66228,7 +69092,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2101',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66238,7 +69102,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66318,7 +69182,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2102',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66328,7 +69192,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66408,7 +69272,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2103',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66418,7 +69282,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66498,7 +69362,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2104',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66508,7 +69372,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66588,7 +69452,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2105',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66598,7 +69462,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66678,7 +69542,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_key_dorm_male_2106',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66688,7 +69552,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66787,7 +69651,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_r5w9e2q6t',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -66797,7 +69661,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -67629,7 +70493,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_m7n3p9v4j',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -67639,7 +70503,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -67725,7 +70589,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_h8f4k0d6b',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -67735,7 +70599,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
               dynamicStat: {
                 collection: 'inventory',
                 entityId: 'item_k4d8m9h3m',
-                property: 'count',
+                property: 'quantity',
               },
               operator: '>=',
               value: 1,
@@ -68134,6 +70998,7 @@ const area2_5_MaleDormLocations: LocationNode[] = [
   },
 ];
 
+
 // ==========================================
 // 統一匯出地點定義
 // ==========================================
@@ -68142,6 +71007,7 @@ export const defaultLocations: LocationNode[] = [
   ...area1_2_DepartmentStoreLocations,
   ...area1_3_FinancialStreetLocations,
   ...area1_4_ShoppingStreetLocations,
+  ...area1_5_EntertainmentStreetLocations,
   ...area2_1_SchoolMainLocations,
   ...area2_2_GymnasiumLocations,
   ...area2_3_ClubBuildingLocations,

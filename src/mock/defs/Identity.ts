@@ -761,4 +761,153 @@ export const defaultIdentities: IdentityDef[] = [
     name: '飲料店店員',
     description: '連鎖飲料店店員。',
   },
+
+  // ==========================================
+  // 娛樂街相關身分 (Area 1.5)
+  // ==========================================
+  {
+    id: 'netcafe_manager',
+    name: '網吧店長',
+    description: '網吧店長',
+  },
+  {
+    id: 'netcafe_clerk',
+    name: '網吧店員',
+    description: '網吧店員',
+  },
+  {
+    id: 'pet_cafe_manager',
+    name: '寵物咖啡廳店長',
+    description: '寵物咖啡廳店長',
+  },
+  {
+    id: 'boardgame_manager',
+    name: '桌遊店店長',
+    description: '桌遊店店長',
+  },
+  {
+    id: 'boardgame_clerk',
+    name: '桌遊店店員',
+    description: '桌遊店店員',
+  },
+  {
+    id: 'arcade_manager',
+    name: '街機中心店長',
+    description: '街機中心店長',
+  },
+  {
+    id: 'arcade_staff',
+    name: '街機中心店員',
+    description: '街機中心店員',
+  },
+  {
+    id: 'ktv_manager',
+    name: 'KTV經理',
+    description: 'KTV經理',
+  },
+  {
+    id: 'ktv_staff',
+    name: 'KTV服務生',
+    description: 'KTV服務生',
+  },
+  {
+    id: 'tcg_shop_manager',
+    name: '卡牌店店長',
+    description: '卡牌店店長',
+  },
+  {
+    id: 'tcg_clerk',
+    name: '卡牌店店員',
+    description: '卡牌店店員',
+  },
+  {
+    id: 'merch_shop_manager',
+    name: '周邊店店長',
+    description: '周邊店店長',
+  },
+  {
+    id: 'merch_clerk',
+    name: '周邊店店員',
+    description: '周邊店店員',
+  },
+  {
+    id: 'manga_shop_manager',
+    name: '漫畫店店長',
+    description: '漫畫店店長',
+  },
+  {
+    id: 'manga_clerk',
+    name: '漫畫店店員',
+    description: '漫畫店店員',
+  },
+  {
+    id: 'video_rental_manager',
+    name: '錄影帶店店長',
+    description: '錄影帶店店長',
+  },
+  {
+    id: 'video_clerk',
+    name: '錄影帶店店員',
+    description: '錄影帶店店員',
+  },
+  {
+    id: 'cinema_manager',
+    name: '電影院經理',
+    description: '電影院經理',
+  },
+  {
+    id: 'cinema_staff',
+    name: '電影院員工',
+    description: '電影院員工',
+  },
+  {
+    id: 'maid_manager',
+    name: '女僕咖啡廳店長',
+    description: '女僕咖啡廳店長',
+  },
+  {
+    id: 'maid',
+    name: '女僕服務生',
+    description: '女僕服務生',
+  },
+  {
+    id: 'tattoo_artist',
+    name: '刺青師',
+    description: '刺青師',
+  },
+  {
+    id: 'tattoo_assistant',
+    name: '刺青店助理',
+    description: '刺青店助理',
+  },
+  {
+    id: 'tattoo_vip',
+    name: '刺青店VIP',
+    description: '刺青店VIP',
+  },
+  {
+    id: 'bar_tender',
+    name: '調酒師/酒吧老闆',
+    description: '調酒師/酒吧老闆',
+  },
+  {
+    id: 'bar_staff',
+    name: '酒吧員工',
+    description: '酒吧員工',
+  },
+  {
+    id: 'bar_vip',
+    name: '撞球酒吧VIP',
+    description: '撞球酒吧VIP',
+  },
+  {
+    id: 'escape_room_manager',
+    name: '密室逃脫館館長',
+    description: '密室逃脫館館長',
+  },
+  {
+    id: 'escape_room_staff',
+    name: '密室逃脫工作人員',
+    description: '密室逃脫工作人員',
+  },
 ];
